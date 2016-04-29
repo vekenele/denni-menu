@@ -3,6 +3,6 @@
 ###### Credits
 
 - Bc. David Věžník
-- Miroslav Lehotský
+- Miroslav Lehotský (422548)
 - Peter Neupauer
 - Bc. Jiří Ketner
