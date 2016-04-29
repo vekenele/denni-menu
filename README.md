@@ -1,1 +1,1 @@
-# denni-menu
+# denni-menu je repozitář zdrojových kódů pro projekt z předmětu PB138
