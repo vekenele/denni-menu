@@ -4,5 +4,5 @@
 
 - Bc. David Věžník
 - Miroslav Lehotský
-- Peter Neupauers
+- Peter Neupauer
 - Bc. Jiří Ketner
