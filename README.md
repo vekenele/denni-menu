@@ -1,5 +1,7 @@
 # Daily Menu
+
 ![](https://img.shields.io/github/license/vekenele/denni-menu.svg)
+
 ###### Credits
 
 - Bc. David Věžník
