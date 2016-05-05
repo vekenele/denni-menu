@@ -1,8 +1,15 @@
-# denni-menu je repozitář zdrojových kódů pro projekt z předmětu PB138
+# Daily Menu
 
 ###### Credits
 
 - Bc. David Věžník
-- Miroslav Lehotský (422548)
+- Miroslav Lehotský
 - Peter Neupauer
 - Bc. Jiří Ketner
+
+### Version
+1.0.0
+
+### License
+
+The software is licensed under the [MIT license](http://opensource.org/licenses/MIT).
