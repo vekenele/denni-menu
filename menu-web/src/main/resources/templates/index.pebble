@@ -1,0 +1,16 @@
+{% extends 'layouts/master' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<!-- Section -->
+<section id="services">
+    <div class="container">
+        <div class="row ">
+            <div class="col-md-12">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A alias assumenda, consequatur error iste iure perspiciatis, possimus quis repudiandae sapiente, sed similique totam voluptas? Distinctio eius enim nesciunt provident vel! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad amet asperiores assumenda, debitis deserunt est illum in ipsum maiores modi perferendis provident quia quos suscipit tempora temporibus totam. Nisi, odio.</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

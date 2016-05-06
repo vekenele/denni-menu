@@ -1,3 +1,13 @@
+/.idea
+
+/menu-admin/menu-admin.iml
+/menu-backend/menu-backend.iml
+/menu-app.iml
+/menu-web/menu-web.iml
+/menu-admin/target
+/menu-backend/target
+/menu-web/target
+
 *.class
 
 # Package Files #
