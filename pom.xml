@@ -1,75 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-	<groupId>cz.muni.fi.pb138</groupId>
-	<artifactId>menu-app</artifactId>
-	<version>1.0-SNAPSHOT</version>
-	<name>Daily menu</name>
-	<packaging>pom</packaging>
-	<modules>
-		<module>menu-backend</module>
-		<module>menu-admin</module>
-		<module>menu-web</module>
-	</modules>
-	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-	</properties>
-	<build>
-		<pluginManagement>
-			<plugins>
-				<!-- Java version is 8 -->
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-compiler-plugin</artifactId>
-					<configuration>
-						<source>8</source>
-						<target>8</target>
-					</configuration>
-				</plugin>
-			</plugins>
-		</pluginManagement>
-	</build>
-	<description>Daily menu - seminar project (PB138)</description>
-	<developers>
-		<developer>
-			<name>Peter Neupauer</name>
-			<email>xneup@mail.muni.cz</email>
-			<url/>
-			<organization>Masaryk University</organization>
-			<organizationUrl>http://www.muni.cz</organizationUrl>
-		</developer>
-		<developer>
-			<name>Miroslav Lehotský</name>
-			<email/>
-			<url/>
-			<organization>Masaryk University</organization>
-			<organizationUrl>http://www.muni.cz</organizationUrl>
-		</developer>
-		<developer>
-			<name>Bc. David Věžník</name>
-			<email/>
-			<url/>
-			<organization>Masaryk University</organization>
-			<organizationUrl>http://www.muni.cz</organizationUrl>
-		</developer>
-		<developer>
-			<name>Bc. Jiří Ketner</name>
-			<email/>
-			<url/>
-			<organization>Masaryk University</organization>
-			<organizationUrl>http://www.muni.cz</organizationUrl>
-		</developer>
-	</developers>
-	<organization>
-		<name>Masaryk University</name>
-		<url>http://www.muni.cz</url>
-	</organization>
-	<licenses>
-		<license>
-			<name>MIT</name>
-			<url>https://opensource.org/licenses/MIT</url>
-		</license>
-	</licenses>
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>cz.muni.fi.pb138</groupId>
+    <artifactId>menu-app</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <name>Daily menu</name>
+    <packaging>pom</packaging>
+    <modules>
+        <module>menu-backend</module>
+        <module>menu-admin</module>
+        <module>menu-web</module>
+    </modules>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+    <build>
+        <pluginManagement>
+            <plugins>
+                <!-- Java version is 8 -->
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <configuration>
+                        <source>8</source>
+                        <target>8</target>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+    <description>Daily menu - seminar project (PB138)</description>
+    <developers>
+        <developer>
+            <name>Peter Neupauer</name>
+            <email>xneup@mail.muni.cz</email>
+            <url/>
+            <organization>Masaryk University</organization>
+            <organizationUrl>http://www.muni.cz</organizationUrl>
+        </developer>
+        <developer>
+            <name>Miroslav Lehotský</name>
+            <email/>
+            <url/>
+            <organization>Masaryk University</organization>
+            <organizationUrl>http://www.muni.cz</organizationUrl>
+        </developer>
+        <developer>
+            <name>Bc. David Věžník</name>
+            <email/>
+            <url/>
+            <organization>Masaryk University</organization>
+            <organizationUrl>http://www.muni.cz</organizationUrl>
+        </developer>
+        <developer>
+            <name>Bc. Jiří Ketner</name>
+            <email/>
+            <url/>
+            <organization>Masaryk University</organization>
+            <organizationUrl>http://www.muni.cz</organizationUrl>
+        </developer>
+    </developers>
+    <organization>
+        <name>Masaryk University</name>
+        <url>http://www.muni.cz</url>
+    </organization>
+    <licenses>
+        <license>
+            <name>MIT</name>
+            <url>https://opensource.org/licenses/MIT</url>
+        </license>
+    </licenses>
 </project>
