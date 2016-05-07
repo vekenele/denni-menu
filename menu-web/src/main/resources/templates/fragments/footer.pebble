@@ -1,7 +1,7 @@
 <!-- Footer -->
 <footer>
     <div class="container">
-        <ul class="nav nav-pills">
+        <ul class="list-unstyled">
             <li>
                 <a href="#">Home</a>
             </li>
@@ -12,5 +12,6 @@
                 <a href="#">Contact</a>
             </li>
         </ul>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aperiam consequuntur esse facilis perspiciatis placeat quis similique velit veniam.</p>
     </div>
 </footer>

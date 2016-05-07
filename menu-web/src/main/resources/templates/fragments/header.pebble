@@ -1,10 +1,8 @@
 <!-- Header -->
 <header>
     <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h1>Title</h1>
-            </div>
+        <div class="intro-text">
+            <div class="intro-heading">Welcome To Our Restaurant</div>
         </div>
     </div>
 </header>

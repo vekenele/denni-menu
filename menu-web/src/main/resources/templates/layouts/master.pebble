@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <title>{% block title %}{% endblock %}</title>
     <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/app.css">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
 </head>
-<body style="margin-top: 100px">
+<body>
 {% include "fragments/navigation" %}
 {% include "fragments/header" %}
 {% block content %}{% endblock %}
