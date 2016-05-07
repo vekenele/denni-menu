@@ -32,6 +32,6 @@ public class AppTest extends FluentTest {
     @Test
     public void homeTest() {
         goTo("http://localhost:4567/");
-        assertThat(pageSource()).contains("Title");
+        assertThat(pageSource()).contains("Daily Menu");
     }
 }
