@@ -2,6 +2,8 @@
 
 ![](https://img.shields.io/github/license/vekenele/denni-menu.svg)
 
+Více informací na [WIKI](https://github.com/vekenele/denni-menu/wiki) stránkách repozitáře.
+
 ###### Credits
 
 - Bc. David Věžník
