@@ -12,10 +12,5 @@
     <packaging>war</packaging>
     <name>Daily Menu - Administration</name>
     <dependencies>
-        <dependency>
-            <groupId>cz.muni.fi.pb138</groupId>
-            <artifactId>menu-backend</artifactId>
-            <version>${project.parent.version}</version>
-        </dependency>
     </dependencies>
 </project>
