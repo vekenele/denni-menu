@@ -9,9 +9,7 @@
     <name>Daily menu</name>
     <packaging>pom</packaging>
     <modules>
-        <module>menu-backend</module>
         <module>menu-admin</module>
-        <module>menu-web</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
