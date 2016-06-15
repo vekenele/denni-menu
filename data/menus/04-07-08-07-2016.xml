@@ -1,0 +1,1143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dailymenu>
+    <validFrom>2016-07-04</validFrom>
+    <validTo>2016-07-08</validTo>
+    <restaurants>
+        <restaurant rid="1">
+            <servedFrom>11:00</servedFrom>
+            <servedTo>14:00</servedTo>
+            <monday date="2016-06-27">
+                <appetizer>
+                    <variant>
+                        <name>Chléb se sádlem a pažitkou</name>
+                        <allergens>1,3</allergens>
+                        <costPrice>5</costPrice>
+                        <sellPrice>12</sellPrice>
+                        <interest>8</interest>
+                    </variant>
+                    <variant>
+                        <name>Hermelín v bramborovém těstíčku</name>
+                        <allergens>2,3</allergens>
+                        <costPrice>25</costPrice>
+                        <sellPrice>40</sellPrice>
+                        <interest>2</interest>
+                    </variant>
+                </appetizer>
+                <soup>
+                    <variant>
+                        <name>Kulajda</name>
+                        <allergens>2,5</allergens>
+                        <costPrice>12</costPrice>
+                        <sellPrice>25</sellPrice>
+                        <interest>6</interest>
+                    </variant>
+                    <variant>
+                        <name>Česnečka se sýrem</name>
+                        <allergens>2</allergens>
+                        <costPrice>12</costPrice>
+                        <sellPrice>25</sellPrice>
+                        <interest>4</interest>
+                    </variant>
+                </soup>
+                <mainDish>
+                    <variant>
+                        <name>Svíčková s brusinkami</name>
+                        <allergens>1,6</allergens>
+                        <costPrice>45</costPrice>
+                        <sellPrice>89</sellPrice>
+                        <interest>7</interest>
+                    </variant>
+                    <variant>
+                        <name>Salát s lososem</name>
+                        <allergens>3,4</allergens>
+                        <costPrice>42</costPrice>
+                        <sellPrice>85</sellPrice>
+                        <interest>2</interest>
+                    </variant>
+                    <variant>
+                        <name>Bramboráky</name>
+                        <allergens>2,4</allergens>
+                        <costPrice>20</costPrice>
+                        <sellPrice>65</sellPrice>
+                        <interest>1</interest>
+                    </variant>
+                </mainDish>
+                <dessert>
+                    <variant>
+                        <name>Jablečný závin</name>
+                        <allergens>3</allergens>
+                        <costPrice>8</costPrice>
+                        <sellPrice>22</sellPrice>
+                        <interest>6</interest>
+                    </variant>
+                    <variant>
+                        <name>Palačinky</name>
+                        <allergens>2,5</allergens>
+                        <costPrice>19</costPrice>
+                        <sellPrice>45</sellPrice>
+                        <interest>4</interest>
+                    </variant>
+                </dessert>
+            </monday>
+            <tuesday date="2016-06-28">
+                <appetizer>
+                    <variant>
+                        <name>Cuketa zapečená se šunkou</name>
+                        <allergens>1,3</allergens>
+                        <costPrice>7</costPrice>
+                        <sellPrice>22</sellPrice>
+                        <interest>3</interest>
+                    </variant>
+                    <variant>
+                        <name>Hummus</name>
+                        <allergens>2,4</allergens>
+                        <costPrice>9</costPrice>
+                        <sellPrice>21</sellPrice>
+                        <interest>6</interest>
+                    </variant>
+                </appetizer>
+                <soup>
+                    <variant>
+                        <name>Zelňačka s klobásou</name>
+                        <allergens>2,6</allergens>
+                        <costPrice>15</costPrice>
+                        <sellPrice>22</sellPrice>
+                        <interest>8</interest>
+                    </variant>
+                    <variant>
+                        <name>Dýňová polévka</name>
+                        <allergens>2,1</allergens>
+                        <costPrice>12</costPrice>
+                        <sellPrice>21</sellPrice>
+                        <interest>5</interest>
+                    </variant>
+                </soup>
+                <mainDish>
+                    <variant>
+                        <name>Čočka na kyselo s klobáskou a čerstvým chlebem</name>
+                        <allergens>1,2</allergens>
+                        <costPrice>33</costPrice>
+                        <sellPrice>67</sellPrice>
+                        <interest>5</interest>
+                    </variant>
+                    <variant>
+                        <name>Vepřový guláš s knedlíkem</name>
+                        <allergens>1</allergens>
+                        <costPrice>41</costPrice>
+                        <sellPrice>88</sellPrice>
+                        <interest>7</interest>
+                    </variant>
+                    <variant>
+                        <name>Zeleninový salát s kuřecím masem a zákyskou</name>
+                        <allergens>2,4</allergens>
+                        <costPrice>32</costPrice>
+                        <sellPrice>78</sellPrice>
+                        <interest>2</interest>
+                    </variant>
+                </mainDish>
+                <dessert>
+                    <variant>
+                        <name>Tiramisu</name>
+                        <allergens>2</allergens>
+                        <costPrice>23</costPrice>
+                        <sellPrice>42</sellPrice>
+                        <interest>6</interest>
+                    </variant>
+                    <variant>
+                        <name>Pudinkové řezy se skořicí</name>
+                        <allergens>1</allergens>
+                        <costPrice>12</costPrice>
+                        <sellPrice>28</sellPrice>
+                        <interest>3</interest>
+                    </variant>
+                </dessert>
+            </tuesday>
+            <wednesday date="2016-06-29">
+                <appetizer>
+                    <variant>
+                        <name>Zapečený hermelín se žampiony</name>
+                        <allergens>1,2</allergens>
+                        <costPrice>29</costPrice>
+                        <sellPrice>39</sellPrice>
+                        <interest>3</interest>
+                    </variant>
+                    <variant>
+                        <name>Plněná rajská jablíčka</name>
+                        <allergens>2,3</allergens>
+                        <costPrice>18</costPrice>
+                        <sellPrice>32</sellPrice>
+                        <interest>7</interest>
+                    </variant>
+                </appetizer>
+                <soup>
+                    <variant>
+                        <name>Pórková polévka</name>
+                        <allergens>1,5</allergens>
+                        <costPrice>11</costPrice>
+                        <sellPrice>22</sellPrice>
+                        <interest>7</interest>
+                    </variant>
+                    <variant>
+                        <name>Mrkvová polévka</name>
+                        <allergens>2,3</allergens>
+                        <costPrice>13</costPrice>
+                        <sellPrice>22</sellPrice>
+                        <interest>9</interest>
+                    </variant>
+                </soup>
+                <mainDish>
+                    <variant>
+                        <name>Španělský ptáček</name>
+                        <allergens>1</allergens>
+                        <costPrice>39</costPrice>
+                        <sellPrice>85</sellPrice>
+                        <interest>6</interest>
+                    </variant>
+                    <variant>
+                        <name>Kuřecí maso se smetanou a kari</name>
+                        <allergens>2,3</allergens>
+                        <costPrice>43</costPrice>
+                        <sellPrice>89</sellPrice>
+                        <interest>4</interest>
+                    </variant>
+                    <variant>
+                        <name>Těstovinový salát s kuřecím masem</name>
+                        <allergens>1,3</allergens>
+                        <costPrice>31</costPrice>
+                        <sellPrice>76</sellPrice>
+                        <interest>2</interest>
+                    </variant>
+                </mainDish>
+                <dessert>
+                    <variant>
+                        <name>Čokoládové muffiny</name>
+                        <allergens>1</allergens>
+                        <costPrice>12</costPrice>
+                        <sellPrice>29</sellPrice>
+                        <interest>10</interest>
+                    </variant>
+                    <variant>
+                        <name>Nepečený smetanový dort s čerstvými jahodami</name>
+                        <allergens>2</allergens>
+                        <costPrice>21</costPrice>
+                        <sellPrice>37</sellPrice>
+                        <interest>12</interest>
+                    </variant>
+                </dessert>
+            </wednesday>
+            <thursday date="2016-06-30">
+                <appetizer>
+                    <variant>
+                        <name>Domácí tlačenka</name>
+                        <allergens>2,5</allergens>
+                        <costPrice>21</costPrice>
+                        <sellPrice>34</sellPrice>
+                        <interest>7</interest>
+                    </variant>
+                    <variant>
+                        <name>Avokádo s tuňákem</name>
+                        <allergens>1,3</allergens>
+                        <costPrice>29</costPrice>
+                        <sellPrice>38</sellPrice>
+                        <interest>3</interest>
+                    </variant>
+                </appetizer>
+                <soup>
+                    <variant>
+                        <name>Květáková polévka s vejci a brambory</name>
+                        <allergens>1,4</allergens>
+                        <costPrice>13</costPrice>
+                        <sellPrice>28</sellPrice>
+                        <interest>7</interest>
+                    </variant>
+                    <variant>
+                        <name>Dršťková polévka</name>
+                        <allergens>1</allergens>
+                        <costPrice>12</costPrice>
+                        <sellPrice>22</sellPrice>
+                        <interest>3</interest>
+                    </variant>
+                </soup>
+                <mainDish>
+                    <variant>
+                        <name>Rajská omáčka</name>
+                        <allergens>1,3</allergens>
+                        <costPrice>25</costPrice>
+                        <sellPrice>78</sellPrice>
+                        <interest>5</interest>
+                    </variant>
+                    <variant>
+                        <name>Smažené karbanátky s bramborovou kaší</name>
+                        <allergens>1,3</allergens>
+                        <costPrice>33</costPrice>
+                        <sellPrice>79</sellPrice>
+                        <interest>3</interest>
+                    </variant>
+                    <variant>
+                        <name>Rajčatový salát s cibulí</name>
+                        <allergens>1,3</allergens>
+                        <costPrice>24</costPrice>
+                        <sellPrice>60</sellPrice>
+                        <interest>3</interest>
+                    </variant>
+                </mainDish>
+                <dessert>
+                    <variant>
+                        <name>Pudinkový řez s broskvemi a šlehačkou</name>
+                        <allergens>3</allergens>
+                        <costPrice>12</costPrice>
+                        <sellPrice>25</sellPrice>
+                        <interest>3</interest>
+                    </variant>
+                    <variant>
+                        <name>Smetanové pokušení</name>
+                        <allergens>2</allergens>
+                        <costPrice>22</costPrice>
+                        <sellPrice>38</sellPrice>
+                        <interest>7</interest>
+                    </variant>
+                </dessert>
+            </thursday>
+            <friday date="2016-07-01">
+                <appetizer>
+                    <variant>
+                        <name>Francouzský toast</name>
+                        <allergens>1</allergens>
+                        <costPrice>9</costPrice>
+                        <sellPrice>21</sellPrice>
+                        <interest>9</interest>
+                    </variant>
+                    <variant>
+                        <name>Čínské závitky</name>
+                        <allergens>2,3</allergens>
+                        <costPrice>18</costPrice>
+                        <sellPrice>29</sellPrice>
+                        <interest>5</interest>
+                    </variant>
+                </appetizer>
+                <soup>
+                    <variant>
+                        <name>Bramboračka</name>
+                        <allergens>2,3</allergens>
+                        <costPrice>12</costPrice>
+                        <sellPrice>23</sellPrice>
+                        <interest>7</interest>
+                    </variant>
+                    <variant>
+                        <name>Rajská polévka s nočky</name>
+                        <allergens>1,2</allergens>
+                        <costPrice>12</costPrice>
+                        <sellPrice>26</sellPrice>
+                        <interest>7</interest>
+                    </variant>
+                </soup>
+                <mainDish>
+                    <variant>
+                        <name>Květákové placičky se sýrem</name>
+                        <allergens>1,6</allergens>
+                        <costPrice>32</costPrice>
+                        <sellPrice>68</sellPrice>
+                        <interest>7</interest>
+                    </variant>
+                    <variant>
+                        <name>Kuřecí prsa s hermelínem a smetanou</name>
+                        <allergens>3</allergens>
+                        <costPrice>54</costPrice>
+                        <sellPrice>101</sellPrice>
+                        <interest>6</interest>
+                    </variant>
+                    <variant>
+                        <name>Salát Caesar</name>
+                        <allergens>1,4</allergens>
+                        <costPrice>25</costPrice>
+                        <sellPrice>85</sellPrice>
+                        <interest>7</interest>
+                    </variant>
+                </mainDish>
+                <dessert>
+                    <variant>
+                        <name>Domácí vanilková zmrzlina</name>
+                        <allergens>1,2</allergens>
+                        <costPrice>19</costPrice>
+                        <sellPrice>39</sellPrice>
+                        <interest>9</interest>
+                    </variant>
+                    <variant>
+                        <name>Lívance</name>
+                        <allergens>1,5</allergens>
+                        <costPrice>18</costPrice>
+                        <sellPrice>39</sellPrice>
+                        <interest>7</interest>
+                    </variant>
+                </dessert>
+            </friday>
+        </restaurant>
+        <restaurant rid="3">
+            <servedFrom>12:00</servedFrom>
+            <servedTo>14:00</servedTo>
+            <monday date="2016-06-27">
+                <appetizer>
+                    <variant>
+                        <name>Chléb se sádlem a pažitkou</name>
+                        <allergens>1,3</allergens>
+                        <costPrice>5</costPrice>
+                        <sellPrice>12</sellPrice>
+                        <interest>8</interest>
+                    </variant>
+                    <variant>
+                        <name>Hermelín v bramborovém těstíčku</name>
+                        <allergens>2,3</allergens>
+                        <costPrice>25</costPrice>
+                        <sellPrice>40</sellPrice>
+                        <interest>2</interest>
+                    </variant>
+                </appetizer>
+                <soup>
+                    <variant>
+                        <name>Kulajda</name>
+                        <allergens>2,5</allergens>
+                        <costPrice>12</costPrice>
+                        <sellPrice>25</sellPrice>
+                        <interest>6</interest>
+                    </variant>
+                    <variant>
+                        <name>Česnečka se sýrem</name>
+                        <allergens>2</allergens>
+                        <costPrice>12</costPrice>
+                        <sellPrice>25</sellPrice>
+                        <interest>4</interest>
+                    </variant>
+                </soup>
+                <mainDish>
+                    <variant>
+                        <name>Svíčková s brusinkami</name>
+                        <allergens>1,6</allergens>
+                        <costPrice>45</costPrice>
+                        <sellPrice>89</sellPrice>
+                        <interest>7</interest>
+                    </variant>
+                    <variant>
+                        <name>Salát s lososem</name>
+                        <allergens>3,4</allergens>
+                        <costPrice>42</costPrice>
+                        <sellPrice>85</sellPrice>
+                        <interest>2</interest>
+                    </variant>
+                    <variant>
+                        <name>Bramboráky</name>
+                        <allergens>2,4</allergens>
+                        <costPrice>20</costPrice>
+                        <sellPrice>65</sellPrice>
+                        <interest>1</interest>
+                    </variant>
+                </mainDish>
+                <dessert>
+                    <variant>
+                        <name>Jablečný závin</name>
+                        <allergens>3</allergens>
+                        <costPrice>8</costPrice>
+                        <sellPrice>22</sellPrice>
+                        <interest>6</interest>
+                    </variant>
+                    <variant>
+                        <name>Palačinky</name>
+                        <allergens>2,5</allergens>
+                        <costPrice>19</costPrice>
+                        <sellPrice>45</sellPrice>
+                        <interest>4</interest>
+                    </variant>
+                </dessert>
+            </monday>
+            <tuesday date="2016-06-28">
+                <appetizer>
+                    <variant>
+                        <name>Cuketa zapečená se šunkou</name>
+                        <allergens>1,3</allergens>
+                        <costPrice>7</costPrice>
+                        <sellPrice>22</sellPrice>
+                        <interest>3</interest>
+                    </variant>
+                    <variant>
+                        <name>Hummus</name>
+                        <allergens>2,4</allergens>
+                        <costPrice>9</costPrice>
+                        <sellPrice>21</sellPrice>
+                        <interest>6</interest>
+                    </variant>
+                </appetizer>
+                <soup>
+                    <variant>
+                        <name>Zelňačka s klobásou</name>
+                        <allergens>2,6</allergens>
+                        <costPrice>15</costPrice>
+                        <sellPrice>22</sellPrice>
+                        <interest>8</interest>
+                    </variant>
+                    <variant>
+                        <name>Dýňová polévka</name>
+                        <allergens>2,1</allergens>
+                        <costPrice>12</costPrice>
+                        <sellPrice>21</sellPrice>
+                        <interest>5</interest>
+                    </variant>
+                </soup>
+                <mainDish>
+                    <variant>
+                        <name>Čočka na kyselo s klobáskou a čerstvým chlebem</name>
+                        <allergens>1,2</allergens>
+                        <costPrice>33</costPrice>
+                        <sellPrice>67</sellPrice>
+                        <interest>5</interest>
+                    </variant>
+                    <variant>
+                        <name>Vepřový guláš s knedlíkem</name>
+                        <allergens>1</allergens>
+                        <costPrice>41</costPrice>
+                        <sellPrice>88</sellPrice>
+                        <interest>7</interest>
+                    </variant>
+                    <variant>
+                        <name>Zeleninový salát s kuřecím masem a zákyskou</name>
+                        <allergens>2,4</allergens>
+                        <costPrice>32</costPrice>
+                        <sellPrice>78</sellPrice>
+                        <interest>2</interest>
+                    </variant>
+                </mainDish>
+                <dessert>
+                    <variant>
+                        <name>Tiramisu</name>
+                        <allergens>2</allergens>
+                        <costPrice>23</costPrice>
+                        <sellPrice>42</sellPrice>
+                        <interest>6</interest>
+                    </variant>
+                    <variant>
+                        <name>Pudinkové řezy se skořicí</name>
+                        <allergens>1</allergens>
+                        <costPrice>12</costPrice>
+                        <sellPrice>28</sellPrice>
+                        <interest>3</interest>
+                    </variant>
+                </dessert>
+            </tuesday>
+            <wednesday date="2016-06-29">
+                <appetizer>
+                    <variant>
+                        <name>Zapečený hermelín se žampiony</name>
+                        <allergens>1,2</allergens>
+                        <costPrice>29</costPrice>
+                        <sellPrice>39</sellPrice>
+                        <interest>3</interest>
+                    </variant>
+                    <variant>
+                        <name>Plněná rajská jablíčka</name>
+                        <allergens>2,3</allergens>
+                        <costPrice>18</costPrice>
+                        <sellPrice>32</sellPrice>
+                        <interest>7</interest>
+                    </variant>
+                </appetizer>
+                <soup>
+                    <variant>
+                        <name>Pórková polévka</name>
+                        <allergens>1,5</allergens>
+                        <costPrice>11</costPrice>
+                        <sellPrice>22</sellPrice>
+                        <interest>7</interest>
+                    </variant>
+                    <variant>
+                        <name>Mrkvová polévka</name>
+                        <allergens>2,3</allergens>
+                        <costPrice>13</costPrice>
+                        <sellPrice>22</sellPrice>
+                        <interest>9</interest>
+                    </variant>
+                </soup>
+                <mainDish>
+                    <variant>
+                        <name>Španělský ptáček</name>
+                        <allergens>1</allergens>
+                        <costPrice>39</costPrice>
+                        <sellPrice>85</sellPrice>
+                        <interest>6</interest>
+                    </variant>
+                    <variant>
+                        <name>Kuřecí maso se smetanou a kari</name>
+                        <allergens>2,3</allergens>
+                        <costPrice>43</costPrice>
+                        <sellPrice>89</sellPrice>
+                        <interest>4</interest>
+                    </variant>
+                    <variant>
+                        <name>Těstovinový salát s kuřecím masem</name>
+                        <allergens>1,3</allergens>
+                        <costPrice>31</costPrice>
+                        <sellPrice>76</sellPrice>
+                        <interest>2</interest>
+                    </variant>
+                </mainDish>
+                <dessert>
+                    <variant>
+                        <name>Čokoládové muffiny</name>
+                        <allergens>1</allergens>
+                        <costPrice>12</costPrice>
+                        <sellPrice>29</sellPrice>
+                        <interest>10</interest>
+                    </variant>
+                    <variant>
+                        <name>Nepečený smetanový dort s čerstvými jahodami</name>
+                        <allergens>2</allergens>
+                        <costPrice>21</costPrice>
+                        <sellPrice>37</sellPrice>
+                        <interest>12</interest>
+                    </variant>
+                </dessert>
+            </wednesday>
+            <thursday date="2016-06-30">
+                <appetizer>
+                    <variant>
+                        <name>Domácí tlačenka</name>
+                        <allergens>2,5</allergens>
+                        <costPrice>21</costPrice>
+                        <sellPrice>34</sellPrice>
+                        <interest>7</interest>
+                    </variant>
+                    <variant>
+                        <name>Avokádo s tuňákem</name>
+                        <allergens>1,3</allergens>
+                        <costPrice>29</costPrice>
+                        <sellPrice>38</sellPrice>
+                        <interest>3</interest>
+                    </variant>
+                </appetizer>
+                <soup>
+                    <variant>
+                        <name>Květáková polévka s vejci a brambory</name>
+                        <allergens>1,4</allergens>
+                        <costPrice>13</costPrice>
+                        <sellPrice>28</sellPrice>
+                        <interest>7</interest>
+                    </variant>
+                    <variant>
+                        <name>Dršťková polévka</name>
+                        <allergens>1</allergens>
+                        <costPrice>12</costPrice>
+                        <sellPrice>22</sellPrice>
+                        <interest>3</interest>
+                    </variant>
+                </soup>
+                <mainDish>
+                    <variant>
+                        <name>Rajská omáčka</name>
+                        <allergens>1,3</allergens>
+                        <costPrice>25</costPrice>
+                        <sellPrice>78</sellPrice>
+                        <interest>5</interest>
+                    </variant>
+                    <variant>
+                        <name>Smažené karbanátky s bramborovou kaší</name>
+                        <allergens>1,3</allergens>
+                        <costPrice>33</costPrice>
+                        <sellPrice>79</sellPrice>
+                        <interest>3</interest>
+                    </variant>
+                    <variant>
+                        <name>Rajčatový salát s cibulí</name>
+                        <allergens>1,3</allergens>
+                        <costPrice>24</costPrice>
+                        <sellPrice>60</sellPrice>
+                        <interest>3</interest>
+                    </variant>
+                </mainDish>
+                <dessert>
+                    <variant>
+                        <name>Pudinkový řez s broskvemi a šlehačkou</name>
+                        <allergens>3</allergens>
+                        <costPrice>12</costPrice>
+                        <sellPrice>25</sellPrice>
+                        <interest>3</interest>
+                    </variant>
+                    <variant>
+                        <name>Smetanové pokušení</name>
+                        <allergens>2</allergens>
+                        <costPrice>22</costPrice>
+                        <sellPrice>38</sellPrice>
+                        <interest>7</interest>
+                    </variant>
+                </dessert>
+            </thursday>
+            <friday date="2016-07-01">
+                <appetizer>
+                    <variant>
+                        <name>Francouzský toast</name>
+                        <allergens>1</allergens>
+                        <costPrice>9</costPrice>
+                        <sellPrice>21</sellPrice>
+                        <interest>9</interest>
+                    </variant>
+                    <variant>
+                        <name>Čínské závitky</name>
+                        <allergens>2,3</allergens>
+                        <costPrice>18</costPrice>
+                        <sellPrice>29</sellPrice>
+                        <interest>5</interest>
+                    </variant>
+                </appetizer>
+                <soup>
+                    <variant>
+                        <name>Bramboračka</name>
+                        <allergens>2,3</allergens>
+                        <costPrice>12</costPrice>
+                        <sellPrice>23</sellPrice>
+                        <interest>7</interest>
+                    </variant>
+                    <variant>
+                        <name>Rajská polévka s nočky</name>
+                        <allergens>1,2</allergens>
+                        <costPrice>12</costPrice>
+                        <sellPrice>26</sellPrice>
+                        <interest>7</interest>
+                    </variant>
+                </soup>
+                <mainDish>
+                    <variant>
+                        <name>Květákové placičky se sýrem</name>
+                        <allergens>1,6</allergens>
+                        <costPrice>32</costPrice>
+                        <sellPrice>68</sellPrice>
+                        <interest>7</interest>
+                    </variant>
+                    <variant>
+                        <name>Kuřecí prsa s hermelínem a smetanou</name>
+                        <allergens>3</allergens>
+                        <costPrice>54</costPrice>
+                        <sellPrice>101</sellPrice>
+                        <interest>6</interest>
+                    </variant>
+                    <variant>
+                        <name>Salát Caesar</name>
+                        <allergens>1,4</allergens>
+                        <costPrice>25</costPrice>
+                        <sellPrice>85</sellPrice>
+                        <interest>7</interest>
+                    </variant>
+                </mainDish>
+                <dessert>
+                    <variant>
+                        <name>Domácí vanilková zmrzlina</name>
+                        <allergens>1,2</allergens>
+                        <costPrice>19</costPrice>
+                        <sellPrice>39</sellPrice>
+                        <interest>9</interest>
+                    </variant>
+                    <variant>
+                        <name>Lívance</name>
+                        <allergens>1,5</allergens>
+                        <costPrice>18</costPrice>
+                        <sellPrice>39</sellPrice>
+                        <interest>7</interest>
+                    </variant>
+                </dessert>
+            </friday>
+        </restaurant>
+        <restaurant rid="4">
+            <servedFrom>11:30</servedFrom>
+            <servedTo>14:30</servedTo>
+            <monday date="2016-06-27">
+                <appetizer>
+                    <name>Francouzský toast</name>
+                    <allergens>1</allergens>
+                    <costPrice>9</costPrice>
+                    <sellPrice>21</sellPrice>
+                    <interest>9</interest>
+                </appetizer>
+                <soup>
+                    <name>Bramboračka</name>
+                    <allergens>2,3</allergens>
+                    <costPrice>12</costPrice>
+                    <sellPrice>23</sellPrice>
+                    <interest>7</interest>
+                </soup>
+                <mainDish>
+                    <variant>
+                        <name>Kuřecí prsa s hermelínem a smetanou</name>
+                        <allergens>3</allergens>
+                        <costPrice>54</costPrice>
+                        <sellPrice>101</sellPrice>
+                        <interest>6</interest>
+                    </variant>
+                    <variant>
+                        <name>Salát Caesar</name>
+                        <allergens>1,4</allergens>
+                        <costPrice>25</costPrice>
+                        <sellPrice>85</sellPrice>
+                        <interest>7</interest>
+                    </variant>
+                </mainDish>
+                <dessert>
+                    <name>Lívance</name>
+                    <allergens>1,5</allergens>
+                    <costPrice>18</costPrice>
+                    <sellPrice>39</sellPrice>
+                    <interest>7</interest>
+                </dessert>
+            </monday>
+            <tuesday date="2016-06-28">
+                <appetizer>
+                    <name>Chléb se sádlem a pažitkou</name>
+                    <allergens>1,3</allergens>
+                    <costPrice>5</costPrice>
+                    <sellPrice>12</sellPrice>
+                    <interest>8</interest>
+                </appetizer>
+                <soup>
+                    <name>Kulajda</name>
+                    <allergens>2,5</allergens>
+                    <costPrice>12</costPrice>
+                    <sellPrice>25</sellPrice>
+                    <interest>6</interest>
+                </soup>
+                <mainDish>
+                    <variant>
+                        <name>Svíčková s brusinkami</name>
+                        <allergens>1,6</allergens>
+                        <costPrice>45</costPrice>
+                        <sellPrice>89</sellPrice>
+                        <interest>7</interest>
+                    </variant>
+                    <variant>
+                        <name>Salát s lososem</name>
+                        <allergens>3,4</allergens>
+                        <costPrice>42</costPrice>
+                        <sellPrice>85</sellPrice>
+                        <interest>2</interest>
+                    </variant>
+                </mainDish>
+                <dessert>
+                    <name>Jablečný závin</name>
+                    <allergens>3</allergens>
+                    <costPrice>8</costPrice>
+                    <sellPrice>22</sellPrice>
+                    <interest>6</interest>
+                </dessert>
+            </tuesday>
+            <wednesday date="2016-06-29">
+                <appetizer>
+                    <name>Plněná rajská jablíčka</name>
+                    <allergens>2,3</allergens>
+                    <costPrice>18</costPrice>
+                    <sellPrice>32</sellPrice>
+                    <interest>7</interest>
+                </appetizer>
+                <soup>
+                    <name>Dýňová polévka</name>
+                    <allergens>2,1</allergens>
+                    <costPrice>12</costPrice>
+                    <sellPrice>21</sellPrice>
+                    <interest>5</interest>
+                </soup>
+                <mainDish>
+                    <variant>
+                        <name>Čočka na kyselo s klobáskou a čerstvým chlebem</name>
+                        <allergens>1,2</allergens>
+                        <costPrice>33</costPrice>
+                        <sellPrice>67</sellPrice>
+                        <interest>5</interest>
+                    </variant>
+                    <variant>
+                        <name>Zeleninový salát s kuřecím masem a zákyskou</name>
+                        <allergens>2,4</allergens>
+                        <costPrice>32</costPrice>
+                        <sellPrice>78</sellPrice>
+                        <interest>2</interest>
+                    </variant>
+                </mainDish>
+                <dessert>
+                    <name>Pudinkové řezy se skořicí</name>
+                    <allergens>1</allergens>
+                    <costPrice>12</costPrice>
+                    <sellPrice>28</sellPrice>
+                    <interest>3</interest>
+                </dessert>
+            </wednesday>
+            <thursday date="2016-06-30">
+                <appetizer>
+                    <name>Cuketa zapečená se šunkou</name>
+                    <allergens>1,3</allergens>
+                    <costPrice>7</costPrice>
+                    <sellPrice>22</sellPrice>
+                    <interest>3</interest>
+                </appetizer>
+                <soup>
+                    <name>Zelňačka s klobásou</name>
+                    <allergens>2,6</allergens>
+                    <costPrice>15</costPrice>
+                    <sellPrice>22</sellPrice>
+                    <interest>8</interest>
+                </soup>
+                <mainDish>
+                    <variant>
+                        <name>Vepřový guláš s knedlíkem</name>
+                        <allergens>1</allergens>
+                        <costPrice>41</costPrice>
+                        <sellPrice>88</sellPrice>
+                        <interest>7</interest>
+                    </variant>
+                    <variant>
+                        <name>Španělský ptáček</name>
+                        <allergens>1</allergens>
+                        <costPrice>39</costPrice>
+                        <sellPrice>85</sellPrice>
+                        <interest>6</interest>
+                    </variant>
+                </mainDish>
+                <dessert>
+                    <name>Jablečný závin</name>
+                    <allergens>3</allergens>
+                    <costPrice>8</costPrice>
+                    <sellPrice>22</sellPrice>
+                    <interest>6</interest>
+                </dessert>
+            </thursday>
+            <friday date="2016-07-01">
+                <appetizer>
+                    <name>Domácí tlačenka</name>
+                    <allergens>2,5</allergens>
+                    <costPrice>21</costPrice>
+                    <sellPrice>34</sellPrice>
+                    <interest>7</interest>
+                </appetizer>
+                <soup>
+                    <name>Květáková polévka s vejci a brambory</name>
+                    <allergens>1,4</allergens>
+                    <costPrice>13</costPrice>
+                    <sellPrice>28</sellPrice>
+                    <interest>7</interest>
+                </soup>
+                <mainDish>
+                    <variant>
+                        <name>Rajská omáčka</name>
+                        <allergens>1,3</allergens>
+                        <costPrice>25</costPrice>
+                        <sellPrice>78</sellPrice>
+                        <interest>5</interest>
+                    </variant>
+                    <variant>
+                        <name>Smažené karbanátky s bramborovou kaší</name>
+                        <allergens>1,3</allergens>
+                        <costPrice>33</costPrice>
+                        <sellPrice>79</sellPrice>
+                        <interest>3</interest>
+                    </variant>
+                </mainDish>
+                <dessert>
+                    <name>Smetanové pokušení</name>
+                    <allergens>2</allergens>
+                    <costPrice>22</costPrice>
+                    <sellPrice>38</sellPrice>
+                    <interest>7</interest>
+                </dessert>
+            </friday>
+        </restaurant>
+        <restaurant rid="10">
+            <servedFrom>11:45</servedFrom>
+            <servedTo>15:00</servedTo>
+            <monday date="2016-06-27">
+                <appetizer>
+                    <name>Francouzský toast</name>
+                    <allergens>1</allergens>
+                    <costPrice>9</costPrice>
+                    <sellPrice>21</sellPrice>
+                    <interest>9</interest>
+                </appetizer>
+                <soup>
+                    <name>Bramboračka</name>
+                    <allergens>2,3</allergens>
+                    <costPrice>12</costPrice>
+                    <sellPrice>23</sellPrice>
+                    <interest>7</interest>
+                </soup>
+                <mainDish>
+                    <variant>
+                        <name>Kuřecí prsa s hermelínem a smetanou</name>
+                        <allergens>3</allergens>
+                        <costPrice>54</costPrice>
+                        <sellPrice>101</sellPrice>
+                        <interest>6</interest>
+                    </variant>
+                    <variant>
+                        <name>Salát Caesar</name>
+                        <allergens>1,4</allergens>
+                        <costPrice>25</costPrice>
+                        <sellPrice>85</sellPrice>
+                        <interest>7</interest>
+                    </variant>
+                </mainDish>
+                <dessert>
+                    <name>Lívance</name>
+                    <allergens>1,5</allergens>
+                    <costPrice>18</costPrice>
+                    <sellPrice>39</sellPrice>
+                    <interest>7</interest>
+                </dessert>
+            </monday>
+            <tuesday date="2016-06-28">
+                <appetizer>
+                    <name>Chléb se sádlem a pažitkou</name>
+                    <allergens>1,3</allergens>
+                    <costPrice>5</costPrice>
+                    <sellPrice>12</sellPrice>
+                    <interest>8</interest>
+                </appetizer>
+                <soup>
+                    <name>Kulajda</name>
+                    <allergens>2,5</allergens>
+                    <costPrice>12</costPrice>
+                    <sellPrice>25</sellPrice>
+                    <interest>6</interest>
+                </soup>
+                <mainDish>
+                    <variant>
+                        <name>Svíčková s brusinkami</name>
+                        <allergens>1,6</allergens>
+                        <costPrice>45</costPrice>
+                        <sellPrice>89</sellPrice>
+                        <interest>7</interest>
+                    </variant>
+                    <variant>
+                        <name>Salát s lososem</name>
+                        <allergens>3,4</allergens>
+                        <costPrice>42</costPrice>
+                        <sellPrice>85</sellPrice>
+                        <interest>2</interest>
+                    </variant>
+                </mainDish>
+                <dessert>
+                    <name>Jablečný závin</name>
+                    <allergens>3</allergens>
+                    <costPrice>8</costPrice>
+                    <sellPrice>22</sellPrice>
+                    <interest>6</interest>
+                </dessert>
+            </tuesday>
+            <wednesday date="2016-06-29">
+                <appetizer>
+                    <name>Plněná rajská jablíčka</name>
+                    <allergens>2,3</allergens>
+                    <costPrice>18</costPrice>
+                    <sellPrice>32</sellPrice>
+                    <interest>7</interest>
+                </appetizer>
+                <soup>
+                    <name>Dýňová polévka</name>
+                    <allergens>2,1</allergens>
+                    <costPrice>12</costPrice>
+                    <sellPrice>21</sellPrice>
+                    <interest>5</interest>
+                </soup>
+                <mainDish>
+                    <variant>
+                        <name>Čočka na kyselo s klobáskou a čerstvým chlebem</name>
+                        <allergens>1,2</allergens>
+                        <costPrice>33</costPrice>
+                        <sellPrice>67</sellPrice>
+                        <interest>5</interest>
+                    </variant>
+                    <variant>
+                        <name>Zeleninový salát s kuřecím masem a zákyskou</name>
+                        <allergens>2,4</allergens>
+                        <costPrice>32</costPrice>
+                        <sellPrice>78</sellPrice>
+                        <interest>2</interest>
+                    </variant>
+                </mainDish>
+                <dessert>
+                    <name>Pudinkové řezy se skořicí</name>
+                    <allergens>1</allergens>
+                    <costPrice>12</costPrice>
+                    <sellPrice>28</sellPrice>
+                    <interest>3</interest>
+                </dessert>
+            </wednesday>
+            <thursday date="2016-06-30">
+                <appetizer>
+                    <name>Cuketa zapečená se šunkou</name>
+                    <allergens>1,3</allergens>
+                    <costPrice>7</costPrice>
+                    <sellPrice>22</sellPrice>
+                    <interest>3</interest>
+                </appetizer>
+                <soup>
+                    <name>Zelňačka s klobásou</name>
+                    <allergens>2,6</allergens>
+                    <costPrice>15</costPrice>
+                    <sellPrice>22</sellPrice>
+                    <interest>8</interest>
+                </soup>
+                <mainDish>
+                    <variant>
+                        <name>Vepřový guláš s knedlíkem</name>
+                        <allergens>1</allergens>
+                        <costPrice>41</costPrice>
+                        <sellPrice>88</sellPrice>
+                        <interest>7</interest>
+                    </variant>
+                    <variant>
+                        <name>Španělský ptáček</name>
+                        <allergens>1</allergens>
+                        <costPrice>39</costPrice>
+                        <sellPrice>85</sellPrice>
+                        <interest>6</interest>
+                    </variant>
+                </mainDish>
+                <dessert>
+                    <name>Jablečný závin</name>
+                    <allergens>3</allergens>
+                    <costPrice>8</costPrice>
+                    <sellPrice>22</sellPrice>
+                    <interest>6</interest>
+                </dessert>
+            </thursday>
+            <friday date="2016-07-01">
+                <appetizer>
+                    <name>Domácí tlačenka</name>
+                    <allergens>2,5</allergens>
+                    <costPrice>21</costPrice>
+                    <sellPrice>34</sellPrice>
+                    <interest>7</interest>
+                </appetizer>
+                <soup>
+                    <name>Květáková polévka s vejci a brambory</name>
+                    <allergens>1,4</allergens>
+                    <costPrice>13</costPrice>
+                    <sellPrice>28</sellPrice>
+                    <interest>7</interest>
+                </soup>
+                <mainDish>
+                    <variant>
+                        <name>Rajská omáčka</name>
+                        <allergens>1,3</allergens>
+                        <costPrice>25</costPrice>
+                        <sellPrice>78</sellPrice>
+                        <interest>5</interest>
+                    </variant>
+                    <variant>
+                        <name>Smažené karbanátky s bramborovou kaší</name>
+                        <allergens>1,3</allergens>
+                        <costPrice>33</costPrice>
+                        <sellPrice>79</sellPrice>
+                        <interest>3</interest>
+                    </variant>
+                </mainDish>
+                <dessert>
+                    <name>Smetanové pokušení</name>
+                    <allergens>2</allergens>
+                    <costPrice>22</costPrice>
+                    <sellPrice>38</sellPrice>
+                    <interest>7</interest>
+                </dessert>
+            </friday>
+        </restaurant>
+    </restaurants>
+</dailymenu>

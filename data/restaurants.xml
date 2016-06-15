@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<restaurants>
+    <restaurant rid="1">
+        <name>Borgo Agnese</name>
+        <address>Kopečná 43</address>
+        <city>Brno - Střed</city>
+        <zip>602 00</zip>
+        <contact>
+            <phone>+420 515 537 500</phone>
+            <phone>+420 515 537 501</phone>
+            <email>info@borgoagnese.cz</email>
+        </contact>
+        <www>http://www.borgoagnese.cz</www>
+    </restaurant>
+    <restaurant rid="2">
+        <name>Sunset Restaurant</name>
+        <address>Příkop 4</address>
+        <city>Brno - Střed</city>
+        <zip>602 00</zip>
+        <contact>
+            <phone>+420 545 176 565</phone>
+            <email>info@sunset-restaurant.cz</email>
+        </contact>
+        <www>http://www.sunset-restaurant.cz</www>
+    </restaurant>
+    <restaurant rid="3">
+        <name>Bohéma</name>
+        <address>Rooseveltova 7</address>
+        <city>Brno</city>
+        <zip>602 00</zip>
+        <contact>
+            <phone>+420 775 733 448</phone>
+            <phone>+420 604 555 345</phone>
+            <email>info@restauracebohema.cz</email>
+        </contact>
+        <www>http://www.restauracebohema.cz/</www>
+    </restaurant>
+    <restaurant rid="4">
+        <name>Valoria</name>
+        <address>Bohunická 2</address>
+        <city>Brno - Horní Heršpice</city>
+        <zip>619 00</zip>
+        <contact>
+            <phone>+420 543 250 462</phone>
+            <email>valoria@valoria.cz</email>
+        </contact>
+        <www>http://www.valoria.cz</www>
+    </restaurant>
+    <restaurant rid="5">
+        <name>Hostinec Slunečnice</name>
+        <address>Faměrovo náměstí 17</address>
+        <city>Brno - Černovice</city>
+        <zip>618 00</zip>
+        <contact>
+            <phone>+420 775 998 204</phone>
+            <email>info@hostinecslunecnice.cz</email>
+        </contact>
+        <www>http://www.hostinecslunecnice.cz/</www>
+    </restaurant>
+    <restaurant rid="6">
+        <name>Forhaus coffee &amp; restaurant</name>
+        <address>Pekařská 4</address>
+        <city>Brno - Střed</city>
+        <zip>602 00</zip>
+        <contact>
+            <phone>+420 702 200 047</phone>
+            <phone>+420 605 122 344</phone>
+            <email>info@forhaus.cz</email>
+            <email>restaurant@forhaus.cz</email>
+        </contact>
+        <www>http://www.forhaus.cz</www>
+    </restaurant>
+    <restaurant rid="7">
+        <name>Pavillon Restaurant</name>
+        <address>Jezuitská 6</address>
+        <city>Brno - Střed</city>
+        <zip>602 00</zip>
+        <contact>
+            <phone>+420 541 213 497</phone>
+            <email>info@restaurant-pavillon.cz</email>
+        </contact>
+        <www>http://www.restaurant-pavillon.cz</www>
+    </restaurant>
+    <restaurant rid="8">
+        <name>Butcher's restaurant</name>
+        <address>Dobrovského 29</address>
+        <city>Brno - Královo Pole</city>
+        <zip>602 00</zip>
+        <contact>
+            <phone>+420 734 309 499</phone>
+            <email>brno@butchers.cz</email>
+        </contact>
+        <www>http://www.butchers.cz/</www>
+    </restaurant>
+    <restaurant rid="9">
+        <name>U Starýho Billa</name>
+        <address>Kudelova 5</address>
+        <city>Brno - Střed</city>
+        <zip>602 00</zip>
+        <contact>
+            <phone>+420 545 244 453</phone>
+            <phone>+420 728 286 533</phone>
+            <email>info@bill.cz</email>
+        </contact>
+        <www>http://www.bill.cz</www>
+    </restaurant>
+    <restaurant rid="10">
+        <name>Noem Arch Restaurant</name>
+        <address>Cimburkova 9</address>
+        <city>Brno - Královo Pole</city>
+        <zip>612 00</zip>
+        <contact>
+            <phone>+420 541 216 160</phone>
+            <email>info@noemarch.cz</email>
+            <email>vedeni@noemarch.cz</email>
+        </contact>
+        <www>http://www.noemarch.cz</www>
+    </restaurant>
+</restaurants>
