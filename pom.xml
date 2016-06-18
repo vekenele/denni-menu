@@ -3,17 +3,11 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>cz.muni.fi.pb138</groupId>
-    <artifactId>menu-app</artifactId>
-    <version>1.0-SNAPSHOT</version>
-    <name>Daily menu</name>
-    <packaging>pom</packaging>
-    <modules>
-        <module>menu-admin</module>
-    </modules>
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
+
+    <groupId>fi.muni.pb138.app</groupId>
+    <artifactId>denni-menu</artifactId>
+    <version>1.0</version>
+
     <build>
         <pluginManagement>
             <plugins>
@@ -29,45 +23,18 @@
             </plugins>
         </pluginManagement>
     </build>
-    <description>Daily menu - seminar project (PB138)</description>
-    <developers>
-        <developer>
-            <name>Peter Neupauer</name>
-            <email>xneup@mail.muni.cz</email>
-            <url/>
-            <organization>Masaryk University</organization>
-            <organizationUrl>http://www.muni.cz</organizationUrl>
-        </developer>
-        <developer>
-            <name>Miroslav Lehotský</name>
-            <email/>
-            <url/>
-            <organization>Masaryk University</organization>
-            <organizationUrl>http://www.muni.cz</organizationUrl>
-        </developer>
-        <developer>
-            <name>Bc. David Věžník</name>
-            <email/>
-            <url/>
-            <organization>Masaryk University</organization>
-            <organizationUrl>http://www.muni.cz</organizationUrl>
-        </developer>
-        <developer>
-            <name>Bc. Jiří Ketner</name>
-            <email/>
-            <url/>
-            <organization>Masaryk University</organization>
-            <organizationUrl>http://www.muni.cz</organizationUrl>
-        </developer>
-    </developers>
-    <organization>
-        <name>Masaryk University</name>
-        <url>http://www.muni.cz</url>
-    </organization>
-    <licenses>
-        <license>
-            <name>MIT</name>
-            <url>https://opensource.org/licenses/MIT</url>
-        </license>
-    </licenses>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.sparkjava</groupId>
+            <artifactId>spark-core</artifactId>
+            <version>2.5</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>1.7.13</version>
+        </dependency>
+    </dependencies>
+
 </project>
