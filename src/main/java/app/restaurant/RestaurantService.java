@@ -17,17 +17,17 @@ public class RestaurantService {
     public static String XSLTProcessRestaurants() throws TransformerConfigurationException, TransformerException {
 
         TransformerFactory tf = TransformerFactory.newInstance();
-        URL url = RestaurantService.class.getResource("RestaurantIndexPage.xsl");
-        //Transformer xsltProc = tf.newTransformer(new StreamSource(new File(url.getPath())));
+        URL urlXSL = RestaurantService.class.getClassLoader().getResource("xslt/RestaurantIndexPage.xsl");
+        URL urlXML = RestaurantService.class.getClassLoader().getResource("data/restaurants.xml");
+        Transformer xsltProc = tf.newTransformer(new StreamSource(new File(urlXSL.getPath())));
 
-        //StringWriter outWriter = new StringWriter();
-        //StreamResult result = new StreamResult(outWriter);
+        StringWriter outWriter = new StringWriter();
+        StreamResult result = new StreamResult(outWriter);
 
-        //xsltProc.transform(new StreamSource(new File("restaurants.xml")), result);
+        xsltProc.transform(new StreamSource(new File(urlXML.getPath())), result);
 
-        //StringBuffer sb = outWriter.getBuffer();
-        //String returnString = sb.toString();
+        StringBuffer sb = outWriter.getBuffer();
 
-        return "Zde předáme posléze transformovaný seznam restaurací + nějakou main-page, zatím není XSL."; // TODO
+        return sb.toString(); // TODO
     };
 }

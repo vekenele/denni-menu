@@ -2,7 +2,7 @@
 
     <xsl:template match="/">
         <h1>Seznam restaurací</h1>
-        <xsl:for-each select="restaurant">
+        <xsl:for-each select="restaurants/restaurant">
             <h2><xsl:value-of select="name"/></h2>
         </xsl:for-each>
     </xsl:template>
