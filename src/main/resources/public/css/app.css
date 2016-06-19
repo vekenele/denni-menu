@@ -1,3 +1,7 @@
+a {
+    cursor: pointer;
+}
+
 header {
     background-image: url('../img/header-bg.jpg');
     background-repeat: none;
@@ -9,11 +13,24 @@ header {
     -o-background-size: cover;
     text-align: center;
     color: white;
+    position: relative;
+    z-index: 1;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    background-color: #333333;
+    opacity: 0.5;
+    z-index:2;
 }
 
 header .intro-text {
     padding-top: 300px;
     padding-bottom: 200px;
+    position: relative;
+    z-index:3;
 }
 
 header .intro-text .intro-heading {
@@ -23,11 +40,14 @@ header .intro-text .intro-heading {
     font-size: 75px;
     line-height: 75px;
     margin-bottom: 50px;
+    color: #fff;
+    text-shadow: 2px 2px #333333;
 }
 
 footer {
     background-color: #202020;
     padding: 1em 0;
+    margin-top: 30px;
 }
 
 footer li {
@@ -48,4 +68,11 @@ table tr td:last-child {
 
 table tr td:last-child {
     text-align: right;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 800px) {
+    header .intro-text .intro-heading {
+        font-size: 48px;
+    }
 }
