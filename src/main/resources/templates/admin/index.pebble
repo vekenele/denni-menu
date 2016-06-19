@@ -11,6 +11,11 @@
                 <h1>Administration</h1>
 
                 <hr>
+
+                <form method="post">
+                    <input type="file" name="uploadMenu">
+                    <input type="submit" name="uploadMenuSubmit">
+                </form>
             </div>
         </div>
     </div>
