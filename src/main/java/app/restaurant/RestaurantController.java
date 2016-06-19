@@ -6,8 +6,14 @@ package app.restaurant;
 
 import spark.*;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class RestaurantController {
-    public static Route getAllRestaurants = (Request request, Response response) -> {
-        return RestaurantService.XSLTProcessRestaurants();
+
+    public static TemplateViewRoute getAllRestaurants = (request, response) -> {
+        Map<String, Object> data = new HashMap<>();
+        data.put("restaurants", RestaurantService.XSLTProcessRestaurants());
+        return new ModelAndView(data, "index");
     };
 }

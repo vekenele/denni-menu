@@ -14,7 +14,7 @@ import javax.xml.transform.stream.StreamSource;
  * Created by Jiri Ketner on 17/06/16.
  */
 public class RestaurantService {
-    public static String XSLTProcessRestaurants() throws TransformerConfigurationException, TransformerException {
+    public static String XSLTProcessRestaurants() throws TransformerException {
 
         TransformerFactory tf = TransformerFactory.newInstance();
         URL urlXSL = RestaurantService.class.getClassLoader().getResource("xslt/RestaurantIndexPage.xsl");
@@ -29,5 +29,5 @@ public class RestaurantService {
         StringBuffer sb = outWriter.getBuffer();
 
         return sb.toString(); // TODO
-    };
+    }
 }
