@@ -1,8 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <dailymenu>
-    <validFrom>2016-06-27</validFrom>
-    <validTo>2016-07-01</validTo>
-    <monday date="2016-06-27">
+    <validFrom>2016-07-04</validFrom>
+    <validTo>2016-07-08</validTo>
+    <monday date="2016-07-04">
         <appetizer>
             <variant>
                 <name>Chléb se sádlem a pažitkou</name>
@@ -66,7 +65,7 @@
             </variant>
         </dessert>
     </monday>
-    <tuesday date="2016-06-28">
+    <tuesday date="2016-07-05">
         <appetizer>
             <variant>
                 <name>Cuketa zapečená se šunkou</name>
@@ -130,7 +129,7 @@
             </variant>
         </dessert>
     </tuesday>
-    <wednesday date="2016-06-29">
+    <wednesday date="2016-07-06">
         <appetizer>
             <variant>
                 <name>Zapečený hermelín se žampiony</name>
@@ -194,7 +193,7 @@
             </variant>
         </dessert>
     </wednesday>
-    <thursday date="2016-06-30">
+    <thursday date="2016-07-07">
         <appetizer>
             <variant>
                 <name>Domácí tlačenka</name>
@@ -258,7 +257,7 @@
             </variant>
         </dessert>
     </thursday>
-    <friday date="2016-07-01">
+    <friday date="2016-07-08">
         <appetizer>
             <variant>
                 <name>Francouzský toast</name>
