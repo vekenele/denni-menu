@@ -1,0 +1,31 @@
+{% extends 'layouts/admin' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<!-- Sectionss -->
+<section>
+    <div class="container">
+        <div class="row ">
+            <div class="col-md-3">
+                {% include 'fragments/admin/side-nav' %}
+            </div>
+            <div class="col-md-8">
+                <h3>Administration <small>/ menu - import</small></h3>
+
+                <hr>
+
+                <h4>Import Menu</h4>
+
+                <form method="post" action="/admin/menu/import" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="file">File</label>
+                        <input type="file" class="form-control" id="file" name="file" placeholder="File">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Import</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
