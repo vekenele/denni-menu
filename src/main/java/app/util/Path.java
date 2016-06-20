@@ -7,6 +7,8 @@ public class Path {
 
     public static class Web {
         public static final String INDEX = "/";
+        public static final String ABOUT = "/about-us";
+        public static final String CONTACT = "/contact";
         public static final String ANYTHING = "*";
     }
 

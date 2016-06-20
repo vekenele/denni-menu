@@ -32,7 +32,9 @@ public class Application {
         //-----------------------------
 
         // Web
-        get(Path.Web.INDEX, RestaurantController.getAllRestaurants, engine);
+        get(Path.Web.INDEX, (req, resp) -> new ModelAndView(null, "index"), engine);
+        get(Path.Web.ABOUT, (req, resp) -> new ModelAndView(null, "about"), engine);
+        get(Path.Web.CONTACT, (req, resp) -> new ModelAndView(null, "contact"), engine);
 
         // Admin
         get(Path.Admin.INDEX, AdminController.index, engine);

@@ -1,0 +1,57 @@
+{% extends 'layouts/master' %}
+
+{% block title %}About us | VEKENELE restaurant{% endblock %}
+
+{% block header %}{% include "fragments/headerabout" %}{% endblock %}
+
+{% block content %}
+
+<section id="about-us">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2><span>About us</span><br>and our restaurant</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <p>
+                    For a delicous breakfast, lunch and dinner you are welcome in the Tipsy Seagull restaurant. With an amazing view at the sea you will enjoy a buffet dinner or you can choose from the menu card. You can visit Tipsy Seagull restaurant everyday for a nice cup of coffee or for drinks.
+                </p>
+                <p>
+                    Did you know you can check our menu card online?
+                    Enjoy yourself with our delicous dishes which you can check on the menu card and choose the best dish ever.
+                </p>
+                <h3>Breakfast</h3>
+                <p>
+                    In the Tipsy Seagull Restaurant you are welcome to enjoy your healthy start of the day. At the breakfast buffet you can choose between fresh baked rolls, juices, coffee and tea, fresh fruit, yoghurt, sweet pie's, all kinds of bread and baked eggs.
+                </p>
+                <p>
+                    The breakfast will be daily served from 07:00 till 10:00 o'clock in the morning.
+                </p>
+                <h3>Lunch</h3>
+                <p>
+                    Our kitchen team provides a complete lunch for you. The amazing buffet and the small menu card is giving you a choice between all kind of dishes. Nice sandwiches, healthy salads, meat and fish dishes.
+                </p>
+                <p>
+                    The lunch will be daily served from 12:30 till 14:30 o'clock in the afternoon.
+                </p>
+                <h3>Dinner</h3>
+                <p>
+                    In our restaurant you can enjoy all kind of fishes, which have been catched that same day. We offer you various meat dishes as well. At this restaurant the cooks are working every evening with fresh local products.
+                </p>
+                <p>
+                    The dinner will be daily served from 18:30 till 22:00 o'clock in the evening.
+                </p>
+                <h3>Opening times</h3>
+                <ul>
+                    <li>Breakfast - Daily from 07:00 - 10:00</li>
+                    <li>Lunch - Daily from 12:00 - 18:00</li>
+                    <li>Dinner - Daily from 18:30 - 22:00</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,57 @@
+{% extends 'layouts/master' %}
+
+{% block title %}Contact | VEKENELE restaurant{% endblock %}
+
+{% block header %}{% include "fragments/headercontact" %}{% endblock %}
+
+{% block content %}
+
+<section id="contact-us">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2><span>Feel free</span><br>to contact us</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-5 col-md-offset-1">
+                <form>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input class="form-control" name="name" id="name" placeholder="Enter name" title="Please enter your name (at least 2 characters)" type="text">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input class="form-control" name="email" id="email" placeholder="Enter email" title="Please enter a valid email address" type="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="comments">Comments</label>
+                        <textarea name="comment" class="form-control" id="comments" cols="3" rows="5" placeholder="Enter your message…" title="Please enter your message (at least 10 characters)"></textarea>
+                        <button name="submit" type="submit" class="btn" id="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+
+            <aside class="col-md-5 left-padding">
+                <h3>Contact Information</h3>
+                <p>You'll find our restaurant on the following address</p>
+                <p>
+                    Galerie Vaňkovka <br>
+                    Masarykova 18/2205 <br>
+                    Brno - Střed
+                </p>
+                <p>
+                    Phone: +420 605 332 445 <br>
+                    Email: info [@] vekenele.com
+                </p>
+                <h4>Opening hours</h4>
+                <p>
+                    Monday - Friday: 10 AM - 23 PM <br>
+                    Saturday - Sunday: 17 PM - 1 AM
+                </p>
+            </aside>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
