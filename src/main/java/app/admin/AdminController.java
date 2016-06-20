@@ -1,5 +1,7 @@
 package app.admin;
 
+import app.model.menu.Menu;
+import app.service.menu.MenuService;
 import spark.ModelAndView;
 import spark.TemplateViewRoute;
 
@@ -27,7 +29,11 @@ public class AdminController {
 
         Part menuFile = request.raw().getPart("uploadMenu");
 
-        System.out.println("File: " + menuFile.getContentType());
+        if(MenuService.saveMenu(menuFile)) { // parsed successfully
+            System.out.println("Soubor OK");
+        } else System.out.println("Soubor NOK"); // parsing failed
+
+
         return new ModelAndView(null, "admin/uploaded-menu");
     };
 
