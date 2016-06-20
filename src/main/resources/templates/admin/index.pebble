@@ -12,7 +12,7 @@
 
                 <hr>
 
-                <form method="get" action="/admin/uploaded-menu">
+                <form method="post" action="/admin/uploaded-menu" enctype="multipart/form-data">
                     <input type="file" name="uploadMenu">
                     <input type="text" name="tst">
                     <input type="submit" name="uploadMenuSubmit">
