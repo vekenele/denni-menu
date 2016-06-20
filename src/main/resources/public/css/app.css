@@ -1,5 +1,32 @@
+body {
+    font-size: 14px;
+}
+
 a {
     cursor: pointer;
+    color: #f39d17;
+}
+
+a:hover {
+    color: #a06100;
+}
+
+.navbar-brand.page-scroll {
+    color: #a06100;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+ }
+
+#main-nav .navbar-right .dropdown-menu {
+    left: 0;
+    right: auto;
+}
+
+.navbar-fixed-top {
+    border-bottom: 5px solid #f39d17;
 }
 
 header {
@@ -15,6 +42,14 @@ header {
     color: white;
     position: relative;
     z-index: 1;
+}
+
+header.about-us {
+    background-image: url('../img/header-bg2.jpg');
+}
+
+header.contact-us {
+    background-image: url('../img/header-bg3.jpg');
 }
 
 header::before {
@@ -46,8 +81,7 @@ header .intro-text .intro-heading {
 
 footer {
     background-color: #202020;
-    padding: 1em 0;
-    margin-top: 30px;
+    padding: 3.6em 0 1em 0;
 }
 
 footer li {
@@ -68,6 +102,166 @@ table tr td:last-child {
 
 table tr td:last-child {
     text-align: right;
+}
+
+/* HOMEPAGE STYLES */
+#homepage-welcome {
+    margin-top: 30px;
+}
+
+#homepage-welcome h2, #homepage-services h2, #homepage-cooks h2, #about-us h2, #contact-us h2 {
+    text-align: center;
+    color: #a06100;
+    font-size: 36px;
+    font-weight: 300;
+}
+
+#homepage-welcome h2 span, #homepage-services h2 span, #homepage-cooks h2 span, #about-us h2 span, #contact-us h2 span {
+    font-family: 'Yesteryear', cursive;
+    color: #f39d17;
+    font-size: 80px;
+    font-weight: 400;
+}
+
+#homepage-welcome .our-restaurant {
+    margin-top: 40px;
+    text-align: center;
+}
+
+#homepage-welcome .our-restaurant img {
+    width: 100%;
+    border: 1px solid #f39d17;
+    margin-bottom: 15px;
+}
+
+.decoration::before {
+    background: #f39d17 none repeat scroll 0 0;
+    content: "";
+    height: 1px;
+    left: 0;
+    margin-left: 3px;
+    margin-right: 67px;
+    position: absolute;
+    right: 50%;
+    top: 10px;
+}
+
+.decoration::after {
+    background: #f39d17 none repeat scroll 0 0;
+    content: "";
+    height: 1px;
+    left: 50%;
+    margin-left: 67px;
+    margin-right: 3px;
+    position: absolute;
+    right: 0;
+    top: 10px;
+}
+
+.decoration {
+    position: relative;
+    text-align: center;
+    margin: 45px 0 65px 0;
+}
+
+.decoration .btndec {
+    color: #f39d17;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 20px;
+    position: relative;
+}
+
+.decoration .btndec:hover {
+    color: #a06100;
+}
+
+#homepage-services .circle {
+    background: transparent none repeat scroll 0 0;
+    display: inline-block;
+    max-width: 100%;
+    overflow: hidden;
+    transition: all 1s ease 0s;
+    border-radius: 0;
+    color: #f39d17;
+    height: 110px;
+    line-height: 90px !important;
+    width: 90px;
+}
+
+#homepage-services .col-md-3:hover .circle {
+    transform: scale(1.25);
+}
+
+#homepage-services .circle img {
+    vertical-align: middle;
+    width: 100%;
+}
+
+#homepage-services .services {
+    margin-top: 45px;
+    margin-bottom: 100px;
+}
+
+#homepage-services .services h3 {
+    font-size: 24px;
+}
+
+#homepage-cooks {
+    background-color: #f39d17;
+}
+
+#homepage-cooks h2 span {
+    color: #fff;
+}
+
+#homepage-cooks h2 {
+    color: #fff;
+    margin-top: 70px;
+}
+
+#homepage-cooks .cooks {
+    margin-top: 50px;
+    color: #fff;
+    margin-bottom: 80px;
+}
+
+#homepage-cooks .cooks h3 {
+    font-family: 'Yesteryear', cursive;
+    color: #fff;
+    font-size: 32px;
+    margin: 15px 10px;
+}
+
+#homepage-cooks .cooks img {
+    border: 1px solid #a06100;
+}
+
+/* ABOUT US / CONTACT STYLES */
+#about-us, #contact-us {
+    margin: 30px 0 70px 0;
+}
+
+#about-us h2, #contact-us h2 {
+    margin-bottom: 35px;
+}
+
+#contact-us form .form-control {
+    box-shadow: none !important;
+    border: 1px solid #f39d17;
+}
+
+#contact-us form .btn {
+    background-color: #f39d17;
+    box-shadow: none;
+    border-radius: 0;
+    color: #fff;
+    margin-top: 15px;
+}
+
+#contact-us .left-padding {
+    padding-left: 25px;
 }
 
 /* MEDIA QUERIES */
