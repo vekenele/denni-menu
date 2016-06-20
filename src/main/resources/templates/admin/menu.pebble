@@ -11,11 +11,18 @@
                 {% include 'fragments/admin/side-nav' %}
             </div>
             <div class="col-md-8">
-                <h3>Administration <small>/ dashboard</small></h3>
+                <h3>Administration <small>/ menu</small></h3>
 
                 <hr>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, aspernatur, at delectus dolores dolorum expedita explicabo fugiat harum ipsam itaque laborum omnis quam qui quod reprehenderit, rerum sed sunt totam.</p>
+                <ul>
+                    <li>a</li>
+                    <li>b</li>
+                    <li>c</li>
+                    <li>d</li>
+                    <li>e</li>
+                    <li>f</li>
+                </ul>
             </div>
         </div>
     </div>

@@ -21,7 +21,7 @@ import static spark.Spark.*;
 public class Application {
 
     /**
-     * Here it is where all routes are registered for application.
+     * Here are all the registered application routes.
      *
      * @param args command line arguments
      */
@@ -46,9 +46,14 @@ public class Application {
 
         // Admin
         get(Path.Admin.INDEX, AdminController.index, engine);
+        get(Path.Admin.MENU, AdminController.menu, engine);
+        get(Path.Admin.MENU_CREATE, AdminController.menuCreate, engine);
+        post(Path.Admin.MENU_CREATE, AdminController.menuCreatePost);
+        get(Path.Admin.MENU_IMPORT, AdminController.menuImport, engine);
+        post(Path.Admin.MENU_IMPORT, AdminController.menuImportPost);
 
-        // Admin/uploaded-menu
-        post(Path.Admin.UPLOADED_MENU, AdminController.uploadedMenu, engine);
+//        // Admin/uploaded-menu
+//        post(Path.Admin.UPLOADED_MENU, AdminController.uploadedMenu, engine);
 
         // Error
         get(Path.Web.ANYTHING, (req, resp) -> new ModelAndView(null, "404"), engine);
