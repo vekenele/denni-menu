@@ -11,12 +11,8 @@
                 <h1>Administration</h1>
 
                 <hr>
+                TEST MENU NAHRANO
 
-                <form method="get" action="/admin/uploaded-menu">
-                    <input type="file" name="uploadMenu">
-                    <input type="text" name="tst">
-                    <input type="submit" name="uploadMenuSubmit">
-                </form>
             </div>
         </div>
     </div>

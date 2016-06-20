@@ -37,6 +37,9 @@ public class Application {
         // Admin
         get(Path.Admin.INDEX, AdminController.index, engine);
 
+        // Admin/uploaded-menu
+        get(Path.Admin.UPLOADED_MENU, AdminController.uploadedMenu, engine);
+
         // Error
         get(Path.Web.ANYTHING, (req, resp) -> new ModelAndView(null, "404"), engine);
 
