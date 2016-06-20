@@ -1,0 +1,64 @@
+{% extends 'layouts/admin' %}
+
+{% block title %}Administration - Add Menu Item{% endblock %}
+
+{% block content %}
+
+<h3>Add Menu Item</h3>
+
+<hr>
+
+<p class="text-danger">TODO: Create item after succeed request.</p>
+<p class="text-danger">TODO: Make PLUS button working.</p>
+
+<form method="post" action="">
+
+    <div class="form-group">
+        <label for="day">Day</label>
+        <select class="form-control" id="day" name="day">
+            <option value="mon">Monday</option>
+            <option value="tue">Tuesday</option>
+            <option value="wed">Wednesday</option>
+            <option value="thu">Thursday</option>
+            <option value="fri">Friday</option>
+        </select>
+    </div>
+
+    <div class="well">
+        <strong>Menu Item</strong>
+
+        <div class="form-group">
+            <label for="type">Type</label>
+            <select class="form-control" id="type" name="type">
+                <option value="appetizer">Appetizer</option>
+                <option value="soup">Soup</option>
+                <option value="maindish">Main Dish</option>
+                <option value="dessert">Dessert</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="appetizer-name">Name</label>
+            <input type="text" class="form-control" id="appetizer-name" name="appetizer-name" placeholder="Hermelín v bramborovém těstíčku">
+        </div>
+        <div class="form-group">
+            <label for="appetizer-allergens">Allergens</label>
+            <input type="text" class="form-control" id="appetizer-allergens" name="appetizer-allergens" placeholder="1, 3">
+        </div>
+        <div class="form-group">
+            <label for="appetizer-cost-price">Cost Price</label>
+            <input type="number" class="form-control" id="appetizer-cost-price" name="appetizer-cost-price" placeholder="28">
+        </div>
+        <div class="form-group">
+            <label for="appetizer-sell-price">Sell Price</label>
+            <input type="number" class="form-control" id="appetizer-sell-price" name="appetizer-sell-price" placeholder="35">
+        </div>
+    </div>
+    <button type="button" id="add-item" class="btn btn-success pull-right"><i class="glyphicon glyphicon-plus"></i> Next Item</button>
+
+    <button type="submit" class="btn btn-primary">Create Item</button>
+</form>
+
+<br>
+
+{% endblock %}

@@ -8,6 +8,6 @@
 
 <hr>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, aspernatur, at delectus dolores dolorum expedita explicabo fugiat harum ipsam itaque laborum omnis quam qui quod reprehenderit, rerum sed sunt totam.</p>
+<p class="text-danger">TODO: Create dashboard content.</p>
 
 {% endblock %}
