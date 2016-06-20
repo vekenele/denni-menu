@@ -1,20 +1,9 @@
 package app.admin;
 
-<<<<<<< HEAD
-import app.service.menu.MenuService;
 import spark.ModelAndView;
-import spark.TemplateViewRoute;
-
-import javax.servlet.MultipartConfigElement;
-import javax.servlet.http.Part;
-import java.util.HashMap;
-
-=======
 import spark.Route;
-import spark.ModelAndView;
 import spark.TemplateViewRoute;
 
->>>>>>> 4117d4c5ce7b611194f0c69f45dece8d0e3b0bc0
 /**
  * Administration Controller.
  *
@@ -49,17 +38,11 @@ public class AdminController {
      * Show the menu import form.
      */
     public static TemplateViewRoute menuImport = (request, response) -> new ModelAndView(null, "admin/menu-import");
-
-<<<<<<< HEAD
-        if(MenuService.menuFactory(menuFile)) { // parsed successfully
-            System.out.println("Soubor OK");
-        } else System.out.println("Soubor NOK"); // parsing failed
-=======
+    
     /**
      * Import the menu.
      */
     public static Route menuImportPost = (request, response) -> "TODO: menu import";
->>>>>>> 4117d4c5ce7b611194f0c69f45dece8d0e3b0bc0
 
 
 //    public static TemplateViewRoute uploadedMenu = (request, response) -> {
