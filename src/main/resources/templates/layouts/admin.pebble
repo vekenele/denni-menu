@@ -6,10 +6,48 @@
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/app.css">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+    <style>
+        /* Sticky footer styles
+        -------------------------------------------------- */
+        html {
+            position: relative;
+            min-height: 100%;
+        }
+        body {
+            /* Margin bottom by footer height */
+            margin-bottom: 60px;
+        }
+        footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            /* Set the fixed height of the footer here */
+            height: 60px;
+            background-color: #2196f3;
+            color: #fff;
+        }
+    </style>
 </head>
 <body style="padding-top: 80px">
-{% include "fragments/navigation" %}
-{% block content %}{% endblock %}
+
+{% include "fragments/admin/navigation" %}
+
+<section>
+    <div class="container">
+        <div class="row ">
+            <div class="col-md-3">
+                {% include 'fragments/admin/side-nav' %}
+            </div>
+            <div class="col-md-8">
+                {% block content %}{% endblock %}
+            </div>
+        </div>
+    </div>
+</section>
+
+{% include "fragments/admin/footer" %}
+
 <script src="/js/jquery-2.2.3.min.js"></script>
 <script src="/js/bootstrap.min.js"></script>
 </body>
