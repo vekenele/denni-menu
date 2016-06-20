@@ -1,29 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
 	<!--
-		XML Schema, které se používá při validaci přidávání týdenního menu pro konkrétní 
-		restauraci metodou parsování vstupního souboru. 
+		XML Schema, které se používá při validaci přidávání týdenního menu metodou parsování vstupního txt souboru.
 	-->
-	<xsd:element name="restaurant">
+	<xsd:element name="dailymenu">
 		<xsd:complexType>
 			<xsd:sequence>
-				<xsd:element name="servedFrom" type="servedType" minOccurs="1" maxOccurs="1"/>
-				<xsd:element name="servedTo" type="servedType" minOccurs="1" maxOccurs="1"/>
+				<xsd:element name="validFrom" type="xsd:date" minOccurs="1" maxOccurs="1"/>
+				<xsd:element name="validTo" type="xsd:date" minOccurs="1" maxOccurs="1"/>
 				<xsd:element name="monday" type="dayType" minOccurs="1" maxOccurs="1"/>
 				<xsd:element name="tuesday" type="dayType" minOccurs="1" maxOccurs="1"/>
 				<xsd:element name="wednesday" type="dayType" minOccurs="1" maxOccurs="1"/>
 				<xsd:element name="thursday" type="dayType" minOccurs="1" maxOccurs="1"/>
 				<xsd:element name="friday" type="dayType" minOccurs="1" maxOccurs="1"/>
 			</xsd:sequence>
-			<xsd:attribute name="rid" type="xsd:positiveInteger" use="required"/>
 		</xsd:complexType>
 	</xsd:element>
-
-	<xsd:simpleType name="servedType">
-		<xsd:restriction base="xsd:string">
-			<xsd:pattern value="1[0-5]:[0-9]{2}"/>
-		</xsd:restriction>
-	</xsd:simpleType>
 
 	<xsd:complexType name="dayType">
 		<xsd:sequence>
@@ -45,7 +37,6 @@
 							<xsd:element name="allergens" type="allergensType" minOccurs="0" maxOccurs="1"/>
 							<xsd:element name="costPrice" type="xsd:positiveInteger" minOccurs="1" maxOccurs="1"/>
 							<xsd:element name="sellPrice" type="xsd:positiveInteger" minOccurs="1" maxOccurs="1"/>
-							<xsd:element name="interest" type="xsd:positiveInteger" minOccurs="1" maxOccurs="1"/>
 						</xsd:sequence>
 					</xsd:complexType>
 				</xsd:element>
@@ -55,7 +46,6 @@
 				<xsd:element name="allergens" type="allergensType" minOccurs="0" maxOccurs="1"/>
 				<xsd:element name="costPrice" type="xsd:positiveInteger" minOccurs="1" maxOccurs="1"/>
 				<xsd:element name="sellPrice" type="xsd:positiveInteger" minOccurs="1" maxOccurs="1"/>
-				<xsd:element name="interest" type="xsd:positiveInteger" minOccurs="1" maxOccurs="1"/>
 			</xsd:sequence>
 		</xsd:choice>
 	</xsd:complexType>
