@@ -1,6 +1,5 @@
 package app.admin;
 
-import app.model.menu.Menu;
 import app.service.menu.MenuService;
 import spark.ModelAndView;
 import spark.TemplateViewRoute;
@@ -8,7 +7,6 @@ import spark.TemplateViewRoute;
 import javax.servlet.MultipartConfigElement;
 import javax.servlet.http.Part;
 import java.util.HashMap;
-import java.util.Map;
 
 /**
  * @author Peter Neupauer
@@ -29,7 +27,7 @@ public class AdminController {
 
         Part menuFile = request.raw().getPart("uploadMenu");
 
-        if(MenuService.saveMenu(menuFile)) { // parsed successfully
+        if(MenuService.menuFactory(menuFile)) { // parsed successfully
             System.out.println("Soubor OK");
         } else System.out.println("Soubor NOK"); // parsing failed
 
