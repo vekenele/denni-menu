@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<customers>
+    <customer cid="1">
+        <name>John Doe</name>
+        <phone>+420 604 133 455</phone>
+    </customer>
+    <customer cid="2">
+        <name>Mike Vazowski</name>
+        <phone>+420 608 135 456</phone>
+    </customer>
+    <customer cid="3">
+        <name>Tomáš Nakládal</name>
+        <phone>+420 725 135 456</phone>
+    </customer>
+    <customer cid="4">
+        <name>Mojmír Novák</name>
+        <phone>+420 608 456 456</phone>
+    </customer>
+    <customer cid="5">
+        <name>Jarmila Slováková</name>
+        <phone>+420 755 466 388</phone>
+    </customer>
+    <customer cid="6">
+        <name>Jana Netrubová</name>
+        <phone>+420 608 445 122</phone>
+    </customer>
+    <customer cid="7">
+        <name>Slavomír Lener</name>
+        <phone>+420 605 277 456</phone>
+    </customer>
+    <customer cid="8">
+        <name>Tomáš Nedorost</name>
+        <phone>+420 608 135 000</phone>
+    </customer>
+    <customer cid="9">
+        <name>Angelika Mrvová</name>
+        <phone>+420 733 266 456</phone>
+    </customer>
+    <customer cid="10">
+        <name>Tatiana Nesvadbová</name>
+        <phone>+420 732 209 366</phone>
+    </customer>
+</customers>
