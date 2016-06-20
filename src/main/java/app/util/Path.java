@@ -14,6 +14,10 @@ public class Path {
 
     public static class Admin {
         public static final String INDEX = "/admin";
-        public static final String UPLOADED_MENU = "/admin/uploaded-menu";
+        public static final String MENU = "/admin/menu";
+        public static final String MENU_CREATE = "/admin/menu/create";
+        public static final String MENU_IMPORT = "/admin/menu/import";
+
+//        public static final String UPLOADED_MENU = "/admin/uploaded-menu";
     }
 }
