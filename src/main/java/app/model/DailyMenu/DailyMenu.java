@@ -13,9 +13,11 @@ import java.util.ArrayList;
  * This class represents Menu for one day
  */
 public class DailyMenu {
+    private String day;
     private String date;
     private Appetizer appetizer;
     private Soup soup;
     private Dessert dessert;
     private ArrayList<MainDish> dishes;
+
 }
