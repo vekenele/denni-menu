@@ -114,7 +114,13 @@ public class MenuService {
                 Menu menu = new Menu(validFrom, validTo, dailyMenus);
                 printMenu(menu);
                 boolean menuCreated = createXml(menu);
-                System.out.println("Menu created: " + menuCreated);
+                if(menuCreated) {
+                    System.out.println("Menu created");
+                } else {
+                    System.out.println("Menu was not create");
+                    return false;
+                }
+
             } else return false;
 
         } catch (IOException e) {
@@ -130,7 +136,6 @@ public class MenuService {
     }
 
     private static boolean createXml(Menu menu) {
-
         return XmlService.createXml(menu);
     }
 

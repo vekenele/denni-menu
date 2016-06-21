@@ -6,19 +6,27 @@ import app.model.food.Dessert;
 import app.model.food.MainDish;
 import app.model.food.Soup;
 import app.model.menu.Menu;
+import app.util.Path;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
+import org.xml.sax.SAXException;
 
+import javax.xml.XMLConstants;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.transform.Transformer;
-import javax.xml.transform.TransformerConfigurationException;
-import javax.xml.transform.TransformerException;
-import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.*;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
+import javax.xml.transform.stream.StreamSource;
+import javax.xml.validation.Schema;
+import javax.xml.validation.SchemaFactory;
+import javax.xml.validation.Validator;
 import java.io.File;
+import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.net.URL;
 import java.util.ArrayList;
 
 /**
@@ -35,6 +43,7 @@ public class XmlService {
      * @return
      */
     public static boolean createXml (Menu menu) {
+        boolean valid = false;
 
         DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
         try {
@@ -175,7 +184,8 @@ public class XmlService {
                 e.printStackTrace();
             }
             DOMSource source = new DOMSource(doc);
-            StreamResult result = new StreamResult(new File("src/main/resources/data/menus/" + menu.getValidFrom() + "_" + menu.getValidTo() + ".xml"));
+            StreamResult result = new StreamResult(new File( Path.Admin.XML_STORAGE + menu.getValidFrom() + "_" + menu.getValidTo() + ".xml"));
+
 
 
             try {
@@ -183,13 +193,48 @@ public class XmlService {
             } catch (TransformerException e) {
                 e.printStackTrace();
             }
-
+            valid = validateXml(Path.Admin.XML_STORAGE + menu.getValidFrom() + "_" + menu.getValidTo() + ".xml");
             System.out.println("File saved!");
 
 
         } catch (ParserConfigurationException e) {
             e.printStackTrace();
         }
+        return valid;
+    }
+
+    /**
+     * Validate XML against XML Schema
+     *
+     *@param xmlPath
+     * @return
+     */
+    public static boolean validateXml (String xmlPath) {
+
+        Source xsdFile = new StreamSource(new File(Path.Admin.XSD_PATH));
+        Source xmlFile = new StreamSource(new File(xmlPath));
+        SchemaFactory schemaFactory = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
+        Schema schema = null;
+        try {
+            schema = schemaFactory.newSchema(xsdFile);
+        } catch (SAXException e) {
+            e.printStackTrace();
+        }
+        Validator validator = schema.newValidator();
+        try {
+            try {
+                validator.validate(xmlFile);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            System.out.println(xmlFile.getSystemId() + " is valid");
+        } catch (SAXException e) {
+            System.out.println(xmlFile.getSystemId() + " is NOT valid");
+            System.out.println("Reason: " + e.getLocalizedMessage());
+            return false;
+        }
+
+
         return true;
     }
 }
