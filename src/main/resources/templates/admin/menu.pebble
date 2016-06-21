@@ -8,6 +8,26 @@
 
 <hr>
 
-<p>TODO</p>
+<p class="text-danger">TODO: Generate table programmatically.</p>
+
+<table class="table">
+    <tr>
+        <th>From</th>
+        <th>To</th>
+        <th>Action</th>
+    </tr>
+
+    <tr>
+        <td>4. July 2016</td>
+        <td>8. July 2016</td>
+        <td><a href="/admin/menu/04_07-08_07-2016/add">Add Item</a></td>
+    </tr>
+
+    <tr>
+        <td>27. June 2016</td>
+        <td>1. July 2016</td>
+        <td><a href="/admin/menu/27_06-01_07-2016/add">Add Item</a></td>
+    </tr>
+</table>
 
 {% endblock %}

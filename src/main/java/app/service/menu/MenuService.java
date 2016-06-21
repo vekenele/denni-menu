@@ -8,8 +8,11 @@ import app.model.food.Soup;
 
 import javax.servlet.http.Part;
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
@@ -84,5 +87,9 @@ public class MenuService {
             }
         }
         return true;
+    }
+
+    public static boolean exist(String name) throws IOException {
+        return Files.walk(Paths.get("src/main/resources/data/menus")).anyMatch(path -> path.getFileName().toString().equals(name + ".xml"));
     }
 }

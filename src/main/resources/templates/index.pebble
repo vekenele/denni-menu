@@ -1,14 +1,94 @@
 {% extends 'layouts/master' %}
 
-{% block title %}Home{% endblock %}
+{% block title %}Home | VEKENELE restaurant{% endblock %}
+
+{% block header %}{% include "fragments/header" %}{% endblock %}
 
 {% block content %}
 <!-- Section -->
-<section id="services">
+<section id="homepage-welcome">
     <div class="container">
-        <div class="row ">
+        <div class="row">
             <div class="col-md-12">
-                {{ restaurants | raw }}
+                <h2><span>Welcome</span><br>to Our Restaurant</h2>
+            </div>
+        </div>
+        <div class="row our-restaurant">
+            <div class="col-md-6">
+                <img src="/img/pic1.jpg">
+                <div class="col-md-10 col-md-offset-1">
+                    <p>For those with pure food indulgence in mind, come next door and sate your desires with our ever changing internationally and seasonally inspired small plates.  We love food, lots of different food, just like you.</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <img src="/img/pic2.jpg">
+                <div class="col-md-10 col-md-offset-1">
+                    <p>VEKENELE is a restaurant, bar and coffee roastery located on a busy corner site in Vaňkovka Market. With glazed frontage on two sides of the building, overlooking the market and a bustling Brno intersection.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="decoration">
+                    <a class="btndec" href="/about-us">Read more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="homepage-services">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2><span>Our</span><br>Services</h2>
+            </div>
+        </div>
+        <div class="row services">
+            <div class="col-md-3 text-center">
+                <i class="circle"><img src="/img/breakfast.png"></i>
+                <h3>Breakfast</h3>
+                <p>Breakfast is the first meal of a day, most often eaten in the early morning before undertaking the day's work.</p>
+            </div>
+            <div class="col-md-3 text-center">
+                <i class="circle"><img src="/img/lunch.png"></i>
+                <h3>Lunch</h3>
+                <p>Lunch, the abbreviation for luncheon, is a light meal typically eaten at midday. Visit us and make your stomach happy!</p>
+            </div>
+            <div class="col-md-3 text-center">
+                <i class="circle"><img src="/img/buffet.png"></i>
+                <h3>Buffet</h3>
+                <p>A buffet is a system of serving meals in which food is placed in a public area where the diners generally serve themselves.</p>
+            </div>
+            <div class="col-md-3 text-center">
+                <i class="circle"><img src="/img/party.png"></i>
+                <h3>Party</h3>
+                <p>Invite your frineds and prepare an unforgettable party with our help and services. <a href="/contact">Contact us</a> for more informations.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="homepage-cooks">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2><span>Our</span><br>Cooks</h2>
+            </div>
+        </div>
+        <div class="row cooks">
+            <div class="col-md-4">
+                <img src="/img/cook1.jpg">
+                <h3>John Doe</h3>
+                <p>I love to cook food that people enjoy eating - anything from game casseroles to Ottolenghi inspired salads. I like big flavors!</p>
+            </div>
+            <div class="col-md-4">
+                <img src="/img/cook2.jpg">
+                <h3>Mark Spencer</h3>
+                <p>I cook the national dishes of Senegal where I am from. It’s hearty, full of variety and ceremony and with subtle spice that can be augmented at each persons want.</p>
+            </div>
+            <div class="col-md-4">
+                <img src="/img/cook3.jpg">
+                <h3>Stan Lee</h3>
+                <p>I am a passionate foodie who enjoys cooking comforting and hearty meals like soups and stews, meals you can spoon and eat quickly, which also make you feel good.</p>
             </div>
         </div>
     </div>

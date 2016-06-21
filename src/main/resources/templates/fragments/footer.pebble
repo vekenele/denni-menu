@@ -1,17 +1,29 @@
 <!-- Footer -->
 <footer>
     <div class="container">
-        <ul class="list-unstyled">
-            <li>
-                <a href="#">Home</a>
-            </li>
-            <li>
-                <a href="#">About</a>
-            </li>
-            <li>
-                <a href="#">Contact</a>
-            </li>
-        </ul>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aperiam consequuntur esse facilis perspiciatis placeat quis similique velit veniam.</p>
+        <div class="row">
+            <div class="col-md-4">
+                <p>&copy; 2016 VEKENELE s.r.o.</p>
+            </div>
+            <div class="col-md-8">
+                <ul class="list-unstyled pull-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">Daily menu</a>
+                    </li>
+                    <li>
+                        <a href="#">Permanent offer</a>
+                    </li>
+                    <li>
+                        <a href="/about-us">About us</a>
+                    </li>
+                    <li>
+                        <a href="/contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
 </footer>
