@@ -23,7 +23,7 @@
                     aria-expanded="false">Menus</a>
                     <ul class="dropdown-menu">
                         <li>
-                            <a href="#">Daily</a>
+                            <a href="/menu/daily">Daily</a>
                         </li>
                         <li>
                             <a href="#">Permanent</a>

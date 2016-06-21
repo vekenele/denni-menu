@@ -1,0 +1,25 @@
+{% extends 'layouts/master' %}
+
+{% block title %}Daily menu | VEKENELE restaurant{% endblock %}
+
+{% block header %}{% include "fragments/headerdailymenu" %}{% endblock %}
+
+{% block content %}
+
+<section id="about-us">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h2><span>Pre-order</span><br>your favourite meal</h2>
+                <p>We are sorry that our menu is only in czech language yet.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                {{ menu | raw }}
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

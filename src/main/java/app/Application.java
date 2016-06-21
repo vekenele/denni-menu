@@ -1,7 +1,7 @@
 package app;
 
 import app.admin.AdminController;
-import app.restaurant.RestaurantController;
+import app.service.menu.MenuController;
 import app.util.Path;
 import com.mitchellbosecke.pebble.loader.ClasspathLoader;
 import com.mitchellbosecke.pebble.loader.Loader;
@@ -45,6 +45,7 @@ public class Application {
         get(Path.Web.INDEX, (req, resp) -> new ModelAndView(null, "index"), engine);
         get(Path.Web.ABOUT, (req, resp) -> new ModelAndView(null, "about"), engine);
         get(Path.Web.CONTACT, (req, resp) -> new ModelAndView(null, "contact"), engine);
+        get(Path.Web.DAILYMENU, MenuController.menu, engine);
 
         // Admin
         get(Path.Admin.INDEX, AdminController.index, engine);
