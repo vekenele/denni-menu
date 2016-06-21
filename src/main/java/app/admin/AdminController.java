@@ -85,12 +85,13 @@ public class AdminController {
             request.raw().setAttribute("org.eclipse.jetty.multipartConfig", multipartConfigElement);
         }
 
-        Part menuFile = request.raw().getPart("uploadMenu");
+        Part menuFile = request.raw().getPart("file");
 
         if(MenuService.menuFactory(menuFile)) { // parsed successfully
             System.out.println("Soubor OK");
         } else System.out.println("Soubor NOK"); // parsing failed
         return new ModelAndView(null, "admin/uploaded-menu");
+//        return new ModelAndView(null, "admin/menu-import");
     };
 
     /**

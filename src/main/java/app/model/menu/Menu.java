@@ -2,73 +2,35 @@ package app.model.menu;
 
 import app.model.dailyMenu.DailyMenu;
 
+import java.util.ArrayList;
+
 /**
  * Created by david on 20.06.16.
  *
- * This class represents Menu for the whole week
+ * This class represents Menu for a whole week
  */
 public class Menu {
     private String validFrom;
     private String validTo;
-    private DailyMenu menuMonday;
-    private DailyMenu menuTuesday;
-    private DailyMenu menuWednesday;
-    private DailyMenu menuThursday;
-    private DailyMenu menuFriday;
+    private ArrayList<DailyMenu> dailyMenus;
+
+
+    public Menu(String validFrom, String validTo, ArrayList<DailyMenu> dailyMenus) {
+        this.validFrom = validFrom;
+        this.validTo = validTo;
+        this.dailyMenus = dailyMenus;
+    }
 
     public String getValidFrom() {
         return validFrom;
     }
 
-    public void setValidFrom(String validFrom) {
-        this.validFrom = validFrom;
-    }
 
     public String getValidTo() {
         return validTo;
     }
 
-    public void setValidTo(String validTo) {
-        this.validTo = validTo;
-    }
-
-    public DailyMenu getMenuMonday() {
-        return menuMonday;
-    }
-
-    public void setMenuMonday(DailyMenu menuMonday) {
-        this.menuMonday = menuMonday;
-    }
-
-    public DailyMenu getMenuTuesday() {
-        return menuTuesday;
-    }
-
-    public void setMenuTuesday(DailyMenu menuTuesday) {
-        this.menuTuesday = menuTuesday;
-    }
-
-    public DailyMenu getMenuWednesday() {
-        return menuWednesday;
-    }
-
-    public void setMenuWednesday(DailyMenu menuWednesday) {
-        this.menuWednesday = menuWednesday;
-    }
-
-    public DailyMenu getMenuThursday() {
-        return menuThursday;
-    }
-
-    public void setMenuThursday(DailyMenu menuThursday) {
-        this.menuThursday = menuThursday;
-    }
-
-    public DailyMenu getMenuFriday() {
-        return menuFriday;
-    }
-
-    public void setMenuFriday(DailyMenu menuFriday) {
-        this.menuFriday = menuFriday;
+    public ArrayList<DailyMenu> getDailyMenus() {
+        return dailyMenus;
     }
 }
