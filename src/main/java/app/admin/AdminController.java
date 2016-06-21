@@ -1,8 +1,13 @@
 package app.admin;
 
+import app.service.menu.MenuService;
 import spark.ModelAndView;
 import spark.Route;
 import spark.TemplateViewRoute;
+
+import javax.servlet.MultipartConfigElement;
+import javax.servlet.http.Part;
+import java.util.HashMap;
 
 /**
  * Administration Controller.
@@ -42,7 +47,22 @@ public class AdminController {
     /**
      * Import the menu.
      */
-    public static Route menuImportPost = (request, response) -> "TODO: menu import";
+    public static Route menuImportPost = (request, response) ->  {
+                HashMap data = new HashMap<>();
+
+        if (request.raw().getAttribute("org.eclipse.jetty.multipartConfig") == null) {
+            MultipartConfigElement multipartConfigElement = new MultipartConfigElement(System.getProperty("java.io.tmpdir"));
+            request.raw().setAttribute("org.eclipse.jetty.multipartConfig", multipartConfigElement);
+        }
+
+        Part menuFile = request.raw().getPart("uploadMenu");
+
+        if(MenuService.menuFactory(menuFile)) { // parsed successfully
+            System.out.println("Soubor OK");
+        } else System.out.println("Soubor NOK"); // parsing failed
+
+        return new ModelAndView(null, "admin/uploaded-menu");
+    };
 
 
 //    public static TemplateViewRoute uploadedMenu = (request, response) -> {

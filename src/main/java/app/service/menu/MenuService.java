@@ -65,8 +65,9 @@ public class MenuService {
                     tmpBuffer = line.toLowerCase().replace("[maindish]", "").replace("[/maindish]", "").split("\\*");
                     for(int i = 0; i < tmpBuffer.length; i++ ) {
                         String[] tmpArray = tmpBuffer[i].split(";");
-                        System.out.println("0: " + tmpArray[0] + "1: " + tmpArray[1] + "2: " + tmpArray[2] + "3: " + tmpArray[3]);
+                        System.out.println("0: " + tmpArray[0] + ", 1: " + tmpArray[1] + ", 2: " + tmpArray[2] + ", 3: " + tmpArray[3]);
                        // dishes.add(new MainDish(tmpArray[0], tmpArray[1], Integer.parseInt(tmpArray[2]), Integer.parseInt(tmpArray[3])));
+
                     }
                    // System.out.println("List: " + Arrays.toString(dishes.toArray()));
                 }
