@@ -7,6 +7,7 @@ import app.model.food.Dessert;
 import app.model.food.MainDish;
 import app.model.food.Soup;
 import app.model.menu.Menu;
+import app.service.xml.XmlService;
 
 import javax.servlet.http.Part;
 import javax.xml.transform.Transformer;
@@ -108,10 +109,13 @@ public class MenuService {
                     } else return false;
                 }
             }
+            // if all 5 days is properly parsed create final Menu object
             if(dailyMenus.size() == 5) {
                 Menu menu = new Menu(validFrom, validTo, dailyMenus);
                 printMenu(menu);
-            }
+                boolean menuCreated = createXml(menu);
+                System.out.println("Menu created: " + menuCreated);
+            } else return false;
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -125,9 +129,16 @@ public class MenuService {
         return true;
     }
 
+    private static boolean createXml(Menu menu) {
+
+        return XmlService.createXml(menu);
+    }
+
     public static boolean exist(String name) throws IOException {
         return Files.walk(Paths.get("src/main/resources/data/menus")).anyMatch(path -> path.getFileName().toString().equals(name + ".xml"));
     }
+
+
 
     /*
      * Print given Menu object in readable form
