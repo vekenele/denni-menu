@@ -20,7 +20,8 @@ public class Path {
         public static final String MENU_CREATE = "/admin/menu/create";
         public static final String MENU_IMPORT = "/admin/menu/import";
         public static final String MENU_ADD_ITEM = "/admin/menu/:id/add";
+        public static final String XML_STORAGE = "src/main/resources/data/menus/";
+        public static final String XSD_PATH = "weekMenu.xsd";
 
-//        public static final String UPLOADED_MENU = "/admin/uploaded-menu";
     }
 }
