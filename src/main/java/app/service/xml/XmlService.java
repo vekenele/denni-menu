@@ -9,6 +9,8 @@ import app.model.menu.Menu;
 import app.util.Path;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
 import javax.xml.XMLConstants;
@@ -22,6 +24,10 @@ import javax.xml.transform.stream.StreamSource;
 import javax.xml.validation.Schema;
 import javax.xml.validation.SchemaFactory;
 import javax.xml.validation.Validator;
+import javax.xml.xpath.XPathConstants;
+import javax.xml.xpath.XPathExpression;
+import javax.xml.xpath.XPathExpressionException;
+import javax.xml.xpath.XPathFactory;
 import java.io.File;
 import java.io.IOException;
 import java.net.URI;
@@ -30,9 +36,10 @@ import java.net.URL;
 import java.util.ArrayList;
 
 /**
- * Created by david on 21.06.16.
- *
  * Class providing operations with XML
+ *
+ * @author Bc. Jiří Ketner
+ * @author Bc. David Věžník
  */
 public class XmlService {
 
@@ -236,5 +243,56 @@ public class XmlService {
 
 
         return true;
+    }
+
+    /**
+     * Loads an XML file given in input parameter
+     * @param file      Input XML file
+     * @return          Document document
+     */
+    public static Document loadDocument(File file) throws Exception {
+        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+        factory.setNamespaceAware(true);
+        return factory.newDocumentBuilder().parse(file);
+    }
+
+    /**
+     * This function removes empty text nodes from document. Then transformer indenting
+     * works well.
+     * Source: http://stackoverflow.com/questions/978810/how-to-strip-whitespace-only-text-nodes-from-a-dom-before-serialization
+     */
+    public static void removeEmptyTextNodes(Document doc) {
+        XPathFactory xpathFactory = XPathFactory.newInstance();
+        // XPath to find empty text nodes.
+        NodeList emptyTextNodes = null;
+        try {
+            XPathExpression xpathExp = xpathFactory.newXPath().compile("//text()[normalize-space(.) = '']");
+            emptyTextNodes = (NodeList) xpathExp.evaluate(doc, XPathConstants.NODESET);
+        } catch(XPathExpressionException e) {
+            e.printStackTrace();
+        }
+
+        // Remove each empty text node from document.
+        if(emptyTextNodes != null) {
+            for (int i = 0; i < emptyTextNodes.getLength(); i++) {
+                Node emptyTextNode = emptyTextNodes.item(i);
+                emptyTextNode.getParentNode().removeChild(emptyTextNode);
+            }
+        }
+    }
+
+    /**
+     * Saves changes to source XML. This function is used when new customer is appended to document
+     * or new preorder is requested.
+     */
+    public static void saveChangesToXML(Document doc, File xml) throws TransformerException {
+        DOMSource source = new DOMSource(doc);
+
+        TransformerFactory transformerFactory = TransformerFactory.newInstance();
+        Transformer transformer = transformerFactory.newTransformer();
+        StreamResult result = new StreamResult(xml);
+        transformer.setOutputProperty(OutputKeys.INDENT, "yes");
+        transformer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "4");
+        transformer.transform(source, result);
     }
 }

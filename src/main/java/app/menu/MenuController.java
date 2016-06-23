@@ -24,7 +24,7 @@ public class MenuController {
     public static Route preOrder = (request, response) -> {
         String customerName = request.queryParams("customer[name]");
         String customerPhone = request.queryParams("customer[phone]");
-        //int customerId = CustomerService.returnCustomerId(customerName, customerPhone);
+        int customerId = CustomerService.returnCustomerId(customerName, customerPhone);
 
         // iterate over possible foods in order
         for(int i = 0; i < 4; i++) {

@@ -1,21 +1,14 @@
 package app.service.customer;
 
+import app.service.xml.XmlService;
 import app.util.Path;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
-import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-import javax.xml.parsers.DocumentBuilderFactory;
+
 import javax.xml.transform.*;
-import javax.xml.transform.dom.DOMSource;
-import javax.xml.transform.stream.StreamResult;
-import javax.xml.xpath.XPathConstants;
-import javax.xml.xpath.XPathExpression;
-import javax.xml.xpath.XPathExpressionException;
-import javax.xml.xpath.XPathFactory;
 import java.io.File;
-import java.net.URL;
 
 /**
  * Created by Jiri Ketner on 22/06/16.
@@ -31,16 +24,10 @@ public class CustomerService {
     private CustomerService() {
         customersXML = new File(Path.Web.RESOURCES + "data/customers.xml");
         try {
-            loadDocument(customersXML);
+            doc = XmlService.loadDocument(customersXML);
         } catch(Exception e) {
             e.printStackTrace();
         }
-    }
-
-    private void loadDocument(File file) throws Exception {
-        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-        factory.setNamespaceAware(true);
-        doc = factory.newDocumentBuilder().parse(file);
     }
 
     public static CustomerService getInstance() {
@@ -102,45 +89,6 @@ public class CustomerService {
     }
 
     /**
-     * This function removes empty text nodes from document. Then transformer indenting
-     * works well.
-     * Source: http://stackoverflow.com/questions/978810/how-to-strip-whitespace-only-text-nodes-from-a-dom-before-serialization
-     */
-    private void removeEmptyTextNodes() {
-        XPathFactory xpathFactory = XPathFactory.newInstance();
-        // XPath to find empty text nodes.
-        NodeList emptyTextNodes = null;
-        try {
-            XPathExpression xpathExp = xpathFactory.newXPath().compile("//text()[normalize-space(.) = '']");
-            emptyTextNodes = (NodeList) xpathExp.evaluate(doc, XPathConstants.NODESET);
-        } catch(XPathExpressionException e) {
-            e.printStackTrace();
-        }
-
-        // Remove each empty text node from document.
-        if(emptyTextNodes != null) {
-            for (int i = 0; i < emptyTextNodes.getLength(); i++) {
-                Node emptyTextNode = emptyTextNodes.item(i);
-                emptyTextNode.getParentNode().removeChild(emptyTextNode);
-            }
-        }
-    }
-
-    /**
-     * Saves changes to source XML
-     */
-    private void saveChangesToXML() throws TransformerException {
-        DOMSource source = new DOMSource(doc);
-
-        TransformerFactory transformerFactory = TransformerFactory.newInstance();
-        Transformer transformer = transformerFactory.newTransformer();
-        StreamResult result = new StreamResult(customersXML);
-        transformer.setOutputProperty(OutputKeys.INDENT, "yes");
-        transformer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "4");
-        transformer.transform(source, result);
-    }
-
-    /**
      * If it finds a customer in XML file, then it returns its cid, otherwise
      * creates a new customer's node, appends it to document, save the XML and returns new cid.
      * @param name      customer's name
@@ -153,11 +101,11 @@ public class CustomerService {
         if(cid != -1) {
             return cid;
         } else {
-            service.removeEmptyTextNodes();
+            XmlService.removeEmptyTextNodes(service.doc);
             cid = service.createCustomer(name, phone);
 
             try {
-                service.saveChangesToXML();
+                XmlService.saveChangesToXML(service.doc, service.customersXML);
             } catch(TransformerException e) {
                 e.printStackTrace();
             }

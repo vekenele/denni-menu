@@ -44,4 +44,12 @@
         <name>Tomáš Nejedlý</name>
         <phone>+453 444 555</phone>
     </customer>
+    <customer cid="12">
+        <name>Jan Gilgameš</name>
+        <phone>+420 605 334 555</phone>
+    </customer>
+    <customer cid="13">
+        <name>Jan Gilgamešek</name>
+        <phone>+420 605 334 555</phone>
+    </customer>
 </customers>
