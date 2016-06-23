@@ -109,14 +109,14 @@ table tr td:last-child {
     margin-top: 30px;
 }
 
-#homepage-welcome h2, #homepage-services h2, #homepage-cooks h2, #about-us h2, #contact-us h2 {
+#homepage-welcome h2, #homepage-services h2, #homepage-cooks h2, #about-us h2, #contact-us h2, #dailymenu h2 {
     text-align: center;
     color: #a06100;
     font-size: 36px;
     font-weight: 300;
 }
 
-#homepage-welcome h2 span, #homepage-services h2 span, #homepage-cooks h2 span, #about-us h2 span, #contact-us h2 span {
+#homepage-welcome h2 span, #homepage-services h2 span, #homepage-cooks h2 span, #about-us h2 span, #contact-us h2 span, #dailymenu h2 span {
     font-family: 'Yesteryear', cursive;
     color: #f39d17;
     font-size: 80px;
@@ -239,11 +239,11 @@ table tr td:last-child {
 }
 
 /* ABOUT US / CONTACT STYLES */
-#about-us, #contact-us {
+#about-us, #contact-us, #dailymenu {
     margin: 30px 0 70px 0;
 }
 
-#about-us h2, #contact-us h2 {
+#about-us h2, #contact-us h2, #dailymenu h2 {
     margin-bottom: 35px;
 }
 
@@ -267,6 +267,40 @@ table tr td:last-child {
 /* MENU STYLES */
 .firstUppercase {
     text-transform: capitalize;
+}
+.foodVariants {
+    padding-left: 20px;
+}
+.foodVariants li span {
+    float: right;
+    font-weight: bold;
+    color: #f39d17;
+}
+.foodVariants li {
+    list-style-type: none;
+}
+.foodVariants li input {
+    margin-right: 8px;
+}
+#dailymenu h3 {
+    color: #f39d17;
+}
+
+#dailymenu h4 {
+    font-size: 18px;
+}
+
+#dailymenu p.validity {
+    margin-top: 50px;
+    color: #f39d17;
+}
+#customerName {
+    margin-bottom: 20px;
+}
+.wrong-data {
+    color: #a94442;
+    font-weight: bold;
+    position: absolute;
 }
 
 /* MEDIA QUERIES */

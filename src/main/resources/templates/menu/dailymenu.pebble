@@ -6,7 +6,7 @@
 
 {% block content %}
 
-<section id="about-us">
+<section id="dailymenu">
     <div class="container">
         <div class="row">
             <div class="col-md-12 text-center">
@@ -21,5 +21,30 @@
         </div>
     </div>
 </section>
+
+<!-- Modal -->
+<div class="modal fade" id="customerDataModal" tabindex="-1" role="dialog" aria-labelledby="customerDataModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="customerDataModalLabel">Please fill out the form</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="customerName">Your name</label>
+                    <input type="text" id="customerName" placeholder="Jan Novák" class="form-control"/>
+                    <label for="customerPhone">Your phone number (incl. country code)</label>
+                    <input type="text" id="customerPhone" placeholder="+420 720 445 323" class="form-control"/>
+                </div>
+                <div class="wrong-data text-center"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" onclick="preOrder()">Pre-order</button>
+            </div>
+        </div>
+    </div>
+</div>
 
 {% endblock %}

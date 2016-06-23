@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <customers>
     <customer cid="1">
         <name>John Doe</name>
@@ -39,5 +39,9 @@
     <customer cid="10">
         <name>Tatiana Nesvadbová</name>
         <phone>+420 732 209 366</phone>
+    </customer>
+    <customer cid="11">
+        <name>Tomáš Nejedlý</name>
+        <phone>+453 444 555</phone>
     </customer>
 </customers>

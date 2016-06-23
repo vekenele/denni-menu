@@ -10,6 +10,7 @@ public class Path {
         public static final String ABOUT = "/about-us";
         public static final String CONTACT = "/contact";
         public static final String DAILYMENU = "/menu/daily";
+        public static final String RESOURCES = "src/main/resources/";
         public static final String ANYTHING = "*";
     }
 

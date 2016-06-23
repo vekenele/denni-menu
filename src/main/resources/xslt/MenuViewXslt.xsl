@@ -4,7 +4,7 @@
     <xsl:template match="/dailymenu">
         <xsl:apply-templates select="monday|tuesday|wednesday|thursday|friday"/>
 
-        <p class="text-center"><strong>Valid from </strong>
+        <p class="text-center validity"><strong>Valid from </strong>
             <xsl:call-template name="formatDate">
                 <xsl:with-param name="date" select="validFrom" />
             </xsl:call-template>
@@ -17,11 +17,37 @@
 
     <xsl:template match="monday|tuesday|wednesday|thursday|friday">
         <h3 class="firstUppercase"><xsl:value-of select ="local-name()"/></h3>
-        <xsl:apply-templates select="*"/>
+        <form name="{@date}" onsubmit="openModal('{@date}'); return false;">
+            <xsl:apply-templates select="*"/>
+            <input type="submit" value="Pre-order"/>
+        </form>
     </xsl:template>
 
     <xsl:template match="appetizer|soup|mainDish|dessert">
-        <p>some food type</p>
+        <h4 class="firstUppercase"><xsl:value-of select="local-name()"/></h4>
+        <fieldset>
+            <ul class="foodVariants">
+                <xsl:choose>
+                    <xsl:when test="variant">
+                        <xsl:apply-templates select="variant"/>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <li>
+                            <input type="radio" name="{local-name()}" value="1"/>
+                            <strong><xsl:value-of select="name"/></strong> (allergens: <xsl:value-of select="allergens"/>) <span><xsl:value-of select="sellPrice"/> Kč</span>
+                        </li>
+                    </xsl:otherwise>
+                </xsl:choose>
+            </ul>
+        </fieldset>
+    </xsl:template>
+
+    <xsl:template match="variant">
+        <xsl:variable name="i" select="position()" />
+        <li>
+            <input type="radio" name="{local-name(./parent::*)}" value="{$i}"/>
+            <strong><xsl:value-of select="name"/></strong> (allergens: <xsl:value-of select="allergens"/>) <span><xsl:value-of select="sellPrice"/> Kč</span>
+        </li>
     </xsl:template>
 
     <xsl:template name="formatDate">
