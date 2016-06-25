@@ -334,6 +334,17 @@ table tr td:last-child {
 .clear-btn {
     margin: 10px 15px 0 0;
 }
+iframe[name='frame'] {
+    display: none;
+}
+.glyphicon.glyphicon-print {
+    float: right;
+    font-size: 20px;
+    cursor: pointer;
+}
+.glyphicon.glyphicon-print:hover {
+    color: #000;
+}
 
 /* MEDIA QUERIES */
 @media screen and (max-width: 800px) {

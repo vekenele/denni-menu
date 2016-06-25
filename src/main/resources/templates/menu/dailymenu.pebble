@@ -16,6 +16,7 @@
         </div>
         <div class="row">
             <div class="col-md-6 col-md-offset-3">
+                <span class="glyphicon glyphicon-print" onclick="frames['frame'].print()"></span>
                 {{ menu | raw }}
             </div>
         </div>
@@ -47,5 +48,8 @@
         </div>
     </div>
 </div>
+
+<!-- PRINT VERSION -->
+<iframe src="/menu/daily/print" name="frame"></iframe>
 
 {% endblock %}

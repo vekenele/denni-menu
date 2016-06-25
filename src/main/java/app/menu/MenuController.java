@@ -18,9 +18,19 @@ public class MenuController {
     public static TemplateViewRoute menu = (request, response) -> {
         Map<String, Object> data = new HashMap<>();
         String actualMenu = MenuService.actualMenuFilename();
+
         data.put("menu", XsltTransformService.XSLTProcessFile("xslt/MenuViewXslt.xsl",
                 "data/menus/" + actualMenu));
-        return new ModelAndView(data, "menu/dailymenu"); //TODO -> test if XML file exists
+        return new ModelAndView(data, "menu/dailymenu");
+    };
+
+    public static TemplateViewRoute menuPrint = (request, response) -> {
+        Map<String, Object> data = new HashMap<>();
+        String actualMenu = MenuService.actualMenuFilename();
+
+        data.put("menu", XsltTransformService.XSLTProcessFile("xslt/MenuPrintXslt.xsl",
+                "data/menus/" + actualMenu));
+        return new ModelAndView(data, "menu/dailymenu/print");
     };
 
     public static Route preOrder = (request, response) -> {

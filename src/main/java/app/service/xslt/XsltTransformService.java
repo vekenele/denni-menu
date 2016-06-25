@@ -32,7 +32,8 @@ public class XsltTransformService {
             xslPath = urlXSL.getPath();
             xmlPath = urlXML.getPath();
         } catch(NullPointerException e) {
-            e.printStackTrace();
+            //XML does not exists, no daily menu is prepared
+            return "<div class='alert alert-danger' role='alert'><p class='text-center'>Currently isn't available any daily menu. Please come back later.</p></div>";
         }
 
         Transformer xsltProc = tf.newTransformer(new StreamSource(new File(xslPath)));

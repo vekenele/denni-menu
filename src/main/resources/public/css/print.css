@@ -1,0 +1,70 @@
+@page {
+  size: A4;
+}
+
+@page :left {
+  margin-left: 1cm;
+}
+
+@page :right {
+  margin-left: 1cm;
+}
+
+body {
+    font-size: 11px;
+}
+
+h1, h2 {
+    text-align: center;
+    text-transform: capitalize;
+}
+
+h1 {
+    font-size: 18px;
+}
+
+h2 {
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+h3 {
+    text-transform: capitalize;
+    font-size: 14px;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.foodVariants li > span {
+    float: right;
+    font-weight: bold;
+}
+
+.foodVariants {
+    padding-left: 20px;
+    margin-top: 3px;
+    margin-bottom: 10px;
+}
+
+.menuWrapper {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.day {
+    float: none;
+}
+.page-break {
+    page-break-after: always;
+}
+.restaurantInfo {
+    width: 35%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 100px;
+}
+.address {
+    font-size: 13px;
+    text-align: center;
+    font-weight: bold;
+}

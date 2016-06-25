@@ -7,7 +7,6 @@ Více informací na [WIKI](https://github.com/vekenele/denni-menu/wiki) stránk�
 ###### Credits
 
 - Bc. David Věžník
-- Miroslav Lehotský
 - Peter Neupauer
 - Bc. Jiří Ketner
 

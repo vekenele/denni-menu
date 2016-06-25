@@ -1,0 +1,16 @@
+{% extends 'layouts/print' %}
+
+{% block title %}Daily menu - print version | VEKENELE restaurant{% endblock %}
+
+{% block content %}
+
+<section id="dailymenu">
+    <div class="container">
+        <h1>Daily menu</h1>
+        <div class="menuWrapper">
+            {{ menu | raw }}
+        </div>
+    </div>
+</section>
+
+{% endblock %}

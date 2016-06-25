@@ -47,6 +47,7 @@ public class Application {
         get(Path.Web.CONTACT, (req, resp) -> new ModelAndView(null, "contact"), engine);
         get(Path.Web.DAILYMENU, MenuController.menu, engine);
         post(Path.Web.DAILYMENU, MenuController.preOrder);
+        get(Path.Web.DAILYMENU_PRINT, MenuController.menuPrint, engine);
 
         // Cron routes
         get(Path.Cron.ACTUAL_MENU, MenuController.refresh);
