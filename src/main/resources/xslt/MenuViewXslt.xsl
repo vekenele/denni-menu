@@ -16,10 +16,15 @@
     </xsl:template>
 
     <xsl:template match="monday|tuesday|wednesday|thursday|friday">
+        <xsl:variable name="j" select="position() - 1"/>
         <h3 class="firstUppercase"><xsl:value-of select ="local-name()"/></h3>
-        <form name="{@date}" onsubmit="openModal('{@date}'); return false;">
+        <form name="{@date}" id="{local-name()}" onsubmit="openModal('{@date}'); return false;">
             <xsl:apply-templates select="*"/>
-            <input type="submit" value="Pre-order"/>
+            <div class="preorder-btn-wrapper">
+                <span id="finalPrice{$j}"></span>
+                <button type="button" class="btn btn-default clear-btn" onclick="clearForm('{@date}');">Clear</button>
+                <input type="submit" value="Pre-order" class="btn preorder-btn"/>
+            </div>
         </form>
     </xsl:template>
 
@@ -33,8 +38,10 @@
                     </xsl:when>
                     <xsl:otherwise>
                         <li>
-                            <input type="radio" name="{local-name()}" value="1"/>
-                            <strong><xsl:value-of select="name"/></strong> (allergens: <xsl:value-of select="allergens"/>) <span><xsl:value-of select="sellPrice"/> Kč</span>
+                            <label>
+                                <input type="radio" name="{local-name()}" value="1"/>
+                                <strong><xsl:value-of select="name"/></strong> (allergens: <xsl:value-of select="allergens"/>) <span><span class="priceValue"><xsl:value-of select="sellPrice"/></span> Kč</span>
+                            </label>
                         </li>
                     </xsl:otherwise>
                 </xsl:choose>
@@ -45,8 +52,10 @@
     <xsl:template match="variant">
         <xsl:variable name="i" select="position()" />
         <li>
-            <input type="radio" name="{local-name(./parent::*)}" value="{$i}"/>
-            <strong><xsl:value-of select="name"/></strong> (allergens: <xsl:value-of select="allergens"/>) <span><xsl:value-of select="sellPrice"/> Kč</span>
+            <label>
+                <input type="radio" name="{local-name(./parent::*)}" value="{$i}"/>
+                <strong><xsl:value-of select="name"/></strong> (allergens: <xsl:value-of select="allergens"/>) <span><span class="priceValue"><xsl:value-of select="sellPrice"/></span> Kč</span>
+            </label>
         </li>
     </xsl:template>
 

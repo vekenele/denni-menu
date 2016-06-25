@@ -12,6 +12,8 @@
                 <preorders>
                     <customer cid="1"/>
                     <customer cid="11"/>
+                    <customer cid="12"/>
+                    <customer cid="13"/>
                 </preorders>
             </variant>
             <variant>
@@ -40,6 +42,8 @@
                     <customer cid="1"/>
                     <customer cid="11"/>
                     <customer cid="3"/>
+                    <customer cid="12"/>
+                    <customer cid="13"/>
                 </preorders>
             </variant>
         </soup>
@@ -58,6 +62,10 @@
                 <allergens>3,4</allergens>
                 <costPrice>42</costPrice>
                 <sellPrice>85</sellPrice>
+                <preorders>
+                    <customer cid="12"/>
+                    <customer cid="13"/>
+                </preorders>
             </variant>
             <variant>
                 <name>Bramboráky</name>
@@ -80,6 +88,7 @@
                     <customer cid="1"/>
                     <customer cid="11"/>
                     <customer cid="3"/>
+                    <customer cid="13"/>
                 </preorders>
             </variant>
             <variant>
@@ -87,6 +96,9 @@
                 <allergens>2,5</allergens>
                 <costPrice>19</costPrice>
                 <sellPrice>45</sellPrice>
+                <preorders>
+                    <customer cid="12"/>
+                </preorders>
             </variant>
         </dessert>
     </monday>
@@ -103,6 +115,9 @@
                 <allergens>2,4</allergens>
                 <costPrice>9</costPrice>
                 <sellPrice>21</sellPrice>
+                <preorders>
+                    <customer cid="12"/>
+                </preorders>
             </variant>
         </appetizer>
         <soup>
@@ -111,6 +126,9 @@
                 <allergens>2,6</allergens>
                 <costPrice>15</costPrice>
                 <sellPrice>22</sellPrice>
+                <preorders>
+                    <customer cid="12"/>
+                </preorders>
             </variant>
             <variant>
                 <name>Dýňová polévka</name>
@@ -131,6 +149,9 @@
                 <allergens>1</allergens>
                 <costPrice>41</costPrice>
                 <sellPrice>88</sellPrice>
+                <preorders>
+                    <customer cid="12"/>
+                </preorders>
             </variant>
             <variant>
                 <name>Zeleninový salát s kuřecím masem a zákyskou</name>
@@ -145,6 +166,9 @@
                 <allergens>2</allergens>
                 <costPrice>23</costPrice>
                 <sellPrice>42</sellPrice>
+                <preorders>
+                    <customer cid="12"/>
+                </preorders>
             </variant>
             <variant>
                 <name>Pudinkové řezy se skořicí</name>

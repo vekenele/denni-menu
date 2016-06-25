@@ -38,10 +38,11 @@
                     <input type="text" id="customerPhone" placeholder="+420 720 445 323" class="form-control"/>
                 </div>
                 <div class="wrong-data text-center"></div>
+                <div class="good-data text-center"></div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary" onclick="preOrder()">Pre-order</button>
+                <button id="preorderBtn" type="button" class="btn preorder-btn" onclick="preOrder()">Pre-order</button>
             </div>
         </div>
     </div>

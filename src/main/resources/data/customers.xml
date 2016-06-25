@@ -44,4 +44,12 @@
         <name>Martina Navrátilová</name>
         <phone>+420 605 123 433</phone>
     </customer>
+    <customer cid="12">
+        <name>Tomáš Nedorost</name>
+        <phone>+420 605 344 545</phone>
+    </customer>
+    <customer cid="13">
+        <name>Jirka Novák</name>
+        <phone>+420 966 488 555</phone>
+    </customer>
 </customers>

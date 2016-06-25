@@ -271,7 +271,7 @@ table tr td:last-child {
 .foodVariants {
     padding-left: 20px;
 }
-.foodVariants li span {
+.foodVariants li label > span {
     float: right;
     font-weight: bold;
     color: #f39d17;
@@ -281,6 +281,16 @@ table tr td:last-child {
 }
 .foodVariants li input {
     margin-right: 8px;
+}
+.foodVariants li label {
+    width: 100%;
+}
+.preorder-btn-wrapper span[id^='finalPrice'] {
+    float: left;
+    font-size: 18px;
+    font-weight: bold;
+    color: #f39d17;
+    margin-top: 13px;
 }
 #dailymenu h3 {
     color: #f39d17;
@@ -301,6 +311,28 @@ table tr td:last-child {
     color: #a94442;
     font-weight: bold;
     position: absolute;
+}
+
+.good-data {
+    color: #3c763d;
+    font-weight: bold;
+    position: absolute;
+}
+
+#dailymenu .preorder-btn-wrapper {
+    text-align: right;
+}
+
+#dailymenu .preorder-btn-wrapper .preorder-btn {
+    margin-top: 10px;
+}
+
+.preorder-btn {
+    background: #f39d17;
+    color: #fff;
+}
+.clear-btn {
+    margin: 10px 15px 0 0;
 }
 
 /* MEDIA QUERIES */
