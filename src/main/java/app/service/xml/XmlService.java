@@ -260,6 +260,7 @@ public class XmlService {
      * This function removes empty text nodes from document. Then transformer indenting
      * works well.
      * Source: http://stackoverflow.com/questions/978810/how-to-strip-whitespace-only-text-nodes-from-a-dom-before-serialization
+     * @param doc       Input Document instantion, where should be removed empty text nodes
      */
     public static void removeEmptyTextNodes(Document doc) {
         XPathFactory xpathFactory = XPathFactory.newInstance();
@@ -284,6 +285,9 @@ public class XmlService {
     /**
      * Saves changes to source XML. This function is used when new customer is appended to document
      * or new preorder is requested.
+     *
+     * @param doc       Input final Document instantion
+     * @param xml       Output XML file, which will be overwritten
      */
     public static void saveChangesToXML(Document doc, File xml) throws TransformerException {
         DOMSource source = new DOMSource(doc);

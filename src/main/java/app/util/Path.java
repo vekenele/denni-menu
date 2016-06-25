@@ -24,4 +24,8 @@ public class Path {
         public static final String XSD_PATH = "weekMenu.xsd";
 
     }
+
+    public static class Cron {
+        public static final String ACTUAL_MENU = "/menu/refresh";
+    }
 }

@@ -41,15 +41,7 @@
         <phone>+420 732 209 366</phone>
     </customer>
     <customer cid="11">
-        <name>Tomáš Nejedlý</name>
-        <phone>+453 444 555</phone>
-    </customer>
-    <customer cid="12">
-        <name>Jan Gilgameš</name>
-        <phone>+420 605 334 555</phone>
-    </customer>
-    <customer cid="13">
-        <name>Jan Gilgamešek</name>
-        <phone>+420 605 334 555</phone>
+        <name>Martina Navrátilová</name>
+        <phone>+420 605 123 433</phone>
     </customer>
 </customers>

@@ -25,6 +25,7 @@ function preOrder() {
                         name: customerName,
                         phone: customerPhone
                     },
+                    date: dayDate,
                     order: orderArray
                 };
                 $.post("/menu/daily", orderObj, function(data) {

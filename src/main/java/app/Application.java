@@ -48,6 +48,9 @@ public class Application {
         get(Path.Web.DAILYMENU, MenuController.menu, engine);
         post(Path.Web.DAILYMENU, MenuController.preOrder);
 
+        // Cron routes
+        get(Path.Cron.ACTUAL_MENU, MenuController.refresh);
+
         // Admin
         get(Path.Admin.INDEX, AdminController.index, engine);
         get(Path.Admin.MENU, AdminController.menu, engine);

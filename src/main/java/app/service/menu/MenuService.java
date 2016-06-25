@@ -8,27 +8,198 @@ import app.model.food.MainDish;
 import app.model.food.Soup;
 import app.model.menu.Menu;
 import app.service.xml.XmlService;
+import app.util.Path;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.NodeList;
 
 import javax.servlet.http.Part;
-import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerException;
-import javax.xml.transform.TransformerFactory;
-import javax.xml.transform.stream.StreamResult;
-import javax.xml.transform.stream.StreamSource;
+import javax.xml.xpath.*;
 import java.io.*;
-import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Iterator;
-import java.util.StringJoiner;
+import java.util.*;
 
 /**
- * Created by david on 20.06.16.
+ * MenuService
+ * Singleton
  *
+ * @author Bc. Jiří Ketner
+ * @author Bc. David Věžník
  */
 public class MenuService {
+
+    private Document doc;
+    private File actualMenu;
+    private static MenuService instance;
+
+    private MenuService() {
+        loadActualMenu();
+    }
+
+    public static MenuService getInstance() {
+        if(instance == null) {
+            instance = new MenuService();
+        }
+        return instance;
+    }
+
+    /**
+     * Inits actual class attributes (doc, actualMenu). It's used, when the class is instantiated
+     * or when we access to a specific route for the actual menu change (every Sunday). We can set a CRON
+     * in the future...
+     */
+    public boolean loadActualMenu() {
+        String actualFilename = actualMenuFilename();
+        actualMenu = new File(Path.Web.RESOURCES + "data/menus/" + actualFilename);
+        if(actualMenu.exists() && !actualMenu.isDirectory()) {
+            try {
+                doc = XmlService.loadDocument(actualMenu);
+            } catch(Exception e) {
+                e.printStackTrace();
+            }
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    private NodeList getNodeListByXPath(String xpathExpr) {
+        XPathFactory xPathfactory = XPathFactory.newInstance();
+        XPath xpath = xPathfactory.newXPath();
+        XPathExpression expr = null;
+        NodeList result = null;
+        try {
+            expr = xpath.compile(xpathExpr);
+            result = (NodeList)expr.evaluate(doc, XPathConstants.NODESET);
+        } catch(XPathExpressionException e) {
+            e.printStackTrace();
+        }
+        return result;
+    }
+
+    /**
+     * The function looks for the preorder on the specified day (via dayDate) of specified customer
+     * (via customerId) ... if preorder isset, then returns true.
+     * @param dayDate       specified day
+     * @param customerId    specified customer
+     * @return              true, if preorder exists | day with specified dayDate doesn't exist (wrong request)
+     */
+    public boolean hasOrderedBefore(String dayDate, int customerId) {
+        NodeList specifiedDays = getNodeListByXPath("/dailymenu/*[@date='" + dayDate + "']");
+        if(specifiedDays.getLength() == 0) {
+            return true;
+        } else {
+            Element day = (Element)specifiedDays.item(0);
+            NodeList customers = day.getElementsByTagName("customer");
+            if(customers.getLength() > 0) {
+                for(int i = 0; i < customers.getLength(); i++) {
+                    Element customer = (Element)customers.item(i);
+                    if(customerId == Integer.parseInt(customer.getAttribute("cid"))) {
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+    }
+
+    /**
+     * Create element customer element inside parent element specified
+     * @param parent        parent Element
+     * @param customerId    customer id
+     */
+    private void createElementCustomer(Element parent, int customerId) {
+        Element newCustomer = doc.createElement("customer");
+        newCustomer.setAttribute("cid", Integer.toString(customerId));
+        parent.appendChild(newCustomer);
+    }
+
+    /**
+     * Create element preorders inside parent Element, with customer inside it
+     * @param parent
+     * @param customerId
+     */
+    private void createElementPreordersWithCustomer(Element parent, int customerId) {
+        Element newPreorders = doc.createElement("preorders");
+        createElementCustomer(newPreorders, customerId);
+        parent.appendChild(newPreorders);
+    }
+
+    /**
+     * Method for preordering concrete food on concrete day.
+     * @param dayDate           date on which order should be placed
+     * @param customerId        customer, which is ordering something
+     * @param foodType          type of food (desert, appetizer etc.)
+     * @param foodVariant       number of food variant
+     * @return                  true, if order was processed, false otherwise
+     */
+    public void preOrderFood(String dayDate, int customerId, String foodType, int foodVariant) {
+        NodeList concreteFoodTypeList = getNodeListByXPath("/dailymenu/*[@date='" + dayDate + "']/" + foodType);
+        Element concreteFoodType = (Element)concreteFoodTypeList.item(0);
+        NodeList variants = concreteFoodType.getElementsByTagName("variant");
+        if(variants.getLength() > 0) {
+            Element chosenVariant = (Element)variants.item(foodVariant-1);
+            NodeList preorders = chosenVariant.getElementsByTagName("preorders");
+            if(preorders.getLength() > 0) {
+                Element preorderEl = (Element)preorders.item(0);
+                createElementCustomer(preorderEl, customerId);
+            } else {
+                createElementPreordersWithCustomer(chosenVariant, customerId);
+            }
+        } else {
+            NodeList preorders = concreteFoodType.getElementsByTagName("preorders");
+            if(preorders.getLength() > 0) {
+                Element preorderEl = (Element)preorders.item(0);
+                createElementCustomer(preorderEl, customerId);
+            } else {
+                createElementPreordersWithCustomer(concreteFoodType, customerId);
+            }
+        }
+    }
+
+    /**
+     * Save changes to source XML
+     */
+    public void saveChanges() {
+        XmlService.removeEmptyTextNodes(doc);
+        try {
+            XmlService.saveChangesToXML(doc, actualMenu);
+        } catch(TransformerException e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * Determines current week and based on it - generates String of filename, which stores data for actual week.
+     * It "switches" to next week always on Sunday.
+     * @return      String filename for actual XML
+     */
+    public static String actualMenuFilename() {
+        Date dateNow = new Date();
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(dateNow);
+
+        calendar.set(Calendar.DAY_OF_WEEK, Calendar.MONDAY);
+        int dayFrom = calendar.get(Calendar.DAY_OF_MONTH);
+        int monthFrom = calendar.get(Calendar.MONTH) + 1;
+        int yearFrom = calendar.get(Calendar.YEAR);
+
+        calendar.set(Calendar.DAY_OF_WEEK, Calendar.FRIDAY);
+        int dayTo = calendar.get(Calendar.DAY_OF_MONTH);
+        int monthTo = calendar.get(Calendar.MONTH) + 1;
+        int yearTo = calendar.get(Calendar.YEAR);
+
+        String result = yearFrom + "-";
+        result += (monthFrom < 10) ? "0" + monthFrom + "-" : monthFrom + "-";
+        result += (dayFrom < 10) ? "0" + dayFrom : dayFrom;
+        result += "_" + yearTo + "-";
+        result += (monthTo < 10) ? "0" + monthTo + "-" : monthTo + "-";
+        result += (dayTo < 10) ? "0" + dayTo + ".xml" : dayTo + ".xml";
+
+        return result;
+    }
 
     /*
      * This method parses input file and creates all objects required for Menu.
