@@ -10,6 +10,8 @@ import java.io.StringWriter;
 import java.net.URL;
 
 /**
+ * Class for performing XSLT transformations
+ *
  * Created by ketys on 21/06/16.
  */
 public class XsltTransformService {
@@ -18,7 +20,7 @@ public class XsltTransformService {
      * This method transforms XML file via XSLT transformation and returns result as a String
      * @param xslFile   processing XSLT file
      * @param xmlFile   input XML file
-     * @return String of transformed input XML file
+     * @return          String of transformed input XML file
      */
     public static String XSLTProcessFile(String xslFile, String xmlFile) throws TransformerException {
 

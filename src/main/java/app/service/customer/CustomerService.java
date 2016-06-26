@@ -11,6 +11,8 @@ import javax.xml.transform.*;
 import java.io.File;
 
 /**
+ * Customer Service
+ *
  * Created by Jiri Ketner on 22/06/16.
  *
  * Singleton

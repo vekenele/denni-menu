@@ -1,6 +1,8 @@
 package app.util;
 
 /**
+ * Class Path defines a website urls
+ *
  * Created by Jiri Ketner on 17/06/16.
  */
 public class Path {

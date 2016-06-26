@@ -49,6 +49,8 @@ public class MenuService {
      * Inits actual class attributes (doc, actualMenu). It's used, when the class is instantiated
      * or when we access to a specific route for the actual menu change (every Sunday). We can set a CRON
      * in the future...
+     *
+     * @return          true, if everything is OK
      */
     public boolean loadActualMenu() {
         String actualFilename = actualMenuFilename();
@@ -65,6 +67,12 @@ public class MenuService {
         }
     }
 
+    /**
+     * Searches and returns NodeList based on input XPath expression
+     *
+     * @param xpathExpr     input XPath expression
+     * @return              NodeList corresponding to given XPath expression
+     */
     private NodeList getNodeListByXPath(String xpathExpr) {
         XPathFactory xPathfactory = XPathFactory.newInstance();
         XPath xpath = xPathfactory.newXPath();
