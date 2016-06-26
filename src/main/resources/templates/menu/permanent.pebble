@@ -1,0 +1,69 @@
+{% extends 'layouts/master' %}
+
+{% block title %}Permanent offer | VEKENELE restaurant{% endblock %}
+
+{% block header %}{% include "fragments/headerpermanentoffer" %}{% endblock %}
+
+{% block content %}
+
+<section id="dailymenu">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h2><span>Look at our</span><br>permanent offer</h2>
+                <p>For full menu content, please, visit our restaurant.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1 permanent-offer">
+                <h3>Appetizers</h3>
+                <ul>
+                    <li>Rillettes z kachního masa s vůní pomeranče a opečenou bagetkou <span>99 Kč</span></li>
+                    <li>Kozí sýr rozpečený na grilovaném lilku s bazalkovým pestem a pita chlebem <span>125 Kč</span></li>
+                    <li>Gratinované rajče s parmazánem, grilovaný lilek a paprika s bylinkami, pita chléb <span>89 Kč</span></li>
+                    <li>Cuketové hranolky v křehkém těstíčku podávané se zakysanou smetanou <span>65 Kč</span></li>
+                    <li>Namíchaný hovězí tatarák podávaný s topinkami a česnekem <span>155 Kč</span></li>
+                </ul>
+                <h3>Soups</h3>
+                <ul>
+                    <li>Silný domácí vývar s hovězím špalíčkem, nudlemi a juliene zeleninou <span>45 Kč</span></li>
+                    <li>Ruský boršč se zakysanou smetanou <span>45 Kč</span></li>
+                </ul>
+                <h3>Salads</h3>
+                <ul>
+                    <li>Listy baby špenátu s pečenou hruškou, anglickou slaninou a feta sýrem <span>145 Kč</span></li>
+                    <li>Trhané listové saláty s grilovaným kachním prsem a limetovo – medovým dresinkem <span>149 Kč</span></li>
+                </ul>
+                <h3>Pasta</h3>
+                <ul>
+                    <li>Domácí bramborové noky s kuřecím masem a listovým špenátem ve smetanové omáčce <span>139 Kč</span></li>
+                    <li>Široké nudle s hříbky pečenými na panenském olivovém oleji a oříšku másla <span>129 Kč</span></li>
+                    <li>Široké nudle s medailonky z vepřové panenky na grilu, cherry rajčátky, rukolou a bílým vínem <span>155 Kč</span></li>
+                </ul>
+                <h3>Main Dishes</h3>
+                <ul>
+                    <li>Pečené kachní stehno s červeným hlávkovým zelím a domácími strapačky <span>165 Kč</span></li>
+                    <li>Pikantní hovězí guláš s domácími bramboráčky <span>145 Kč</span></li>
+                    <li>Hovězí svíčková na smetaně s jemnými karlovarskými knedlíky a brusinkami <span>149 Kč</span></li>
+                    <li>Hovězí líčka na červeném víně s celerovým pyré a máslovou karotkou <span>189 Kč</span></li>
+                    <li>Kuřecí prso ‚Supreme‘ na grilu se šafránovou omáčkou a pažitkovými brambory <span>189 Kč</span></li>
+                    <li>Grilované kuřecí prso špikované tapenádou ze sušených rajčat s gratinovanými brambory se smetanou <span>165 Kč</span></li>
+                    <li>Filírované kachní prso na teplém salátku z červené čočky a grilované zeleniny <span>195 Kč</span></li>
+                    <li>Stroganof z hovězí roštěné se smetanou, žampiony a jasmínovou rýží <span>195 Kč</span></li>
+                    <li>Kapská štika na másle s citrónovým pepřem a brambory se středomořským kořením a cherry rajčátky <span>220 Kč</span></li>
+                    <li>Steak z lososa na grilu a bramborová kaše s listovým špenátem prokládaná baklažánovými smaženkami <span>245 Kč</span></li>
+                </ul>
+                <h3>Desserts</h3>
+                <ul>
+                    <li>Domácí jahodové knedlíky s tvarohem a ovocným dipem <span>69 Kč</span></li>
+                    <li>Krupicová kaše s kakaem a rozpuštěným máslem <span>49 Kč</span></li>
+                    <li>Staročeský medovník se šlehačkou <span>49 Kč</span></li>
+                    <li>Domácí jablečný závin s ořechy a vanilkovou zmrzlinou <span>49 Kč</span></li>
+                    <li>Domácí makové a pistáciové parfé s hruškou ve smetanovém karamelu <span>75 Kč</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

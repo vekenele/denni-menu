@@ -45,6 +45,7 @@ public class Application {
         get(Path.Web.INDEX, (req, resp) -> new ModelAndView(null, "index"), engine);
         get(Path.Web.ABOUT, (req, resp) -> new ModelAndView(null, "about"), engine);
         get(Path.Web.CONTACT, (req, resp) -> new ModelAndView(null, "contact"), engine);
+        get(Path.Web.PERMANENT_OFFER, (req, resp) -> new ModelAndView(null, "menu/permanent"), engine);
         get(Path.Web.DAILYMENU, MenuController.menu, engine);
         post(Path.Web.DAILYMENU, MenuController.preOrder);
         get(Path.Web.DAILYMENU_PRINT, MenuController.menuPrint, engine);

@@ -52,4 +52,8 @@
         <name>Jirka Novák</name>
         <phone>+420 966 488 555</phone>
     </customer>
+    <customer cid="14">
+        <name>Tomáš Nedlužil</name>
+        <phone>+420 605 344 566</phone>
+    </customer>
 </customers>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <dailymenu>
     <validFrom>2016-06-27</validFrom>
     <validTo>2016-07-01</validTo>
@@ -9,12 +9,18 @@
                 <allergens>1,3</allergens>
                 <costPrice>5</costPrice>
                 <sellPrice>12</sellPrice>
+                <preorders>
+                    <customer cid="14"/>
+                </preorders>
             </variant>
             <variant>
                 <name>Hermelín v bramborovém těstíčku</name>
                 <allergens>2,3</allergens>
                 <costPrice>25</costPrice>
                 <sellPrice>40</sellPrice>
+                <preorders>
+                    <customer cid="1"/>
+                </preorders>
             </variant>
         </appetizer>
         <soup>
@@ -23,6 +29,9 @@
                 <allergens>2,5</allergens>
                 <costPrice>12</costPrice>
                 <sellPrice>25</sellPrice>
+                <preorders>
+                    <customer cid="14"/>
+                </preorders>
             </variant>
             <variant>
                 <name>Česnečka se sýrem</name>
@@ -43,12 +52,18 @@
                 <allergens>3,4</allergens>
                 <costPrice>42</costPrice>
                 <sellPrice>85</sellPrice>
+                <preorders>
+                    <customer cid="1"/>
+                </preorders>
             </variant>
             <variant>
                 <name>Bramboráky</name>
                 <allergens>2,4</allergens>
                 <costPrice>20</costPrice>
                 <sellPrice>65</sellPrice>
+                <preorders>
+                    <customer cid="14"/>
+                </preorders>
             </variant>
         </mainDish>
         <dessert>
@@ -57,12 +72,18 @@
                 <allergens>3</allergens>
                 <costPrice>8</costPrice>
                 <sellPrice>22</sellPrice>
+                <preorders>
+                    <customer cid="1"/>
+                </preorders>
             </variant>
             <variant>
                 <name>Palačinky</name>
                 <allergens>2,5</allergens>
                 <costPrice>19</costPrice>
                 <sellPrice>45</sellPrice>
+                <preorders>
+                    <customer cid="14"/>
+                </preorders>
             </variant>
         </dessert>
     </monday>

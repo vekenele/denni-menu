@@ -9,6 +9,7 @@ public class Path {
         public static final String INDEX = "/";
         public static final String ABOUT = "/about-us";
         public static final String CONTACT = "/contact";
+        public static final String PERMANENT_OFFER = "/menu/permanent";
         public static final String DAILYMENU = "/menu/daily";
         public static final String DAILYMENU_PRINT = "/menu/daily/print";
         public static final String RESOURCES = "src/main/resources/";
