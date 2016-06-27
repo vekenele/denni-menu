@@ -8,8 +8,6 @@
 
 <hr>
 
-<p class="text-danger">TODO: Create menu after succeed request.</p>
-
 {% include "fragments/admin/message" %}
 
 <form method="post" action="/admin/menu/create">
@@ -18,14 +16,14 @@
         <div class="col-md-6">
             <div class="form-group">
                 <label for="valid-from">From</label>
-                <input type="date" class="form-control" id="valid-from" name="valid-from" placeholder="25. 1. 2016" value="{{ validFrom }}">
+                <input type="date" class="form-control" id="valid-from" name="valid-from" placeholder="25. 01. 2016" value="{{ validFrom }}">
             </div>
         </div>
 
         <div class="col-md-6">
             <div class="form-group">
                 <label for="valid-to">To</label>
-                <input type="date" class="form-control" id="valid-to" name="valid-to" placeholder="29. 1. 2016" value="{{ validTo }}">
+                <input type="date" class="form-control" id="valid-to" name="valid-to" placeholder="29. 01. 2016" value="{{ validTo }}">
             </div>
         </div>
     </div>

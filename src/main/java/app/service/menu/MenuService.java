@@ -319,7 +319,7 @@ public class MenuService {
     }
 
     public static boolean exist(String name) throws IOException {
-        return Files.walk(Paths.get("src/main/resources/data/menus")).anyMatch(path -> path.getFileName().toString().equals(name + ".xml"));
+        return Files.walk(Paths.get(Path.Admin.XML_STORAGE)).anyMatch(path -> path.getFileName().toString().equals(name + ".xml"));
     }
 
 

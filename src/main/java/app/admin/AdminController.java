@@ -2,7 +2,9 @@ package app.admin;
 
 import app.service.menu.MenuService;
 
+import app.service.xml.XmlService;
 import app.util.Message;
+import app.util.Utils;
 import spark.Filter;
 import spark.ModelAndView;
 import spark.Route;
@@ -10,6 +12,7 @@ import spark.TemplateViewRoute;
 
 import javax.servlet.MultipartConfigElement;
 import javax.servlet.http.Part;
+import java.time.LocalDate;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -31,7 +34,13 @@ public class AdminController {
     /**
      * Show the menu.
      */
-    public static TemplateViewRoute menu = (request, response) -> new ModelAndView(null, "admin/menu");
+    public static TemplateViewRoute menu = (request, response) -> {
+        Map<String, Object> data = new HashMap<>();
+
+
+
+        return new ModelAndView(data, "admin/menu");
+    };
 
     /**
      * Show the menu create form.
@@ -57,11 +66,19 @@ public class AdminController {
         else if (validTo.isEmpty()) {
             data.put("message", new Message(Message.Level.DANGER, "Field To is required."));
         }
+        else if (!Utils.isValidDate(validFrom)) {
+            data.put("message", new Message(Message.Level.DANGER, "Field From has invalid date."));
+        }
+        else if (!Utils.isValidDate(validTo)) {
+            data.put("message", new Message(Message.Level.DANGER, "Field To has invalid date."));
+        }
         else {
+            LocalDate dateFrom = LocalDate.parse(validFrom, Utils.getDateTimeFormatter());
+            LocalDate dateTo = LocalDate.parse(validTo, Utils.getDateTimeFormatter());
 
-            // TODO: Create menu
+            XmlService.createEmptyMenuXmlFile(dateFrom, dateTo);
 
-            data.put("message", new Message(Message.Level.SUCCESS, "Menu was created."));
+            data.put("message", new Message(Message.Level.SUCCESS, "Menu was successfully created."));
             data.remove("validFrom");
             data.remove("validTo");
         }

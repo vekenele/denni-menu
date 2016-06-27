@@ -33,6 +33,8 @@ import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.net.URL;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 
 /**
@@ -298,5 +300,63 @@ public class XmlService {
         transformer.setOutputProperty(OutputKeys.INDENT, "yes");
         transformer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "4");
         transformer.transform(source, result);
+    }
+
+    /**
+     * Create empty menu xml file.
+     *
+     * @param dateFrom the date from
+     * @param dateTo   the date to
+     */
+    public static void createEmptyMenuXmlFile(LocalDate dateFrom, LocalDate dateTo) {
+
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+
+        String textFrom = dateFrom.format(formatter);
+        String textTo = dateTo.format(formatter);
+
+        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+        DocumentBuilder docBuilder;
+
+        try {
+            docBuilder = factory.newDocumentBuilder();
+            Document doc = docBuilder.newDocument();
+
+            Element rootElement = doc.createElement("dailymenu");
+            doc.appendChild(rootElement);
+
+            Element validFromElement = doc.createElement("validFrom");
+            rootElement.appendChild(validFromElement);
+            validFromElement.appendChild(doc.createTextNode(textFrom));
+
+            Element validToElement = doc.createElement("validTo");
+            rootElement.appendChild(validToElement);
+            validToElement.appendChild(doc.createTextNode(textTo));
+
+            TransformerFactory transformerFactory = TransformerFactory.newInstance();
+            Transformer transformer = null;
+            try {
+                transformer = transformerFactory.newTransformer();
+            } catch (TransformerConfigurationException e) {
+                e.printStackTrace();
+            }
+            DOMSource source = new DOMSource(doc);
+
+            StreamResult result = new StreamResult(
+                    new File(String.format("%s%s_%s.xml",
+                            Path.Admin.XML_STORAGE,
+                            textFrom,
+                            textTo)));
+            try {
+                if (transformer != null) {
+                    transformer.transform(source, result);
+                }
+            } catch (TransformerException e) {
+                e.printStackTrace();
+            }
+
+        } catch (ParserConfigurationException e) {
+            e.printStackTrace();
+        }
     }
 }
