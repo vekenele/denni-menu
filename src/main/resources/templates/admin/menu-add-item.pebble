@@ -8,19 +8,18 @@
 
 <hr>
 
-<p class="text-danger">TODO: Create item after succeed request.</p>
-<p class="text-danger">TODO: Make PLUS button working.</p>
+{% include "fragments/admin/message" %}
 
 <form method="post" action="">
 
     <div class="form-group">
         <label for="day">Day</label>
         <select class="form-control" id="day" name="day">
-            <option value="mon">Monday</option>
-            <option value="tue">Tuesday</option>
-            <option value="wed">Wednesday</option>
-            <option value="thu">Thursday</option>
-            <option value="fri">Friday</option>
+            <option value="monday">Monday</option>
+            <option value="tuesday">Tuesday</option>
+            <option value="wednesday">Wednesday</option>
+            <option value="thursday">Thursday</option>
+            <option value="friday">Friday</option>
         </select>
     </div>
 
@@ -32,31 +31,30 @@
             <select class="form-control" id="type" name="type">
                 <option value="appetizer">Appetizer</option>
                 <option value="soup">Soup</option>
-                <option value="maindish">Main Dish</option>
+                <option value="mainDish">Main Dish</option>
                 <option value="dessert">Dessert</option>
             </select>
         </div>
 
         <div class="form-group">
-            <label for="appetizer-name">Name</label>
-            <input type="text" class="form-control" id="appetizer-name" name="appetizer-name" placeholder="Hermelín v bramborovém těstíčku">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" name="name" placeholder="Hermelín v bramborovém těstíčku" value="{{ name }}">
         </div>
         <div class="form-group">
-            <label for="appetizer-allergens">Allergens</label>
-            <input type="text" class="form-control" id="appetizer-allergens" name="appetizer-allergens" placeholder="1, 3">
+            <label for="allergens">Allergens</label>
+            <input type="text" class="form-control" id="allergens" name="allergens" placeholder="1, 3" value="{{ allergens }}">
         </div>
         <div class="form-group">
-            <label for="appetizer-cost-price">Cost Price</label>
-            <input type="number" class="form-control" id="appetizer-cost-price" name="appetizer-cost-price" placeholder="28">
+            <label for="cost-price">Cost Price</label>
+            <input type="number" class="form-control" id="cost-price" name="cost-price" placeholder="28" value="{{ costPrice }}">
         </div>
         <div class="form-group">
-            <label for="appetizer-sell-price">Sell Price</label>
-            <input type="number" class="form-control" id="appetizer-sell-price" name="appetizer-sell-price" placeholder="35">
+            <label for="sell-price">Sell Price</label>
+            <input type="number" class="form-control" id="sell-price" name="sell-price" placeholder="35" value="{{ sellPrice }}">
         </div>
     </div>
-    <button type="button" id="add-item" class="btn btn-success pull-right"><i class="glyphicon glyphicon-plus"></i> Next Item</button>
 
-    <button type="submit" class="btn btn-primary">Create Item</button>
+    <button type="submit" class="btn btn-primary">Add Item</button>
 </form>
 
 <br>

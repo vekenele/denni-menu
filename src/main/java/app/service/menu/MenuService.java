@@ -14,7 +14,14 @@ import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 
 import javax.servlet.http.Part;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerConfigurationException;
 import javax.xml.transform.TransformerException;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
 import javax.xml.xpath.*;
 import java.io.*;
 import java.nio.file.Files;
@@ -369,5 +376,62 @@ public class MenuService {
             System.out.println("-----------------------");
 
         }
+    }
+
+    public void addItem(String fileName, String day, String type, String name, String allergens, String costPrice, String sellPrice) {
+
+        try {
+            File fXmlFile = new File(Path.Admin.XML_STORAGE + fileName);
+            DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+            DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+            Document doc = dBuilder.parse(fXmlFile);
+            doc.getDocumentElement().normalize();
+            System.out.println("Root element :" + doc.getDocumentElement().getNodeName());
+
+            Element rootElement = doc.getDocumentElement();
+            Element dayElement = (Element) rootElement.getElementsByTagName(day).item(0);
+            Element typeElement = (Element) dayElement.getElementsByTagName(type).item(0);
+            Element variantElement = doc.createElement("variant");
+            typeElement.appendChild(variantElement);
+
+            Element nameElement = doc.createElement("name");
+            nameElement.appendChild(doc.createTextNode(name));
+
+            Element allergensElement = doc.createElement("allergens");
+            allergensElement.appendChild(doc.createTextNode(allergens));
+
+            Element costPriceElement = doc.createElement("costPrice");
+            costPriceElement.appendChild(doc.createTextNode(costPrice));
+
+            Element sellPriceElement = doc.createElement("sellPrice");
+            sellPriceElement.appendChild(doc.createTextNode(sellPrice));
+
+            variantElement.appendChild(nameElement);
+            variantElement.appendChild(allergensElement);
+            variantElement.appendChild(costPriceElement);
+            variantElement.appendChild(sellPriceElement);
+
+            TransformerFactory transformerFactory = TransformerFactory.newInstance();
+            Transformer transformer = null;
+            try {
+                transformer = transformerFactory.newTransformer();
+            } catch (TransformerConfigurationException e) {
+                e.printStackTrace();
+            }
+            DOMSource source = new DOMSource(doc);
+
+            StreamResult result = new StreamResult(fXmlFile);
+            try {
+                if (transformer != null) {
+                    transformer.transform(source, result);
+                }
+            } catch (TransformerException e) {
+                e.printStackTrace();
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
     }
 }

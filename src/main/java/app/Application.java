@@ -65,7 +65,7 @@ public class Application {
 
         before(Path.Admin.MENU_ADD_ITEM, AdminController.menuBeforeFilter);
         get(Path.Admin.MENU_ADD_ITEM, AdminController.menuAddItem, engine);
-        post(Path.Admin.MENU_ADD_ITEM, AdminController.menuAddItemPost);
+        post(Path.Admin.MENU_ADD_ITEM, AdminController.menuAddItemPost, engine);
 
         before(Path.Admin.MENU_DELETE, AdminController.menuBeforeFilter);
         get(Path.Admin.MENU_DELETE, AdminController.menuDelete);

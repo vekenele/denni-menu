@@ -333,6 +333,48 @@ public class XmlService {
             rootElement.appendChild(validToElement);
             validToElement.appendChild(doc.createTextNode(textTo));
 
+            //days
+            Element monday = doc.createElement("monday");
+            rootElement.appendChild(monday);
+            monday.appendChild(doc.createElement("appetizer"));
+            monday.appendChild(doc.createElement("soup"));
+            monday.appendChild(doc.createElement("mainDish"));
+            monday.appendChild(doc.createElement("dessert"));
+            monday.setAttribute("date", textFrom);
+
+            Element tuesday = doc.createElement("tuesday");
+            rootElement.appendChild(tuesday);
+            tuesday.appendChild(doc.createElement("appetizer"));
+            tuesday.appendChild(doc.createElement("soup"));
+            tuesday.appendChild(doc.createElement("mainDish"));
+            tuesday.appendChild(doc.createElement("dessert"));
+            tuesday.setAttribute("date", dateFrom.plusDays(1).format(formatter));
+
+            Element wednesday = doc.createElement("wednesday");
+            rootElement.appendChild(wednesday);
+            wednesday.appendChild(doc.createElement("appetizer"));
+            wednesday.appendChild(doc.createElement("soup"));
+            wednesday.appendChild(doc.createElement("mainDish"));
+            wednesday.appendChild(doc.createElement("dessert"));
+            wednesday.setAttribute("date", dateFrom.plusDays(2).format(formatter));
+
+            Element thursday = doc.createElement("thursday");
+            rootElement.appendChild(thursday);
+            thursday.appendChild(doc.createElement("appetizer"));
+            thursday.appendChild(doc.createElement("soup"));
+            thursday.appendChild(doc.createElement("mainDish"));
+            thursday.appendChild(doc.createElement("dessert"));
+            thursday.setAttribute("date", dateFrom.plusDays(3).format(formatter));
+
+            Element friday = doc.createElement("friday");
+            rootElement.appendChild(friday);
+            friday.appendChild(doc.createElement("appetizer"));
+            friday.appendChild(doc.createElement("soup"));
+            friday.appendChild(doc.createElement("mainDish"));
+            friday.appendChild(doc.createElement("dessert"));
+            friday.setAttribute("date", dateFrom.plusDays(4).format(formatter));
+
+
             TransformerFactory transformerFactory = TransformerFactory.newInstance();
             Transformer transformer = null;
             try {

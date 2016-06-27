@@ -128,7 +128,44 @@ public class AdminController {
     /**
      * Save the item.
      */
-    public static Route menuAddItemPost = (request, response) -> "TODO: menu add item";
+    public static TemplateViewRoute menuAddItemPost = (request, response) -> {
+        Map<String, Object> data = new HashMap<>();
+
+        System.out.println(request.params(":id"));
+
+        String day = request.queryParams("day").trim();
+        String type = request.queryParams("type").trim();
+        String name = request.queryParams("name").trim();
+        String allergens = request.queryParams("allergens").trim();
+        String costPrice = request.queryParams("cost-price").trim();
+        String sellPrice = request.queryParams("sell-price").trim();
+
+        data.put("day", day);
+        data.put("type", type);
+        data.put("name", name);
+        data.put("allergens", allergens);
+        data.put("costPrice", costPrice);
+        data.put("sellPrice", sellPrice);
+
+        // Validation
+        if (day.isEmpty() || type.isEmpty() || name.isEmpty() || allergens.isEmpty() || costPrice.isEmpty() || sellPrice.isEmpty()) {
+            data.put("message", new Message(Message.Level.DANGER, "All fields are required."));
+        }
+        else {
+
+            MenuService.getInstance().addItem(request.params(":id") + ".xml", day, type, name, allergens, costPrice, sellPrice);
+
+            data.put("message", new Message(Message.Level.SUCCESS, "Item was added successfully."));
+            data.remove("day");
+            data.remove("type");
+            data.remove("name");
+            data.remove("allergens");
+            data.remove("costPrice");
+            data.remove("sellPrice");
+        }
+
+        return new ModelAndView(data, "admin/menu-add-item");
+    };
 
     public static Route menuDelete = (request, response) -> {
         Files.delete(new File(String.format("%s%s.xml", Path.Admin.XML_STORAGE, request.params("id"))).toPath());
