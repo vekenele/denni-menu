@@ -13,7 +13,7 @@
 {% for preorder in preorders %}
     {% if preorder.getCount() > 0 %}
          <div class="col-md-6">
-             {{ preorder.getName() }} ({{ preorder.getCount() }}) <br>
+             <h4>{{ preorder.getName() }} ({{ preorder.getCount() }}) </h4> <br> 
              {% for customer in preorder.getCustomers() %}
                    {{ customer.getName() }}, {{ customer.getTelephone() }} <br>
              {% endfor %}
