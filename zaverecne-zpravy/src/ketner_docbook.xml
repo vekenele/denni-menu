@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+"http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd">
+<article lang="cs">
+  <articleinfo>
+    <title>Závěrečná zpráva k projektu Správa denního menu</title>
+
+    <autor>
+      <firstname>Bc. Jiří</firstname>
+
+      <surname>Ketner</surname>
+
+      <affiliation>
+        <orgname>VEKENELE</orgname>
+      </affiliation>
+    </autor>
+
+    <datum>26.6.2016</datum>
+  </articleinfo>
+
+  <section>
+    <title>Návrh aplikace</title>
+
+    <para>Po úvodním setkání a konzultaci se členy týmu, kdy jsme si
+    vyjasnili, co a jak budeme dělat, jsem se chopil návrhu aplikace. Hrubý
+    nástřel funkčnosti jsme již měli, tudíž jsem to víceméně jen převedl do
+    prezentovatelné formy na WIKI stránky Githubu a zaměřil se na návrh
+    úložiště.</para>
+
+    <para>Zpočátku jsme nesprávně interpretovali zadání - vytvářeli jsme
+    jakousi aplikaci, kde své denní menu prezentovalo více restaurací. Při
+    započetí prací na implementaci jsem si však zadání znovu přečetl a
+    zjistil, že máme vytvořit aplikaci pro správu denního menu pouze jedné
+    restaurace. Tím pádem jsem musel návrh aplikace lehce pozměnit a především
+    rozmyslet, co se změní v mnou navrženém způsobu ukládání dat. Vznikly tedy
+    2 typy XML souborů, jeden obsahuje týdenní menu, druhý obsahuje seznam
+    všech unikátních zákazníků restaurace.</para>
+  </section>
+
+  <section>
+    <title>Implementace</title>
+
+    <para>Vytvořil jsem jakousi kostru aplikace (vyjma Pebble templatů), na
+    které se mohlo začít stavět. Poté jsem vytvořil XML Schema pro XML soubory
+    s týdenním menu a rovněž jsem vytvořil a vyplnil datové XML soubory, se
+    kterými jsme následně mohli všichni pracovat.</para>
+
+    <para>Mým dalším (hlavním) úkolem bylo postarat se o funkčnost aplikace z
+    pohledu běžného návštěvníka, který příjde na web a chce se něco dozvědět
+    nebo si předobjednat nějaké jídlo z denní nabídky. Jakmile Peter Neupauer
+    naimplementoval templatovací systém Pebble, mohl jsem se pustit do práce.
+    Ačkoliv to možná nebylo v zadání projektu, postaral jsem se o grafickou
+    stránku webu (za pomoci vlastního CSS a knihovny Bootstrap) a vyplnil
+    statické stránky nějakými smysluplnými "dummy" údaji. Na závěr jsem si
+    nechal implementaci stránky s denním menu, kde jsem naprogramoval veškerou
+    backend funkcionalitu pro XSLT transformace včetně šablon pro prezentaci
+    menu na webu i pro tisk, servisní třídy pro práci/modifikaci XML souborů s
+    menu i zákazníky a kompletní javascriptový (JQuery) kód pro objednávkový
+    proces.</para>
+  </section>
+</article>
