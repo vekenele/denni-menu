@@ -62,7 +62,8 @@ public class Application {
         get(Path.Cron.ACTUAL_MENU, MenuController.refresh);
 
         // Admin
-        get(Path.Admin.INDEX, AdminController.index, engine);
+        get(Path.Admin.INDEX, AdminController.index);
+
         get(Path.Admin.MENU, AdminController.menu, engine);
 
         get(Path.Admin.MENU_CREATE, AdminController.menuCreate, engine);

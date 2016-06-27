@@ -1,6 +1,6 @@
 <!-- Footer -->
 <footer>
     <div class="container">
-        <p>Copyright &copy; 2016</p>
+        <p style="padding-top: 20px">Copyright &copy; 2016</p>
     </div>
 </footer>

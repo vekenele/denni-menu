@@ -32,7 +32,11 @@ public class AdminController {
     /**
      * Show the application dashboard.
      */
-    public static TemplateViewRoute index = (request, response) -> new ModelAndView(null, "admin/index");
+    public static Route index = (request, response) -> {
+        response.redirect("/admin/pre-orders");
+        return null;
+    };
+//    public static TemplateViewRoute index = (request, response) -> new ModelAndView(null, "admin/index");
 
     /**
      * Show the menu.
