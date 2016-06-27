@@ -1,6 +1,5 @@
-package app.service.customer;
+package app.services;
 
-import app.service.xml.XmlService;
 import app.util.Path;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;

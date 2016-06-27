@@ -1,8 +1,8 @@
-package app.admin;
+package app.controllers;
 
-import app.service.menu.MenuService;
+import app.services.MenuService;
 
-import app.service.xml.XmlService;
+import app.services.XmlService;
 import app.util.Message;
 import app.util.Path;
 import app.util.Utils;

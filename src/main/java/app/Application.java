@@ -1,7 +1,7 @@
 package app;
 
-import app.admin.AdminController;
-import app.menu.MenuController;
+import app.controllers.AdminController;
+import app.controllers.MenuController;
 import app.util.Path;
 import com.mitchellbosecke.pebble.loader.ClasspathLoader;
 import com.mitchellbosecke.pebble.loader.Loader;

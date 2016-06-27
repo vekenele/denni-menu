@@ -1,6 +1,6 @@
-package app.service.xml;
+package app.services;
 
-import app.model.dailyMenu.DailyMenu;
+import app.model.dailymenu.DailyMenu;
 import app.model.food.Appetizer;
 import app.model.food.Dessert;
 import app.model.food.MainDish;
@@ -30,9 +30,6 @@ import javax.xml.xpath.XPathExpressionException;
 import javax.xml.xpath.XPathFactory;
 import java.io.File;
 import java.io.IOException;
-import java.net.URI;
-import java.net.URISyntaxException;
-import java.net.URL;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;

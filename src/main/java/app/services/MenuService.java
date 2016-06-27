@@ -1,13 +1,12 @@
-package app.service.menu;
+package app.services;
 
 
-import app.model.dailyMenu.DailyMenu;
+import app.model.dailymenu.DailyMenu;
 import app.model.food.Appetizer;
 import app.model.food.Dessert;
 import app.model.food.MainDish;
 import app.model.food.Soup;
 import app.model.menu.Menu;
-import app.service.xml.XmlService;
 import app.util.Path;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;

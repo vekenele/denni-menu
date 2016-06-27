@@ -1,4 +1,4 @@
-package app.model.dailyMenu;
+package app.model.dailymenu;
 
 import app.model.food.Appetizer;
 import app.model.food.Dessert;

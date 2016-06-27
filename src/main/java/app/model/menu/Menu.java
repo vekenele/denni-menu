@@ -1,6 +1,6 @@
 package app.model.menu;
 
-import app.model.dailyMenu.DailyMenu;
+import app.model.dailymenu.DailyMenu;
 
 import java.util.ArrayList;
 

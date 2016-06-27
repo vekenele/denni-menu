@@ -1,8 +1,8 @@
-package app.menu;
+package app.controllers;
 
-import app.service.customer.CustomerService;
-import app.service.menu.MenuService;
-import app.service.xslt.XsltTransformService;
+import app.services.CustomerService;
+import app.services.MenuService;
+import app.services.XsltTransformService;
 import spark.ModelAndView;
 import spark.TemplateViewRoute;
 import spark.Route;
