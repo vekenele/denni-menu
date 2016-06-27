@@ -1,6 +1,6 @@
-package app.services;
+package cz.muni.fi.pb138.app.services;
 
-import app.util.Path;
+import cz.muni.fi.pb138.app.util.Path;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;

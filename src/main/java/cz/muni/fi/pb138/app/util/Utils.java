@@ -1,4 +1,4 @@
-package app.util;
+package cz.muni.fi.pb138.app.util;
 
 import java.time.DateTimeException;
 import java.time.LocalDate;

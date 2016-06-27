@@ -1,8 +1,8 @@
-package app;
+package cz.muni.fi.pb138.app;
 
-import app.controllers.AdminController;
-import app.controllers.MenuController;
-import app.util.Path;
+import cz.muni.fi.pb138.app.controllers.AdminController;
+import cz.muni.fi.pb138.app.controllers.MenuController;
+import cz.muni.fi.pb138.app.util.Path;
 import com.mitchellbosecke.pebble.loader.ClasspathLoader;
 import com.mitchellbosecke.pebble.loader.Loader;
 import spark.ModelAndView;

@@ -1,9 +1,9 @@
-package app.model.dailymenu;
+package cz.muni.fi.pb138.app.model.dailymenu;
 
-import app.model.food.Appetizer;
-import app.model.food.Dessert;
-import app.model.food.MainDish;
-import app.model.food.Soup;
+import cz.muni.fi.pb138.app.model.food.Appetizer;
+import cz.muni.fi.pb138.app.model.food.Dessert;
+import cz.muni.fi.pb138.app.model.food.MainDish;
+import cz.muni.fi.pb138.app.model.food.Soup;
 
 import java.util.ArrayList;
 

@@ -1,11 +1,11 @@
-package app.controllers;
+package cz.muni.fi.pb138.app.controllers;
 
-import app.services.MenuService;
+import cz.muni.fi.pb138.app.services.MenuService;
 
-import app.services.XmlService;
-import app.util.Message;
-import app.util.Path;
-import app.util.Utils;
+import cz.muni.fi.pb138.app.services.XmlService;
+import cz.muni.fi.pb138.app.util.Message;
+import cz.muni.fi.pb138.app.util.Path;
+import cz.muni.fi.pb138.app.util.Utils;
 import spark.Filter;
 import spark.ModelAndView;
 import spark.Route;

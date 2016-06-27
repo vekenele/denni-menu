@@ -1,8 +1,8 @@
-package app.controllers;
+package cz.muni.fi.pb138.app.controllers;
 
-import app.services.CustomerService;
-import app.services.MenuService;
-import app.services.XsltTransformService;
+import cz.muni.fi.pb138.app.services.CustomerService;
+import cz.muni.fi.pb138.app.services.MenuService;
+import cz.muni.fi.pb138.app.services.XsltTransformService;
 import spark.ModelAndView;
 import spark.TemplateViewRoute;
 import spark.Route;

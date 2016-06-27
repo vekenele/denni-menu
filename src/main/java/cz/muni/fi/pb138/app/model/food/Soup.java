@@ -1,4 +1,4 @@
-package app.model.food;
+package cz.muni.fi.pb138.app.model.food;
 
 /**
  * Created by david on 20.06.16.

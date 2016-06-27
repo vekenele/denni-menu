@@ -1,4 +1,4 @@
-package app.services;
+package cz.muni.fi.pb138.app.services;
 
 import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerException;
