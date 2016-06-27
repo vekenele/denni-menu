@@ -164,6 +164,9 @@
                 <allergens>1</allergens>
                 <costPrice>12</costPrice>
                 <sellPrice>28</sellPrice>
+                <preorders>
+                    <customer cid="15"/>
+                </preorders>
             </variant>
         </dessert>
     </tuesday>
@@ -180,6 +183,9 @@
                 <allergens>2,3</allergens>
                 <costPrice>18</costPrice>
                 <sellPrice>32</sellPrice>
+                <preorders>
+                    <customer cid="15"/>
+                </preorders>
             </variant>
         </appetizer>
         <soup>
@@ -194,6 +200,9 @@
                 <allergens>2,3</allergens>
                 <costPrice>13</costPrice>
                 <sellPrice>22</sellPrice>
+                <preorders>
+                    <customer cid="15"/>
+                </preorders>
             </variant>
         </soup>
         <mainDish>
@@ -214,6 +223,9 @@
                 <allergens>1,3</allergens>
                 <costPrice>31</costPrice>
                 <sellPrice>76</sellPrice>
+                <preorders>
+                    <customer cid="15"/>
+                </preorders>
             </variant>
         </mainDish>
         <dessert>
@@ -228,6 +240,9 @@
                 <allergens>2</allergens>
                 <costPrice>21</costPrice>
                 <sellPrice>37</sellPrice>
+                <preorders>
+                    <customer cid="15"/>
+                </preorders>
             </variant>
         </dessert>
     </wednesday>

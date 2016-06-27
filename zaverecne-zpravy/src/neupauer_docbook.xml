@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd">
+<article lang="sk">
+    <articleinfo>
+        <title>Záverečná správa</title>
+
+        <autor>
+            <firstname>Peter</firstname>
+
+            <surname>Neupauer</surname>
+
+            <affiliation>
+                <orgname>VEKENELE</orgname>
+            </affiliation>
+        </autor>
+
+        <datum>27.6.2016</datum>
+    </articleinfo>
+
+    <section>
+        <title>Administrácia</title>
+
+        <para>
+            Moja úloha na projekte spočívala vo vytvorení administračnej časti aplikácie.
+        </para>
+
+        <para>
+            Pri navrhovaní dizaju administrácie sme dbali na jednoduchosť, prehľadnosť a funkčnosť. Dizajn je plne responzívny. Pre uľahčenie práce sme využili knižnice ako Twitter Bootstrap, Chart.js.
+        </para>
+
+        <para>
+            Orkem dizajnu sme pracovali na vytvorení denného menu za pomoci html formuláru. Za pomoci javy na strane serveru sme jednotlivé http požiadavky zachitávali a spracovávali a na ich základe vytvorili XML súbor denného menu. Okrem vytvárania denného menu je možné denné menu priebežne doplňovať o nové položky a taktiž je možné denné menu z administrácie jednoducho odstrániť. V administrácii je taktiž dostupná jednoduchá štatistika a prehľad predobjednávok pre daný týždeň.
+        </para>
+    </section>
+</article>
