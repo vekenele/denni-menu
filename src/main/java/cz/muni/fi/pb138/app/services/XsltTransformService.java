@@ -10,7 +10,7 @@ import java.io.StringWriter;
 import java.net.URL;
 
 /**
- * Class for performing XSLT transformations
+ * Class for performing XSLT transformations.
  *
  * Created by ketys on 21/06/16.
  */

@@ -8,7 +8,11 @@ import com.mitchellbosecke.pebble.loader.Loader;
 import spark.ModelAndView;
 import spark.template.pebble.PebbleTemplateEngine;
 
-import static spark.Spark.*;
+import static spark.Spark.port;
+import static spark.Spark.staticFiles;
+import static spark.Spark.get;
+import static spark.Spark.post;
+import static spark.Spark.before;
 
 /**
  * Main Application class.
@@ -16,7 +20,6 @@ import static spark.Spark.*;
  * @author Bc. Jiří Ketner
  * @author Bc. David Věžník
  * @author Peter Neupauer
- * @version 1.0
  */
 public class Application {
 
@@ -43,14 +46,19 @@ public class Application {
 
         // Web
         get(Path.Web.INDEX, (req, resp) -> new ModelAndView(null, "index"), engine);
-        get(Path.Web.ABOUT, (req, resp) -> new ModelAndView(null, "about"), engine);
-        get(Path.Web.CONTACT, (req, resp) -> new ModelAndView(null, "contact"), engine);
-        get(Path.Web.PERMANENT_OFFER, (req, resp) -> new ModelAndView(null, "menu/permanent"), engine);
-        get(Path.Web.DAILYMENU, MenuController.menu, engine);
-        post(Path.Web.DAILYMENU, MenuController.preOrder);
-        get(Path.Web.DAILYMENU_PRINT, MenuController.menuPrint, engine);
 
-        // Cron routes
+        get(Path.Web.ABOUT, (req, resp) -> new ModelAndView(null, "about"), engine);
+
+        get(Path.Web.CONTACT, (req, resp) -> new ModelAndView(null, "contact"), engine);
+
+        get(Path.Web.PERMANENT_OFFER, (req, resp) -> new ModelAndView(null, "menu/permanent"), engine);
+
+        get(Path.Web.DAILY_MENU, MenuController.menu, engine);
+        post(Path.Web.DAILY_MENU, MenuController.preOrder);
+
+        get(Path.Web.DAILY_MENU_PRINT, MenuController.menuPrint, engine);
+
+        // Cron
         get(Path.Cron.ACTUAL_MENU, MenuController.refresh);
 
         // Admin
@@ -64,18 +72,15 @@ public class Application {
         post(Path.Admin.MENU_IMPORT, AdminController.menuImportPost);
 
         before(Path.Admin.MENU_ADD_ITEM, AdminController.menuBeforeFilter);
+
         get(Path.Admin.MENU_ADD_ITEM, AdminController.menuAddItem, engine);
         post(Path.Admin.MENU_ADD_ITEM, AdminController.menuAddItemPost, engine);
 
         before(Path.Admin.MENU_DELETE, AdminController.menuBeforeFilter);
         get(Path.Admin.MENU_DELETE, AdminController.menuDelete);
 
-//        // Admin/uploaded-menu
-//        post(Path.Admin.UPLOADED_MENU, AdminController.uploadedMenu, engine);
-
         // Error
         get(Path.Web.ANYTHING, (req, resp) -> new ModelAndView(null, "404"), engine);
-
     }
 
     /**

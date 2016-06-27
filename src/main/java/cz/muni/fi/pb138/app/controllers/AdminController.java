@@ -1,7 +1,6 @@
 package cz.muni.fi.pb138.app.controllers;
 
 import cz.muni.fi.pb138.app.services.MenuService;
-
 import cz.muni.fi.pb138.app.services.XmlService;
 import cz.muni.fi.pb138.app.util.Message;
 import cz.muni.fi.pb138.app.util.Path;
@@ -25,7 +24,6 @@ import java.util.Map;
  * @author Bc. Jiří Ketner
  * @author Bc. David Věžník
  * @author Peter Neupauer
- * @version 1.0
  */
 public class AdminController {
 
@@ -39,7 +37,7 @@ public class AdminController {
      */
     public static TemplateViewRoute menu = (request, response) -> {
         Map<String, Object> data = new HashMap<>();
-        data.put("files", new File(Path.Admin.XML_STORAGE).listFiles());
+        data.put("files", new File(Path.File.XML_STORAGE).listFiles());
         return new ModelAndView(data, "admin/menu");
     };
 
@@ -168,7 +166,7 @@ public class AdminController {
     };
 
     public static Route menuDelete = (request, response) -> {
-        Files.delete(new File(String.format("%s%s.xml", Path.Admin.XML_STORAGE, request.params("id"))).toPath());
+        Files.delete(new File(String.format("%s%s.xml", Path.File.XML_STORAGE, request.params("id"))).toPath());
         response.redirect(Path.Admin.MENU);
         return null;
     };

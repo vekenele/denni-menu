@@ -1,11 +1,11 @@
 package cz.muni.fi.pb138.app.services;
 
-import cz.muni.fi.pb138.app.model.dailymenu.DailyMenu;
-import cz.muni.fi.pb138.app.model.food.Appetizer;
-import cz.muni.fi.pb138.app.model.food.Dessert;
-import cz.muni.fi.pb138.app.model.food.MainDish;
-import cz.muni.fi.pb138.app.model.food.Soup;
-import cz.muni.fi.pb138.app.model.menu.Menu;
+import cz.muni.fi.pb138.app.models.DailyMenu;
+import cz.muni.fi.pb138.app.models.Appetizer;
+import cz.muni.fi.pb138.app.models.Dessert;
+import cz.muni.fi.pb138.app.models.MainDish;
+import cz.muni.fi.pb138.app.models.Soup;
+import cz.muni.fi.pb138.app.models.Menu;
 import cz.muni.fi.pb138.app.util.Path;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -28,7 +28,6 @@ import javax.xml.xpath.XPathConstants;
 import javax.xml.xpath.XPathExpression;
 import javax.xml.xpath.XPathExpressionException;
 import javax.xml.xpath.XPathFactory;
-import java.io.File;
 import java.io.IOException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -190,7 +189,7 @@ public class XmlService {
                 e.printStackTrace();
             }
             DOMSource source = new DOMSource(doc);
-            StreamResult result = new StreamResult(new File( Path.Admin.XML_STORAGE + menu.getValidFrom() + "_" + menu.getValidTo() + ".xml"));
+            StreamResult result = new StreamResult(new java.io.File( Path.File.XML_STORAGE + menu.getValidFrom() + "_" + menu.getValidTo() + ".xml"));
 
 
 
@@ -199,7 +198,7 @@ public class XmlService {
             } catch (TransformerException e) {
                 e.printStackTrace();
             }
-            valid = validateXml(Path.Admin.XML_STORAGE + menu.getValidFrom() + "_" + menu.getValidTo() + ".xml");
+            valid = validateXml(Path.File.XML_STORAGE + menu.getValidFrom() + "_" + menu.getValidTo() + ".xml");
             System.out.println("File saved!");
 
 
@@ -217,8 +216,8 @@ public class XmlService {
      */
     public static boolean validateXml (String xmlPath) {
 
-        Source xsdFile = new StreamSource(new File(Path.Admin.XSD_PATH));
-        Source xmlFile = new StreamSource(new File(xmlPath));
+        Source xsdFile = new StreamSource(new java.io.File(Path.File.XSD_PATH));
+        Source xmlFile = new StreamSource(new java.io.File(xmlPath));
         SchemaFactory schemaFactory = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
         Schema schema = null;
         try {
@@ -249,7 +248,7 @@ public class XmlService {
      * @param file      Input XML file
      * @return          Document document
      */
-    public static Document loadDocument(File file) throws Exception {
+    public static Document loadDocument(java.io.File file) throws Exception {
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         factory.setNamespaceAware(true);
         return factory.newDocumentBuilder().parse(file);
@@ -288,7 +287,7 @@ public class XmlService {
      * @param doc       Input final Document instantion
      * @param xml       Output XML file, which will be overwritten
      */
-    public static void saveChangesToXML(Document doc, File xml) throws TransformerException {
+    public static void saveChangesToXML(Document doc, java.io.File xml) throws TransformerException {
         DOMSource source = new DOMSource(doc);
 
         TransformerFactory transformerFactory = TransformerFactory.newInstance();
@@ -382,8 +381,8 @@ public class XmlService {
             DOMSource source = new DOMSource(doc);
 
             StreamResult result = new StreamResult(
-                    new File(String.format("%s%s_%s.xml",
-                            Path.Admin.XML_STORAGE,
+                    new java.io.File(String.format("%s%s_%s.xml",
+                            Path.File.XML_STORAGE,
                             textFrom,
                             textTo)));
             try {

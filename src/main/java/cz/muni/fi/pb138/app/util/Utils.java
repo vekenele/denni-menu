@@ -13,7 +13,7 @@ import java.time.format.DateTimeFormatterBuilder;
 public class Utils {
 
     /**
-     * Gets date time formatter from default patterns
+     * Gets date time formatter from default patterns.
      *
      * @return the date time formatter
      */

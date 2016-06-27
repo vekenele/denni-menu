@@ -1,6 +1,4 @@
-package cz.muni.fi.pb138.app.model.menu;
-
-import cz.muni.fi.pb138.app.model.dailymenu.DailyMenu;
+package cz.muni.fi.pb138.app.models;
 
 import java.util.ArrayList;
 

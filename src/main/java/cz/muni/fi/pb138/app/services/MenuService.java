@@ -1,12 +1,12 @@
 package cz.muni.fi.pb138.app.services;
 
 
-import cz.muni.fi.pb138.app.model.dailymenu.DailyMenu;
-import cz.muni.fi.pb138.app.model.food.Appetizer;
-import cz.muni.fi.pb138.app.model.food.Dessert;
-import cz.muni.fi.pb138.app.model.food.MainDish;
-import cz.muni.fi.pb138.app.model.food.Soup;
-import cz.muni.fi.pb138.app.model.menu.Menu;
+import cz.muni.fi.pb138.app.models.DailyMenu;
+import cz.muni.fi.pb138.app.models.Appetizer;
+import cz.muni.fi.pb138.app.models.Dessert;
+import cz.muni.fi.pb138.app.models.MainDish;
+import cz.muni.fi.pb138.app.models.Soup;
+import cz.muni.fi.pb138.app.models.Menu;
 import cz.muni.fi.pb138.app.util.Path;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -325,7 +325,7 @@ public class MenuService {
     }
 
     public static boolean exist(String name) throws IOException {
-        return Files.walk(Paths.get(Path.Admin.XML_STORAGE)).anyMatch(path -> path.getFileName().toString().equals(name + ".xml"));
+        return Files.walk(Paths.get(Path.File.XML_STORAGE)).anyMatch(path -> path.getFileName().toString().equals(name + ".xml"));
     }
 
 
@@ -380,7 +380,7 @@ public class MenuService {
     public void addItem(String fileName, String day, String type, String name, String allergens, String costPrice, String sellPrice) {
 
         try {
-            File fXmlFile = new File(Path.Admin.XML_STORAGE + fileName);
+            File fXmlFile = new File(Path.File.XML_STORAGE + fileName);
             DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
             Document doc = dBuilder.parse(fXmlFile);

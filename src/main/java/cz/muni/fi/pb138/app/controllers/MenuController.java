@@ -13,7 +13,7 @@ import java.util.Map;
 /**
  * Controller for handling menu requests.
  *
- * Created by Jiri Ketner on 21/06/16.
+ * @author Bc. Jiri Ketner.
  */
 public class MenuController {
 
