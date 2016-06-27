@@ -431,6 +431,34 @@ public class MenuService {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
 
+    public Map<String, Integer> getPreOrder(String day, String type) {
+
+        Map<String, Integer> map = new HashMap<>();
+
+        Element dayElm = (Element) doc.getElementsByTagName(day).item(0);
+        Element typeElm = (Element) dayElm.getElementsByTagName(type).item(0);
+
+        NodeList list = typeElm.getElementsByTagName("variant");
+
+        for (int i = 0; i < list.getLength(); i++) {
+            Element elm = (Element) list.item(i);
+            String name = elm.getElementsByTagName("name").item(0).getTextContent();
+            int count = 0;
+
+            try {
+                Element preorders = ((Element)elm.getElementsByTagName("preorders").item(0));
+                if (preorders != null) {
+                    count = preorders.getElementsByTagName("customer").getLength();
+                }
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            map.put(name, count);
+        }
+
+        return map;
     }
 }

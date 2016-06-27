@@ -1,0 +1,187 @@
+{% extends 'layouts/admin' %}
+
+{% block title %}Administration - Pre Orders{% endblock %}
+
+{% block content %}
+
+<h3>Pre Orders</h3>
+
+<hr>
+
+<ul class="nav nav-tabs nav-justified" role="tablist">
+    <li role="presentation" class="active"><a href="#monday" role="tab" data-toggle="tab">Monday</a></li>
+    <li role="presentation"><a href="#tuesday" role="tab" data-toggle="tab">Tuesday</a></li>
+    <li role="presentation"><a href="#wednesday" role="tab" data-toggle="tab">Wednesday</a></li>
+    <li role="presentation"><a href="#thursday" role="tab" data-toggle="tab">Thursday</a></li>
+    <li role="presentation"><a href="#friday" role="tab" data-toggle="tab">Friday</a></li>
+</ul>
+
+<!-- Tab panes -->
+<div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="monday">
+
+        <br>
+        <div class="row">
+            <div class="col-md-6">
+                <h4>Appetizer</h4>
+                <canvas id="monday-appetizer" width="400" height="200"></canvas>
+            </div>
+            <div class="col-md-6">
+                <h4>Soup</h4>
+                <canvas id="monday-soup" width="400" height="200"></canvas>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <h4>Main Dish</h4>
+                <canvas id="monday-main-dish" width="400" height="200"></canvas>
+            </div>
+            <div class="col-md-6">
+                <h4>Dessert</h4>
+                <canvas id="monday-dessert" width="400" height="200"></canvas>
+            </div>
+        </div>
+
+    </div>
+    <div role="tabpanel" class="tab-pane" id="tuesday">
+
+        <br>
+        <div class="row">
+            <div class="col-md-6">
+                <h4>Appetizer</h4>
+                <canvas id="tuesday-appetizer" width="400" height="200"></canvas>
+            </div>
+            <div class="col-md-6">
+                <h4>Soup</h4>
+                <canvas id="tuesday-soup" width="400" height="200"></canvas>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <h4>Main Dish</h4>
+                <canvas id="tuesday-main-dish" width="400" height="200"></canvas>
+            </div>
+            <div class="col-md-6">
+                <h4>Dessert</h4>
+                <canvas id="tuesday-dessert" width="400" height="200"></canvas>
+            </div>
+        </div>
+
+    </div>
+    <div role="tabpanel" class="tab-pane" id="wednesday">
+
+        <br>
+        <div class="row">
+            <div class="col-md-6">
+                <h4>Appetizer</h4>
+                <canvas id="wednesday-appetizer" width="400" height="200"></canvas>
+            </div>
+            <div class="col-md-6">
+                <h4>Soup</h4>
+                <canvas id="wednesday-soup" width="400" height="200"></canvas>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <h4>Main Dish</h4>
+                <canvas id="wednesday-main-dish" width="400" height="200"></canvas>
+            </div>
+            <div class="col-md-6">
+                <h4>Dessert</h4>
+                <canvas id="wednesday-dessert" width="400" height="200"></canvas>
+            </div>
+        </div>
+
+    </div>
+    <div role="tabpanel" class="tab-pane" id="thursday">
+
+        <br>
+        <div class="row">
+            <div class="col-md-6">
+                <h4>Appetizer</h4>
+                <canvas id="thursday-appetizer" width="400" height="200"></canvas>
+            </div>
+            <div class="col-md-6">
+                <h4>Soup</h4>
+                <canvas id="thursday-soup" width="400" height="200"></canvas>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <h4>Main Dish</h4>
+                <canvas id="thursday-main-dish" width="400" height="200"></canvas>
+            </div>
+            <div class="col-md-6">
+                <h4>Dessert</h4>
+                <canvas id="thursday-dessert" width="400" height="200"></canvas>
+            </div>
+        </div>
+
+    </div>
+    <div role="tabpanel" class="tab-pane" id="friday">
+
+        <br>
+        <div class="row">
+            <div class="col-md-6">
+                <h4>Appetizer</h4>
+                <canvas id="friday-appetizer" width="400" height="200"></canvas>
+            </div>
+            <div class="col-md-6">
+                <h4>Soup</h4>
+                <canvas id="friday-soup" width="400" height="200"></canvas>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <h4>Main Dish</h4>
+                <canvas id="friday-main-dish" width="400" height="200"></canvas>
+            </div>
+            <div class="col-md-6">
+                <h4>Dessert</h4>
+                <canvas id="friday-dessert" width="400" height="200"></canvas>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}
+
+{% block footer %}
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.6/Chart.min.js"></script>
+
+<script>
+
+    new Chart(document.getElementById("monday-appetizer"), {type: 'pie',data: {labels: {{ monday_appetizer_keys }},datasets: [{data: {{ monday_appetizer_values }},backgroundColor: ["#FF6384","#36A2EB","#FFCE56","#2ecc71", "#e74c3c"]}]}});
+    new Chart(document.getElementById("monday-soup"), {type: 'pie',data: {labels: {{ monday_soup_keys }},datasets: [{data: {{ monday_soup_values }},backgroundColor: ["#FF6384","#36A2EB","#FFCE56","#2ecc71", "#e74c3c"]}]}});
+    new Chart(document.getElementById("monday-main-dish"), {type: 'pie',data: {labels: {{ monday_mainDish_keys }},datasets: [{data: {{ monday_mainDish_values }},backgroundColor: ["#FF6384","#36A2EB","#FFCE56","#2ecc71", "#e74c3c"]}]}});
+    new Chart(document.getElementById("monday-dessert"), {type: 'pie',data: {labels: {{ monday_dessert_keys }},datasets: [{data: {{ monday_dessert_values }},backgroundColor: ["#FF6384","#36A2EB","#FFCE56","#2ecc71", "#e74c3c"]}]}});
+
+    new Chart(document.getElementById("tuesday-appetizer"), {type: 'pie',data: {labels: {{ tuesday_appetizer_keys }},datasets: [{data: {{ tuesday_appetizer_values }},backgroundColor: ["#FF6384","#36A2EB","#FFCE56","#2ecc71", "#e74c3c"]}]}});
+    new Chart(document.getElementById("tuesday-soup"), {type: 'pie',data: {labels: {{ tuesday_soup_keys }},datasets: [{data: {{ tuesday_soup_values }},backgroundColor: ["#FF6384","#36A2EB","#FFCE56","#2ecc71", "#e74c3c"]}]}});
+    new Chart(document.getElementById("tuesday-main-dish"), {type: 'pie',data: {labels: {{ tuesday_mainDish_keys }},datasets: [{data: {{ tuesday_mainDish_values }},backgroundColor: ["#FF6384","#36A2EB","#FFCE56","#2ecc71", "#e74c3c"]}]}});
+    new Chart(document.getElementById("tuesday-dessert"), {type: 'pie',data: {labels: {{ tuesday_dessert_keys }},datasets: [{data: {{ tuesday_dessert_values }},backgroundColor: ["#FF6384","#36A2EB","#FFCE56","#2ecc71", "#e74c3c"]}]}});
+
+    new Chart(document.getElementById("wednesday-appetizer"), {type: 'pie',data: {labels: {{ wednesday_appetizer_keys }},datasets: [{data: {{ wednesday_appetizer_values }},backgroundColor: ["#FF6384","#36A2EB","#FFCE56","#2ecc71", "#e74c3c"]}]}});
+    new Chart(document.getElementById("wednesday-soup"), {type: 'pie',data: {labels: {{ wednesday_soup_keys }},datasets: [{data: {{ wednesday_soup_values }},backgroundColor: ["#FF6384","#36A2EB","#FFCE56","#2ecc71", "#e74c3c"]}]}});
+    new Chart(document.getElementById("wednesday-main-dish"), {type: 'pie',data: {labels: {{ wednesday_mainDish_keys }},datasets: [{data: {{ wednesday_mainDish_values }},backgroundColor: ["#FF6384","#36A2EB","#FFCE56","#2ecc71", "#e74c3c"]}]}});
+    new Chart(document.getElementById("wednesday-dessert"), {type: 'pie',data: {labels: {{ wednesday_dessert_keys }},datasets: [{data: {{ wednesday_dessert_values }},backgroundColor: ["#FF6384","#36A2EB","#FFCE56","#2ecc71", "#e74c3c"]}]}});
+
+    new Chart(document.getElementById("thursday-appetizer"), {type: 'pie',data: {labels: {{ thursday_appetizer_keys }},datasets: [{data: {{ thursday_appetizer_values }},backgroundColor: ["#FF6384","#36A2EB","#FFCE56","#2ecc71", "#e74c3c"]}]}});
+    new Chart(document.getElementById("thursday-soup"), {type: 'pie',data: {labels: {{ thursday_soup_keys }},datasets: [{data: {{ thursday_soup_values }},backgroundColor: ["#FF6384","#36A2EB","#FFCE56","#2ecc71", "#e74c3c"]}]}});
+    new Chart(document.getElementById("thursday-main-dish"), {type: 'pie',data: {labels: {{ thursday_mainDish_keys }},datasets: [{data: {{ thursday_mainDish_values }},backgroundColor: ["#FF6384","#36A2EB","#FFCE56","#2ecc71", "#e74c3c"]}]}});
+    new Chart(document.getElementById("thursday-dessert"), {type: 'pie',data: {labels: {{ thursday_dessert_keys }},datasets: [{data: {{ thursday_dessert_values }},backgroundColor: ["#FF6384","#36A2EB","#FFCE56","#2ecc71", "#e74c3c"]}]}});
+
+    new Chart(document.getElementById("friday-appetizer"), {type: 'pie',data: {labels: {{ friday_appetizer_keys }},datasets: [{data: {{ friday_appetizer_values }},backgroundColor: ["#FF6384","#36A2EB","#FFCE56","#2ecc71", "#e74c3c"]}]}});
+    new Chart(document.getElementById("friday-soup"), {type: 'pie',data: {labels: {{ friday_soup_keys }},datasets: [{data: {{ friday_soup_values }},backgroundColor: ["#FF6384","#36A2EB","#FFCE56","#2ecc71", "#e74c3c"]}]}});
+    new Chart(document.getElementById("friday-main-dish"), {type: 'pie',data: {labels: {{ friday_mainDish_keys }},datasets: [{data: {{ friday_mainDish_values }},backgroundColor: ["#FF6384","#36A2EB","#FFCE56","#2ecc71", "#e74c3c"]}]}});
+    new Chart(document.getElementById("friday-dessert"), {type: 'pie',data: {labels: {{ friday_dessert_keys }},datasets: [{data: {{ friday_dessert_values }},backgroundColor: ["#FF6384","#36A2EB","#FFCE56","#2ecc71", "#e74c3c"]}]}});
+
+</script>
+{% endblock %}

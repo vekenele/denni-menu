@@ -79,6 +79,8 @@ public class Application {
         before(Path.Admin.MENU_DELETE, AdminController.menuBeforeFilter);
         get(Path.Admin.MENU_DELETE, AdminController.menuDelete);
 
+        get(Path.Admin.PRE_ORDER, AdminController.preOrders, engine);
+
         // Error
         get(Path.Web.ANYTHING, (req, resp) -> new ModelAndView(null, "404"), engine);
     }

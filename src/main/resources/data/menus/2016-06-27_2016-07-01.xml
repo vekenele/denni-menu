@@ -94,12 +94,22 @@
                 <allergens>1,3</allergens>
                 <costPrice>7</costPrice>
                 <sellPrice>22</sellPrice>
+                <preorders>
+                    <customer cid="1"/>
+                    <customer cid="11"/>
+                    <customer cid="12"/>
+                    <customer cid="13"/>
+                </preorders>
             </variant>
             <variant>
                 <name>Hummus</name>
                 <allergens>2,4</allergens>
                 <costPrice>9</costPrice>
                 <sellPrice>21</sellPrice>
+                <preorders>
+                    <customer cid="12"/>
+                    <customer cid="13"/>
+                </preorders>
             </variant>
         </appetizer>
         <soup>
@@ -114,6 +124,12 @@
                 <allergens>2,1</allergens>
                 <costPrice>12</costPrice>
                 <sellPrice>21</sellPrice>
+                <preorders>
+                    <customer cid="1"/>
+                    <customer cid="11"/>
+                    <customer cid="12"/>
+                    <customer cid="13"/>
+                </preorders>
             </variant>
         </soup>
         <mainDish>

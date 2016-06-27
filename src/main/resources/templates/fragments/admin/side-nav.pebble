@@ -1,5 +1,6 @@
 <ul class="nav nav-pills nav-stacked well">
     <li><a href="/admin">Dashboard</a></li>
+    <li><a href="/admin/pre-orders">Pre Orders</a></li>
     <li><a href="/admin/menu">Show Menus</a></li>
     <li><a href="/admin/menu/create">Create Menu</a></li>
     <li><a href="/admin/menu/import">Import Menu</a></li>

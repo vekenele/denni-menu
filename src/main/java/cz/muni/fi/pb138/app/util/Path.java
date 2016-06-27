@@ -75,8 +75,15 @@ public class Path {
          * The constant MENU_DELETE.
          */
         public static final String MENU_DELETE = "/admin/menu/:id/delete";
+        /**
+         * The constant PRE_ORDERS.
+         */
+        public static final String PRE_ORDER = "/admin/pre-orders";
     }
 
+    /**
+     * File paths.
+     */
     public static class File {
         /**
          * The constant XML_STORAGE.

@@ -15,7 +15,9 @@ import javax.servlet.http.Part;
 import java.io.File;
 import java.nio.file.Files;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -169,6 +171,27 @@ public class AdminController {
         Files.delete(new File(String.format("%s%s.xml", Path.File.XML_STORAGE, request.params("id"))).toPath());
         response.redirect(Path.Admin.MENU);
         return null;
+    };
+
+    public static TemplateViewRoute preOrders = (request, response) -> {
+        Map<String, Object> data = new HashMap<>();
+
+        String[] days = { "monday", "tuesday", "wednesday", "thursday", "friday"};
+        String[] types = { "appetizer", "mainDish", "soup", "dessert" };
+
+        for (String day : days) {
+            for (String type : types) {
+                Map<String, Integer> map = MenuService.getInstance().getPreOrder(day, type);
+                List<String> listKeys = new ArrayList<>();
+                List<Integer> listValues = new ArrayList<>();
+                map.forEach((key, value) -> listKeys.add("'" + key + "'"));
+                map.forEach((key, value) -> listValues.add(value));
+                data.put(day + "_" + type + "_keys", listKeys);
+                data.put(day + "_" + type + "_values", listValues);
+            }
+        }
+
+        return new ModelAndView(data, "admin/pre-orders");
     };
 
 }
