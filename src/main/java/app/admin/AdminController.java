@@ -4,6 +4,7 @@ import app.service.menu.MenuService;
 
 import app.service.xml.XmlService;
 import app.util.Message;
+import app.util.Path;
 import app.util.Utils;
 import spark.Filter;
 import spark.ModelAndView;
@@ -12,6 +13,7 @@ import spark.TemplateViewRoute;
 
 import javax.servlet.MultipartConfigElement;
 import javax.servlet.http.Part;
+import java.io.File;
 import java.time.LocalDate;
 import java.util.HashMap;
 import java.util.Map;
@@ -36,9 +38,7 @@ public class AdminController {
      */
     public static TemplateViewRoute menu = (request, response) -> {
         Map<String, Object> data = new HashMap<>();
-
-
-
+        data.put("files", new File(Path.Admin.XML_STORAGE).listFiles());
         return new ModelAndView(data, "admin/menu");
     };
 
