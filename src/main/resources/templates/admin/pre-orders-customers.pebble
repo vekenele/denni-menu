@@ -1,0 +1,28 @@
+{% extends 'layouts/admin' %}
+
+{% block title %}Administration - Pre Orders Customers{% endblock %}
+
+{% block content %}
+
+<h3>Pre Orders Customers</h3>
+
+<hr>
+
+
+<div class="row">
+{% for preorder in preorders %}
+    {% if preorder.getCount() > 0 %}
+         <div class="col-md-6">
+             {{ preorder.getName() }} ({{ preorder.getCount() }}) <br>
+             {% for customer in preorder.getCustomers() %}
+                   {{ customer.getName() }}, {{ customer.getTelephone() }} <br>
+             {% endfor %}
+         </div>
+    {% endif %}
+{% endfor %}
+</div>
+
+{% endblock %}
+
+{% block footer %}
+{% endblock %}

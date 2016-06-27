@@ -112,4 +112,44 @@ public class CustomerService {
             return cid;
         }
     }
+
+    /**
+     * If it finds an id in XML file, then it returns its name
+     *
+     * @param id        customer's id
+     * @return          customer's name
+     */
+    public String getCustomerName(String id) {
+        NodeList customers = doc.getElementsByTagName("customer");
+        if(customers.getLength() > 0) {
+            for(int i = 0; i < customers.getLength(); i++) {
+                Element customer = (Element)customers.item(i);
+                NodeList cname = customer.getElementsByTagName("name");
+                int currentId = Integer.parseInt(customer.getAttribute("cid"));
+                int givenId = Integer.parseInt(id);
+                if(currentId == givenId) return cname.item(0).getTextContent();
+            }
+        }
+        return "";
+    }
+
+    /**
+     * If it finds an id in XML file, then it returns its phone
+     *
+     * @param id        customer's id
+     * @return          customer's phone
+     */
+    public String getCustomerPhone(String id) {
+        NodeList customers = doc.getElementsByTagName("customer");
+        if(customers.getLength() > 0) {
+            for(int i = 0; i < customers.getLength(); i++) {
+                Element customer = (Element)customers.item(i);
+                NodeList cphone = customer.getElementsByTagName("phone");
+                int currentId = Integer.parseInt(customer.getAttribute("cid"));
+                int givenId = Integer.parseInt(id);
+                if(currentId == givenId) return cphone.item(0).getTextContent();
+            }
+        }
+        return "";
+    }
 }

@@ -79,6 +79,10 @@ public class Path {
          * The constant PRE_ORDERS.
          */
         public static final String PRE_ORDER = "/admin/pre-orders";
+        /**
+         * The constant PRE_ORDERS_CUSTOMERS.
+         */
+        public static final String PRE_ORDER_CUSTOMERS = "/admin/pre-orders-customers/:day/:type";
     }
 
     /**

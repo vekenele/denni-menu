@@ -1,5 +1,7 @@
 package cz.muni.fi.pb138.app.controllers;
 
+import cz.muni.fi.pb138.app.models.Customer;
+import cz.muni.fi.pb138.app.models.PreOrders;
 import cz.muni.fi.pb138.app.services.MenuService;
 import cz.muni.fi.pb138.app.services.XmlService;
 import cz.muni.fi.pb138.app.util.Message;
@@ -15,10 +17,7 @@ import javax.servlet.http.Part;
 import java.io.File;
 import java.nio.file.Files;
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * Administration Controller.
@@ -202,5 +201,25 @@ public class AdminController {
 
         return new ModelAndView(data, "admin/pre-orders");
     };
+
+    public static TemplateViewRoute preOrdersCustomers = (request, response) -> {
+        ArrayList<PreOrders> preOrderses = new ArrayList<PreOrders>();
+        Map<String, Integer> map = MenuService.getInstance().getPreOrder(request.params(":day"), request.params(":type"));
+
+        for (Map.Entry<String, Integer> entry : map.entrySet()) {
+            ArrayList<Customer> customers = new ArrayList<Customer>();
+            ArrayList<String> customersId = MenuService.getInstance().getPreOrderCustomers(request.params(":day"), request.params(":type"), entry.getKey());
+            for(String customerId : customersId){
+                customers.add(new Customer(customerId));
+            }
+            preOrderses.add(new PreOrders(entry.getKey(), entry.getValue(), customers));
+        }
+
+        Map<String, Object> buffer = new HashMap<>();
+        buffer.put("preorders", preOrderses);
+
+        return new ModelAndView(buffer, "admin/pre-orders-customers");
+    };
+
 
 }

@@ -82,6 +82,8 @@ public class Application {
 
         get(Path.Admin.PRE_ORDER, AdminController.preOrders, engine);
 
+        get(Path.Admin.PRE_ORDER_CUSTOMERS, AdminController.preOrdersCustomers, engine);
+
         // Error
         get(Path.Web.ANYTHING, (req, resp) -> new ModelAndView(null, "404"), engine);
     }

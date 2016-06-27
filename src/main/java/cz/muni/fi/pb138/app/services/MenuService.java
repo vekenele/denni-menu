@@ -461,4 +461,38 @@ public class MenuService {
 
         return map;
     }
+
+    public ArrayList<String> getPreOrderCustomers(String day, String type, String name) {
+
+        ArrayList<String> map = new ArrayList<String>();
+
+        Element dayElm = (Element) doc.getElementsByTagName(day).item(0);
+        Element typeElm = (Element) dayElm.getElementsByTagName(type).item(0);
+
+        NodeList list = typeElm.getElementsByTagName("variant");
+
+        for (int i = 0; i < list.getLength(); i++) {
+            Element elm = (Element) list.item(i);
+            String tmpName = elm.getElementsByTagName("name").item(0).getTextContent();
+
+            try {
+                Element preorders = ((Element)elm.getElementsByTagName("preorders").item(0));
+                if (preorders != null && name.equals(tmpName)) {
+                    NodeList customers = preorders.getElementsByTagName("customer");
+                    for(int j=0; j < customers.getLength(); j++) {
+                        Element elm2 = (Element) customers.item(j);
+                        String id = elm2.getAttribute("cid");
+
+                        map.add(id);
+                    }
+                }
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+        }
+
+        return map;
+    }
 }
