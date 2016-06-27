@@ -70,7 +70,7 @@ public class Application {
         post(Path.Admin.MENU_CREATE, AdminController.menuCreatePost, engine);
 
         get(Path.Admin.MENU_IMPORT, AdminController.menuImport, engine);
-        post(Path.Admin.MENU_IMPORT, AdminController.menuImportPost);
+        post(Path.Admin.MENU_IMPORT, AdminController.menuImportPost, engine);
 
         before(Path.Admin.MENU_ADD_ITEM, AdminController.menuBeforeFilter);
 

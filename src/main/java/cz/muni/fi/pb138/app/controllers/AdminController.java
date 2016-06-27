@@ -99,20 +99,25 @@ public class AdminController {
     /**
      * Import the menu.
      */
-    public static Route menuImportPost = (request, response) ->  {
+    public static TemplateViewRoute menuImportPost = (request, response) ->  {
         if (request.raw().getAttribute("org.eclipse.jetty.multipartConfig") == null) {
             MultipartConfigElement multipartConfigElement = new MultipartConfigElement(System.getProperty("java.io.tmpdir"));
             request.raw().setAttribute("org.eclipse.jetty.multipartConfig", multipartConfigElement);
         }
 
+        Map<String, Object> data = new HashMap<>();
+
         Part menuFile = request.raw().getPart("file");
-// TODO: 21.06.16 - show result of import to administrator
         if(MenuService.menuFactory(menuFile)) { // parsed successfully and XML created
             System.out.println("Soubor OK");
+            data.put("message", new Message(Message.Level.SUCCESS, "Menu was added successfully."));
+            return new ModelAndView(data, "admin/menu-import");
         } else {
             System.out.println("Soubor NOK"); // parsing or creating failed
+            data.put("message", new Message(Message.Level.DANGER, "Menu import failed!"));
+            return new ModelAndView(data, "admin/menu-import");
         }
-        return new ModelAndView(null, "admin/menu-import");
+
     };
 
     /**

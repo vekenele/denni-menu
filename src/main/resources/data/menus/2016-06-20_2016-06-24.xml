@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<dailymenu>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><dailymenu>
     <validFrom>2016-06-20</validFrom>
     <validTo>2016-06-24</validTo>
     <monday date="2016-06-20">
@@ -25,7 +24,7 @@
                     <customer cid="3"/>
                 </preorders>
             </variant>
-        </appetizer>
+        <variant><name>Topinka s česnekem</name><allergens>1,3</allergens><costPrice>10</costPrice><sellPrice>23</sellPrice></variant></appetizer>
         <soup>
             <variant>
                 <name>Kulajda</name>
