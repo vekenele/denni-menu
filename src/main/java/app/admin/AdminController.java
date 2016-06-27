@@ -14,6 +14,7 @@ import spark.TemplateViewRoute;
 import javax.servlet.MultipartConfigElement;
 import javax.servlet.http.Part;
 import java.io.File;
+import java.nio.file.Files;
 import java.time.LocalDate;
 import java.util.HashMap;
 import java.util.Map;
@@ -113,7 +114,7 @@ public class AdminController {
     /**
      * Check if the menu with given ID exists.
      */
-    public static Filter menuAddItemBeforeFilter = (request, response) -> {
+    public static Filter menuBeforeFilter = (request, response) -> {
         if (!MenuService.exist(request.params("id"))) {
             response.redirect("/not-found");
         }
@@ -128,5 +129,11 @@ public class AdminController {
      * Save the item.
      */
     public static Route menuAddItemPost = (request, response) -> "TODO: menu add item";
+
+    public static Route menuDelete = (request, response) -> {
+        Files.delete(new File(String.format("%s%s.xml", Path.Admin.XML_STORAGE, request.params("id"))).toPath());
+        response.redirect(Path.Admin.MENU);
+        return null;
+    };
 
 }

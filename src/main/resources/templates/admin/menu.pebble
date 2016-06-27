@@ -22,7 +22,10 @@
     <tr>
         <td>{{ file.name | slice(0,10) | date("dd. MMMM yyyy", existingFormat="yyyy-MM-dd") }}</td>
         <td>{{ file.name | slice(11,21) | date("dd. MMMM yyyy", existingFormat="yyyy-MM-dd") }}</td>
-        <td><a href="/admin/menu/{{ file.name | slice(0,21) }}/add">Add Item</a></td>
+        <td>
+            <a href="/admin/menu/{{ file.name | slice(0,21) }}/add">Add Item</a>
+            <a href="/admin/menu/{{ file.name | slice(0,21) }}/delete" class="text-danger">Delete</a>
+        </td>
     </tr>
     {% endfor %}
 </table>

@@ -63,9 +63,12 @@ public class Application {
         get(Path.Admin.MENU_IMPORT, AdminController.menuImport, engine);
         post(Path.Admin.MENU_IMPORT, AdminController.menuImportPost);
 
-        before(Path.Admin.MENU_ADD_ITEM, AdminController.menuAddItemBeforeFilter);
+        before(Path.Admin.MENU_ADD_ITEM, AdminController.menuBeforeFilter);
         get(Path.Admin.MENU_ADD_ITEM, AdminController.menuAddItem, engine);
         post(Path.Admin.MENU_ADD_ITEM, AdminController.menuAddItemPost);
+
+        before(Path.Admin.MENU_DELETE, AdminController.menuBeforeFilter);
+        get(Path.Admin.MENU_DELETE, AdminController.menuDelete);
 
 //        // Admin/uploaded-menu
 //        post(Path.Admin.UPLOADED_MENU, AdminController.uploadedMenu, engine);
