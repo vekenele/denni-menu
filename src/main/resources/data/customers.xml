@@ -56,4 +56,8 @@
         <name>Tomáš Nedlužil</name>
         <phone>+420 605 344 566</phone>
     </customer>
+    <customer cid="15">
+        <name>Pepo</name>
+        <phone>+421123456789</phone>
+    </customer>
 </customers>
