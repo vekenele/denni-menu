@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+        "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd">
+<article lang="cs">
+    <articleinfo>
+        <title>Závěrečná zpráva k projektu Správa denního menu</title>
+
+        <autor>
+            <firstname>Bc. David</firstname>
+
+            <surname>Věžník</surname>
+
+            <affiliation>
+                <orgname>VEKENELE</orgname>
+            </affiliation>
+        </autor>
+
+        <datum>27.6.2016</datum>
+    </articleinfo>
+
+    <section>
+        <title>Import menu z vlastního souboru</title>
+
+        <para>Po domluvě s vedoucím práce vzešlo, že bychom měli vytvořit vlastní formát souboru, jehož importem by vzniklo týdenní menu. </para>
+
+        <para>Já jsem tak navrhl strukturu souboru, kde jsem se snažil, aby úplně nekopírovala strukturu současných známých formátů,
+            jako například csv, JSON nebo XML. Vzešel tak formát souboru, jehož struktura je k nalezení na wiki stránkách projektu.
+            Formát jsem několikrát přepracovával, a to z toho důvodu, aby byl v rámci možností pochopitelný pro osobu, která bude menu
+            pomocí tohoto formátu vytvářet, a také aby vytvoření vlastního parseru nebylo neúměrně náročné. K finálnímu formátu by se
+            dalo říci, že si bere něco z XML, JSON i csv. </para>
+        <para>
+            Jak již bylo zmíněno, tak dále bylo potřeba vytvořit parser, který ze souboru vytáhne důležité informace a ty potom zpracuje.
+            Při implementaci parseru jsem využíval načítání jednotlivých řádků z importovaného souboru, které jsem analyzoval pomocí
+            regulárních výrazů. Jakmile se objevil některý výraz, který nebyl povolen v předepsaném formátu vstupního souboru, tak parsování,
+            a tím i celý import, dopadl neúspěšně. Pří úspěšném zpracování vstupního souboru následně vznikalo množství objektů, které jsem
+            navrhl, a které jsou nutné k tomu, aby mohl být sestaven finální objekt reprezentující menu na celý týden.
+        </para>
+
+        <para>
+            Jakmile byl úspěšně sestaven objekt reprezentující celé menu, tak zbývalo už pouze vytvořit validní XML soubor,
+            který bude tomuto menu odpovídat. Opět jsem navrhl objekty, které umožňují práci s XML. Základním stavebním kamenem objektu,
+            který umožňuje vytvořit XML je třída DocumentBuilderFactory. Logika tvoření výsledného souboru je taková, že se prochází objekt
+            reprezentující menu a z jeho atributů se tvoří výsledné XML.
+        </para>
+
+        <para>
+            Posledním krokem v operaci importu menu bylo zvalidovat výsledné XML oproti navrženému XML Schématu, které vytvořil kolega.
+            Pro validaci jsem využil služeb tříd SchemaFactory a Validator. Jestliže bylo vytvořené XML validní, tak se administrátorovi
+            objeví hláška o úspěšném importu menu. Pokud validní není, tak se objeví hláška, že menu nemohlo být importováno.
+        </para>
+
+
+    </section>
+
+    <section>
+        <title>Zobrazení zákazníků u předobjednávek</title>
+
+        <para>Jak již zmiňuje popis naší aplikace, tak je možné si v aplikaci jídla předobjednat. Při předobjednávce musí
+            zákazník zadat své jméno a telefonní číslo. </para>
+
+        <para>Mým dalším úkolem spojeným s touto funkcionalitou bylo navázat na práci kolegy, který v administraci vytvořil statistický
+            přehled o tom, jaká jídla jsou předobjednána na který den. Návaznost spočívala v tom, že půjde zobrazit seznam zákazníků,
+            kteří mají daná jídla v daný den předobjednána. </para>
+
+        <para>
+            Tento úkol jsem řešil tak, že jsem na základě dne a typu jídla (předkrm, polévka, hlavní jídlo, dezert) získal všechny zákazníky,
+            kteří si dané jídlo předobjednali. Tuto informaci uchováváme v souboru s denním menu, kde se drží informace o předobjednávkách a ID
+            zákazníka, který předobjednává. ID zákazníků ke každému pokrmu jsem spároval s údaji v XML souboru, který reprezentuje všechny
+            zákazníky. Díky tomu jsem získal informace o zákaznících, konkrétně je to jméno zákazníka a jeho telefonní číslo. Nakonec jsem
+            seznam zákazníků, který mají v určitý den objednána určitá jídla, vypisoval v administraci.
+        </para>
+    </section>
+</article>
